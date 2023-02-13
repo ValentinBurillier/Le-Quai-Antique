@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "3c557f1899e422c78dfdc1dd2b3618ab",
+=======
+    "content-hash": "93ffc0b84f52761dd7b52606457f5cbc",
+>>>>>>> development
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -406,6 +410,7 @@
             "time": "2021-07-14T16:46:02+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "sensio/framework-extra-bundle",
             "version": "v6.2.9",
             "source": {
@@ -485,6 +490,8 @@
             "time": "2022-11-01T17:17:13+00:00"
         },
         {
+=======
+>>>>>>> development
             "name": "symfony/asset",
             "version": "v6.2.5",
             "source": {
