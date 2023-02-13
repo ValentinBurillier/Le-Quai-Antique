@@ -7,10 +7,7 @@
         "php": ">=8.1",
         "ext-ctype": "*",
         "ext-iconv": "*",
-<<<<<<< HEAD
         "sensio/framework-extra-bundle": "^6.2",
-=======
->>>>>>> development
         "symfony/asset": "6.2.*",
         "symfony/console": "6.2.*",
         "symfony/dotenv": "6.2.*",
@@ -21,12 +18,9 @@
         "symfony/yaml": "6.2.*",
         "twig/extra-bundle": "^2.12|^3.0",
         "twig/twig": "^2.12|^3.0"
-<<<<<<< HEAD
-=======
     },
     "require-dev": {
         "symfony/maker-bundle": "^1.48"
->>>>>>> development
     },
     "config": {
         "allow-plugins": {
