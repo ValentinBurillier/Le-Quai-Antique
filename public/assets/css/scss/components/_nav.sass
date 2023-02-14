@@ -1,5 +1,27 @@
 nav
   margin: auto
+@media screen and (min-width: 350px) 
+  nav
+    width: 320px
+@media screen and (min-width: 414px) 
+  nav
+    width: 380px
+@media screen and (min-width: 460px) 
+  nav
+    width: 80vw
+@media screen and (min-width: 700px) 
+  nav
+    width: 70vw
+@media screen and (min-width: 1350px) 
+  nav
+    display: flex
+    justify-content: space-around
+    align-items: center
+    width: 95vw
+  .nav__div
+    align-items: center
+    gap: 1vw
+    
 .nav__div
   display: flex
   justify-content: space-between
@@ -18,3 +40,24 @@ ul
   transform: translate(-50%, -50%)
   text-align: center
   text-decoration: underline
+
+@media screen and (min-width: 360px)
+  a
+    font-size: 1.2rem
+@media screen and ( min-width: 414px)
+  a
+    font-size: 1.4rem
+@media screen and ( min-width: 414px)
+  a
+    font-size: 3vw
+@media screen and ( min-width: 830px)
+  a
+    font-size: 2.5vw
+@media screen and ( min-width: 1350px)
+  a
+    font-size: 2vw
+  ul
+    gap: 4vw
+  @media screen and ( min-width: 1830px)
+  a
+    font-size: 1.5vw

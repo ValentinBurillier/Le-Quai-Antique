@@ -2,4 +2,28 @@
 .container__recettes
   margin-top: 1.5rem
   display: flex
+  overflow-x: scroll
+  position: absolute
+  bottom: 0
+  width: 180px
+@media screen and ( min-width: 350px)
+  .container__recettes
+    bottom: 2rem
+    width: 300px
+@media screen and ( min-width: 414px)
+  .container__recettes
+    width: 350px
+@media screen and ( min-width: 700px)
+  .container__recettes
+    width: 45vw
+@media screen and ( min-width: 830px)
+  .container__recettes
+    width: 100% 
+@media screen and ( min-width: 1350px)
+  .container__recettes
+    justify-content: center
+    gap: 5vw
+@media screen and ( min-width: 1830px)
+  .container__recettes
+    width: 80vw
   overflow-x: hidden
