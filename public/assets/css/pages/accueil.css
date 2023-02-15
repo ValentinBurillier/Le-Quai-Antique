@@ -18,10 +18,10 @@ li {
 }
 
 body {
-  background: url("../../images/bg.jpg") no-repeat;
-  object-fit: cover;
+  background: url("../../images/background.jpg") no-repeat;
   max-width: 100vw;
   overflow-x: hidden;
+  max-height: 100vh;
 }
 
 /* BACKGROUND OPACITY */
@@ -64,10 +64,7 @@ h1 {
     font-size: 5vw;
   }
 }
-@media screen and (min-width: 1150px) {
-  h1 {
-    font-size: 3vw;
-  }
+@media screen and (min-width: 1830px) {
   h1 {
     font-size: 2.5vw;
   }
@@ -75,6 +72,7 @@ h1 {
 .header__iconUser {
   width: 40px;
   height: 40px;
+  object-fit: cover;
 }
 
 @media screen and (min-width: 375px) {
@@ -83,25 +81,19 @@ h1 {
     height: 45px;
   }
 }
-@media screen and (min-width: 375px) {
-  .header__iconUser {
-    width: 50px;
-    height: 50px;
-  }
-}
 @media screen and (min-width: 460px) {
-  .header__iconUser {
-    width: vw;
-    height: 10vw;
-  }
   .header__iconUser {
     width: 8vw;
     height: 8vw;
   }
+}
+@media screen and (min-width: 1150px) {
   .header__iconUser {
     width: 6vw;
     height: 6vw;
   }
+}
+@media screen and (min-width: 1830px) {
   .header__iconUser {
     width: 4vw;
     height: 4vw;
@@ -222,10 +214,6 @@ ul {
 @media screen and (min-width: 830px) {
   .header__title2 {
     top: 30%;
-  }
-}
-@media screen and (min-width: 830px) {
-  .header__title2 {
     padding: 2vw;
   }
 }
@@ -352,12 +340,12 @@ h2 {
   }
 }
 .header__img {
-  width: 180px;
+  width: 220px;
 }
 
 @media screen and (min-width: 350px) {
   .header__img {
-    width: 300px;
+    width: 40vh;
   }
 }
 @media screen and (min-width: 414px) {
@@ -367,17 +355,12 @@ h2 {
 }
 @media screen and (min-width: 700px) {
   .header__img {
-    width: 45vw;
+    width: 50vw;
   }
 }
 @media screen and (min-width: 830px) {
   .header__img {
     width: 33.33vw;
-  }
-}
-@media screen and (min-width: 830px) {
-  .header__img {
-    width: 25vw;
   }
 }
 @media screen and (min-width: 1350px) {
@@ -393,16 +376,16 @@ h2 {
 .container__recettes {
   margin-top: 1.5rem;
   display: flex;
-  overflow-x: scroll;
   position: absolute;
+  overflow: hidden;
   bottom: 0;
-  width: 180px;
+  width: 220px;
 }
 
 @media screen and (min-width: 350px) {
   .container__recettes {
     bottom: 2rem;
-    width: 300px;
+    width: 40vh;
   }
 }
 @media screen and (min-width: 414px) {
@@ -412,17 +395,17 @@ h2 {
 }
 @media screen and (min-width: 700px) {
   .container__recettes {
-    width: 45vw;
+    width: 50vw;
   }
 }
 @media screen and (min-width: 830px) {
   .container__recettes {
+    justify-content: center;
     width: 100%;
   }
 }
 @media screen and (min-width: 1350px) {
   .container__recettes {
-    justify-content: center;
     gap: 5vw;
   }
 }
@@ -435,10 +418,4 @@ h2 {
   max-width: 100vw;
   display: flex;
   justify-content: center;
-}
-
-header {
-  height: 100vh;
-  width: 100vw;
-  padding: 10px;
 }
