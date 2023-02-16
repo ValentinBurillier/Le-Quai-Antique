@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr-Fr">
+
+{# HEAD PART #}
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,37 +9,42 @@
 {% block title %}
   <title>Accueil - Le Quai Antique</title>
 {% endblock %}
-  
 {% block stylesheets %}
   <link href="{{ asset('assets/css/pages/accueil.css')}}" rel="stylesheet" type="text/css">
 {% endblock %}
 </head>
+
+{# BODY PART #}
 <body>
-    <div class="opacity"></div>
-    <header>
-        <nav>
-            <div class="nav__div">
+    {# HERO PART #}
+    <section class="container__hero">
+        <header class="header">
+            <nav class="header__nav">
+                <div class="nav__div">
                     <h1>Le Quai Antique</h1>
-                <img src="{{ asset('assets/images/icon_user.png')}}" alt="icone utilisateur connexion et inscription" class="header__iconUser">
-            </div>
-            <ul>
-                <li><a href="/">Accueil</a></li>
-                <li><a href="/menu">Menu</a></li>
-                <li><a href="/reservation">Réservation</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="header__title2">
+                    <img src="{{ asset('assets/images/icon_user.png')}}" alt="icone utilisateur connexion et inscription" class="header__iconUser">
+                </div>
+                 <ul>
+                    <li><a href="/">Accueil</a></li>
+                    <li><a href="/menu">Menu</a></li>
+                    <li><a href="/reservation">Réservation</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                 </ul>
+             </nav>
+        </header>
+        {# END HEADER #}
+
+        <div class="div__title2">
             <h2>Une expérience mêlant le terroir avec la gastronomie</h2>
         </div>
         <h3 class="header__title3">Découvrez nos plats d'exceptions</h3>
-        <div class="test">
-             <div class="container__recettes">
-                <img src="{{ asset('assets/images/recette2.jpg') }}" alt="premier plat" class="header__img recette1">
-                <img src="{{ asset('assets/images/recette3.jpg') }}" alt="premier plat" class="header__img recette2">
-                <img src="{{ asset('assets/images/recette1.jpg') }}" alt="premier plat" class="header__img recette3">
+        <section class="section__gallerie">
+             <div class="gallerie__recettes">
+                <img src="{{ asset('assets/images/recette2.jpg') }}" alt="premier plat" class="img__plats">
+                <img src="{{ asset('assets/images/recette3.jpg') }}" alt="premier plat" class="img__plats">
+                <img src="{{ asset('assets/images/recette1.jpg') }}" alt="premier plat" class="img__plats">
             </div>
-        </div>
-    </header>
+        </section>
+    </section>
 </body>
 </html>
