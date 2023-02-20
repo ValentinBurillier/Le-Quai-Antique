@@ -18,21 +18,12 @@
 <body>
     {# HERO PART #}
     <section class="container__hero">
-        <header class="header">
-            <nav class="header__nav">
-                <div class="nav__div">
-                    <h1>Le Quai Antique</h1>
-                    <img src="{{ asset('assets/images/icon_user.png')}}" alt="icone utilisateur connexion et inscription" class="header__iconUser">
-                </div>
-                 <ul>
-                    <li><a href="/">Accueil</a></li>
-                    <li><a href="/menu">Menu</a></li>
-                    <li><a href="/reservation">Réservation</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                 </ul>
-             </nav>
-        </header>
-        {# END HEADER #}
+
+    {# IMPORTATION DU HEADER #}
+    {% block modalHeader %}
+        {% include ('global/modals/modalHeader.html.twig') %}
+    {% endblock %}
+    {# FIN IMPORTATION #}
 
         <div class="div__title2">
             <h2>Une expérience mêlant le terroir avec la gastronomie</h2>
@@ -64,5 +55,11 @@
     
     </main>
     {# END MAIN #}
+
+    {# IMPORTATION DU FOOTER #}
+    {% block modalFooterAccueil %}
+        {% include ('global/modals/modalFooterAccueil.html.twig') %}
+    {% endblock %}
+    {# FIN IMPORTATION #}
 </body>
 </html>

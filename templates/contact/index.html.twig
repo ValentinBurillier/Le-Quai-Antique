@@ -14,20 +14,9 @@
 </head>
 <body>
     <div class="opacity"></div>
-    <header>
-        <nav>
-            <div class="nav__div">
-                    <h1>Le Quai Antique</h1>
-                <img src="{{ asset('assets/images/icon_user.png')}}" alt="icone utilisateur connexion et inscription" class="header__iconUser">
-            </div>
-            <ul>
-                <li><a href="/">Accueil</a></li>
-                <li><a href="/menu">Menu</a></li>
-                <li><a href="/reservation">Réservation</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
-        </nav>    
-    </header>
+    {% block modalHeader %}
+        {% include('global/modals/modalHeader.html.twig') %}
+    {% endblock %}
 
     <main>
         <h2 class="main__title2">Une question ? Nous sommes disponibles du lundi au vendredi de 11H à 21H</h2>
@@ -46,9 +35,10 @@
         </section>
         <img src="{{ asset('assets/images/logo.png')}}" alt="Logo Le Quai Antique" class="logo">
     </main>
-    <footer>
-        <a>Mentions légales -</a>
-        <a>CGV</a>
-    </footer>
+
+    {% block modalFooter %}
+        {% include ('global/modals/modalFooter.html.twig') %}
+    {% endblock %}
+    
 </body>
 </html>
