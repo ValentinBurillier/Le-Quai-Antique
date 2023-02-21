@@ -488,35 +488,34 @@ h2 {
 
 .main__container {
   position: relative;
+  height: 90%;
 }
 
 .img__Menu {
-  height: 100%;
+  height: 75%;
   width: 100vw;
-  object-fit: cover;
+  position: fixed;
+  left: 0;
 }
 
 .main__Menu {
-  height: 79.2%;
-  width: 70%;
+  height: calc(66% + 9.1vh);
+  width: calc(55% + 11vw);
   background: white;
   position: absolute;
   top: 11.1%;
-  left: 16.9%;
+  left: 16%;
 }
 
 /* IMPORTATION BOUTON */
 .button {
-  height: 8%;
+  height: 70%;
   width: 30%;
   background: #6A2600;
   border-radius: 10%;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: bold;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2%;
 }
 
 /* PERSONNALISATION DE LA PAGE */
@@ -524,6 +523,18 @@ body {
   height: 100vh;
   width: 100vw;
   background: url("../../images/background/bg-small.jpg");
+}
+
+.header {
+  height: 15%;
+}
+
+.main {
+  height: 85%;
+}
+
+.main__container {
+  height: 90%;
 }
 
 .menu__text {
@@ -542,6 +553,38 @@ body {
   font-size: 1.7rem;
 }
 
+@media screen and (min-height: 414px) {
+  .menu__text h2 {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 560px) {
+  .menu__text h2 {
+    font-size: 3rem;
+    margin-bottom: 7%;
+  }
+}
+@media screen and (min-width: 700px) {
+  .menu__text h2 {
+    font-size: 3.5rem;
+    margin-bottom: 5%;
+  }
+}
+@media screen and (min-width: 408px) {
+  .menu__text h3 {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (min-width: 560px) {
+  .menu__text h3 {
+    font-size: 2.2rem;
+  }
+}
+@media screen and (min-width: 700px) {
+  .menu__text h3 {
+    font-size: 2.7rem;
+  }
+}
 .container__formules {
   width: 80%;
   margin-left: auto;
@@ -549,8 +592,24 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 10px;
 }
 
+@media screen and (min-height: 430px) {
+  .container__formules {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 488px) {
+  .container__formules {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 560px) {
+  .container__formules {
+    gap: 20px;
+  }
+}
 .div__form1 {
   display: flex;
   justify-content: space-between;
@@ -559,4 +618,11 @@ body {
 .div__form2 {
   display: flex;
   justify-content: space-between;
+}
+
+.div__button {
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
