@@ -22,25 +22,60 @@
 
     <main class="main">
         <div class="main__container">
-            <img src={{ asset('assets/images/menu.png')}} class="img__Menu">
-            <div class="main__Menu">
-                <div class="menu__text">
-                    <h2>Menu</h2>
-                    <h2>Formules du jour</h2>
-                    <div class="container__formules">
-                        <div class="div__form1">
-                            <h3>Entrée + Plat</h3>
-                            <h3>25€</h3>
-                        </div>
-                        <div class="div__form2">
-                            <h3>Plat + dessert</h3>
-                            <h3>15€</h3>
+
+            {# MENU + FORMULES #}
+            <div class="menuLeft">
+                <img src={{ asset('assets/images/menu.png')}} class="img__Menu">
+                <div class="main__Menu">
+                    <div class="menu__text">
+                        <h2>Menu</h2>
+                        <h2>Formules du jour</h2>
+                        <div class="container__formules">
+                            <div class="div__form1">
+                                <h3>Entrée + Plat</h3>
+                                <h3>25€</h3>
+                            </div>
+                            <div class="div__form2">
+                                <h3>Plat + dessert</h3>
+                                <h3>15€</h3>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <img src={{ asset('assets/images/chevron_droit.png')}} class="img__vector">
             </div>
-            <img src={{ asset('assets/images/chevron_droit.png')}} class="img__vector">
-        </div>
+
+            {# MENU ENTREES #}
+            <div class="menuRight">
+                <img src={{ asset('assets/images/menu.png')}} class="img__Entree">
+                <div class="main__MenuEntree">
+                    <div class="menu__text">
+                        <h2>Entrées</h2>
+
+                        <h3>Salade savoyarde à la tomme</h3>
+                        <div class="">
+                            <p>Parmoniers, tomme fraîche, miel, ail, huile, pommes de terre, moutarde*, salades mélangées</p>
+                            <p>14€</p>
+                        </div>
+
+                        <h3>Rôti de porc à la savoyarde</h3>
+                        <div class="">
+                            <p>Coeur de frisée, diots de savoie, beaufort, persil haché, moutarde*</p>
+                            <p>16€</p>
+                        </div>
+
+                        <h3>Moules au duot de Savoie fumé</h3>
+                        <div class="">
+                            <p>Pâtes perles, jambon cru, tomme de Savoie</p>
+                            <p>12€</p>
+                        </div>
+                    </div>
+                </div>
+                <img src={{ asset('assets/images/chevron_droit.png')}} class="img__vector">
+            </div> {# FIN MENU RIGHT #}
+        </div> {# FIN CONTAINER #}
+        
+        
         <div class="div__button">
             <button type="button" class="button">Réserver</button>
         </div>

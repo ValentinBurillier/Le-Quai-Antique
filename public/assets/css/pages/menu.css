@@ -18,6 +18,30 @@ li {
   list-style: none;
 }
 
+body {
+  background: url("../../images/background/bg-small.jpg");
+}
+
+@media screen and (min-height: 854px) {
+  body {
+    background: url("../../images/background/bg-medium.jpg");
+  }
+}
+@media screen and (min-height: 1281px) {
+  body {
+    background: url("../../images/background/bg-large.jpg");
+  }
+}
+@media screen and (min-width: 1280px) {
+  body {
+    background: url("../../images/background/bg-medium.jpg");
+  }
+}
+@media screen and (min-width: 1920px) {
+  body {
+    background: url("../../images/background/bg-large.jpg");
+  }
+}
 /* IMPORTATION HEADER */
 .container__hero {
   height: 100vh;
@@ -498,6 +522,11 @@ h2 {
   left: 0;
 }
 
+@media screen and (min-width: 800px) {
+  .img__Menu {
+    width: 50%;
+  }
+}
 .main__Menu {
   height: calc(66% + 9.1vh);
   width: calc(55% + 11vw);
@@ -507,6 +536,14 @@ h2 {
   left: 16%;
 }
 
+@media screen and (min-width: 800px) {
+  .main__Menu {
+    height: calc(67% + 9.1vh);
+    width: calc(22% + 11vw);
+    top: 11.1%;
+    left: 8%;
+  }
+}
 /* IMPORTATION BOUTON */
 .button {
   height: 70%;
@@ -522,7 +559,6 @@ h2 {
 body {
   height: 100vh;
   width: 100vw;
-  background: url("../../images/background/bg-small.jpg");
 }
 
 .header {
@@ -537,6 +573,11 @@ body {
   height: 90%;
 }
 
+@media screen and (min-width: 800px) {
+  .main__container {
+    display: flex;
+  }
+}
 .menu__text {
   position: absolute;
   width: 100%;
@@ -570,6 +611,27 @@ body {
     margin-bottom: 5%;
   }
 }
+@media screen and (min-width: 800px) {
+  .menu__text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 5%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .menu__text h2 {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .menu__text h2 {
+    font-size: 3.5rem;
+  }
+}
+@media screen and (min-width: 1800px) {
+  .menu__text h2 {
+    font-size: 4rem;
+  }
+}
 @media screen and (min-width: 408px) {
   .menu__text h3 {
     font-size: 1.8rem;
@@ -583,6 +645,26 @@ body {
 @media screen and (min-width: 700px) {
   .menu__text h3 {
     font-size: 2.7rem;
+  }
+}
+@media screen and (min-width: 800px) {
+  .menu__text h3 {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .menu__text h3 {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .menu__text h3 {
+    font-size: 2.8rem;
+  }
+}
+@media screen and (min-width: 1800px) {
+  .menu__text h3 {
+    font-size: 3rem;
   }
 }
 .container__formules {
@@ -610,6 +692,16 @@ body {
     gap: 20px;
   }
 }
+@media screen and (min-width: 700px) {
+  .container__formules {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1800px) {
+  .container__formules {
+    width: 60%;
+  }
+}
 .div__form1 {
   display: flex;
   justify-content: space-between;
@@ -620,9 +712,114 @@ body {
   justify-content: space-between;
 }
 
+/* MENU & FORMULES */
+@media screen and (min-width: 800px) {
+  .menuLeft {
+    width: 50%;
+  }
+}
+/* MENU ENTREES */
+.menuRight {
+  display: none;
+}
+
+@media screen and (min-width: 800px) {
+  .menuRight {
+    display: block;
+    width: 50%;
+  }
+}
+.menuRight .menu__text {
+  padding: 15px;
+}
+
+.menuRight h2 {
+  color: black;
+  margin-bottom: 2%;
+}
+
+@media screen and (min-width: 800px) {
+  .menuRight h2 {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .menuRight h2 {
+    font-size: 3.5rem;
+  }
+}
+.menuRight h3 {
+  color: black;
+  margin-bottom: 2%;
+}
+
+@media screen and (min-width: 800px) {
+  .menuRight h3 {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .menuRight h3 {
+    font-size: 2.5rem;
+  }
+}
+.menuRight p {
+  color: #AD5E00;
+  font-size: 1.5rem;
+  margin-bottom: 2%;
+}
+
+@media screen and (min-width: 800px) {
+  .menuRight p {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .menuRight p {
+    font-size: 1.8rem;
+  }
+}
+.img__Entree {
+  height: 75%;
+  position: fixed;
+  right: 0;
+  width: 50%;
+}
+
+.menuRight .img__vector {
+  height: 6vw;
+  left: 95%;
+}
+
+.main__MenuEntree {
+  height: calc(67.5% + 9.1vh);
+  width: calc(22% + 11vw);
+  background: white;
+  position: absolute;
+  top: 10.5%;
+  left: 58%;
+}
+
 .div__button {
   height: 10%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (min-width: 800px) {
+  .div__button {
+    width: auto;
+  }
+}
+@media screen and (min-width: 600px) {
+  button {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 800px) {
+  .button {
+    font-size: 2rem;
+    width: 310px;
+  }
 }
