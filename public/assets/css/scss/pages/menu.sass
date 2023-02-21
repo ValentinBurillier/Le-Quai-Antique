@@ -1,0 +1,45 @@
+/* RESET */ 
+@import '../base/_reset'
+
+/* IMPORTATION HEADER */
+@import '../components/sections/_header'
+
+/* IMPORTATION RESTAURANT MENU */
+@import '../components/sections/_restaurantMenu'
+
+/* IMPORTATION BOUTON */
+@import '../components/_button'
+
+/* PERSONNALISATION DE LA PAGE */
+body
+  height: 100vh
+  width: 100vw
+  background: url('../../images/background/bg-small.jpg')
+.menu__text
+  position: absolute
+  width: 100%
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  & h2
+    color: black
+    margin-bottom: 5%
+  & h3
+    color: #AD5E00
+    font-size: 1.7rem
+.container__formules
+  width: 80%
+  margin-left: auto
+  margin-right: auto
+  display: flex
+  flex-direction: column
+  justify-content: center
+.div__form1
+  display: flex
+  justify-content: space-between
+.div__form2
+  display: flex
+  justify-content: space-between
+  
+
+
