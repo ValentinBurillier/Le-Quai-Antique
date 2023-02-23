@@ -1,0 +1,71 @@
+/* RESET */ 
+@import '../base/_reset'
+/* IMPORTATION BODY */
+@import '../components/sections/_body'
+/* IMPORTATION HEADER */
+@import '../components/sections/_header'
+/* IMPORTATION BOUTON */
+@import '../components/_button'
+
+/* PERSONNALISATION DE LA PAGE */
+/* RESPONSIVE DE BASE 352 x 568 px */
+body
+  height: 100vh
+  width: 100vw
+.header
+  position: initial
+  transform: initial
+main
+  height: 80%
+  padding: 5%
+
+footer
+  height: 5%
+  display: flex
+  justify-content: center
+  align-items: center
+  column-gap: 2%
+
+/* PREMIERE SECTION */
+.main__section1 
+  height: 70%
+.section1__container
+  display: flex
+  height: 20%
+  justify-content: center
+  & img
+    height: 50px
+    width: 50px
+    position: absolute
+    left: 10%
+  & h3
+    font-size: 250%
+.main__section1  ul
+  height: 80%
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  & li
+    text-align: initial
+    font-size: 200%
+    font-weight: bold
+
+/* DEUXIEME SECTION */
+.main__section2
+  height: 30%
+  & .section2__container
+    height: 75%
+  & h3
+    font-size: 250%
+  & .section2__text
+    display: flex
+    padding: 3%
+  & p
+    font-size: 200%
+    width: 80%
+    text-align: initial
+  & input
+    width: 20%
+  & .button
+    height: 25%
+    margin-top: 3%
