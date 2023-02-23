@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr-Fr">
+{# HEAD PART #}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block title %}
+  <title>Interface Utilisateur - Informations</title>
+{% endblock %}
+{% block stylesheets %}
+  <link href="{{ asset('assets/css/pages/informations.css')}}" rel="stylesheet" type="text/css">
+{% endblock %}
+</head>
+
+<body>
+    {# IMPORTATION DU HEADER #}
+    {% block modalHeader %}
+        {% include ('global/modals/modalHeader.html.twig') %}
+    {% endblock %}
+    {# FIN IMPORTATION #}
+
+    <main>
+        {# PREMIERE SECTION#}
+        <section class="main__section1">
+            <div class="section1__container">
+                <img src={{asset('assets/images/arrow_left.png')}}>
+                <h3>Informations</h3>
+            </div>
+            <ul>
+                <li>Nom</li>
+                <li>Prénom</li>
+                <li>E-mail</li>
+                <li>Téléphone</li>
+            </ul>
+        </section>
+        {# FIN PREMIERE SECTION #}
+
+        {# DEUXIEME SECTION #}
+        <section class="main__section2">
+            <div class="section2__container">
+                <h3>Ma réservation type</h3>
+                <div class="section2__text">
+                    <p>En général, <br>nous sommes :</p>
+                    <input type="text"/>
+                </div>
+            </div>
+            <button class="button" type="button">Confirmer</button>
+        </section>
+        {# FIN DEUXIEME SECTION #}
+    </main>
+
+     {# IMPORTATION DU FOOTER #}
+    {% block modalFooter %}
+        {% include ('global/modals/modalFooter.html.twig') %}
+    {% endblock %}
+    {# FIN IMPORTATION #}
+
+
+</body>
+</html>
