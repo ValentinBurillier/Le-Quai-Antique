@@ -1,0 +1,67 @@
+/* RESET */ 
+@import '../base/_reset'
+
+/* IMPORTATION BODY */
+@import '../components/sections/_body'
+
+/* IMPORTATION HEADER */
+@import '../components/sections/_header'
+
+/* IMPORTATION BgIntuser */
+@import '../components/sections/_bgIntUser'
+
+/* IMPORTATION BgIntuser */
+@import '../components/sections/InterfaceUser/_mainNav'
+
+/* IMPORTATION BOUTON */
+@import '../../scss/components/_button'
+
+/* PERSONNALISATION BASE DEVICE 320 X 568PX */
+body
+  height: 100vh
+  width: 100vw
+
+.header
+  position: initial
+  transform: initial
+  height: 15%
+
+main
+  height: 80%
+
+footer
+  height: 5%
+  display: flex
+  justify-content: center
+  align-items: center
+  column-gap: 2%
+
+.main__nav a
+  font-size: 150%
+
+.section__bottom
+  height: 45%
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+  & p
+    font-size: 150%
+    line-height: 170%
+    padding: 0% 5%
+
+  & div
+    padding: 0% 5%
+    display: flex
+    justify-content: space-evenly
+  
+.button
+  height: 150%
+  width: 20%
+
+.btnYes
+  background: green
+
+.btnNo
+  background: red
+/* RESPONSIVE */
