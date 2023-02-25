@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr-Fr">
+{# HEAD PART #}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block title %}
+  <title>Interface Utilisateur - Home</title>
+{% endblock %}
+{% block stylesheets %}
+  <link href="{{ asset('assets/css/pages/userCommentaire.css')}}" rel="stylesheet" type="text/css">
+{% endblock %}
+</head>
+
+<body>
+    {# IMPORTATION DU HEADER #}
+    {% block modalHeader %}
+        {% include ('global/modals/modalHeader.html.twig') %}
+    {% endblock %}
+    {# FIN IMPORTATION #}
+
+    <main>
+        <section class="section__top">
+        {% block modalBgIntUser %}
+            {% include ('global/modals/modalBgIntUser.html.twig') %}
+                <ul class="main__nav">
+                    <li><a href="#">Informations</a></li>
+                    <li><a href="#">Gérer ma réservation</a></li>
+                    <li><a href="#">Mes allergies</a></li>
+                    <li><a href="#">Mes avis</a></li>
+                </ul>
+            </div>
+        {% endblock %}
+        </section>
+
+        <section class="section__bottom">
+        <p class="main__paragraph">Dîtes-nous en plus</p>
+        <div class="main__containerArea">
+            <textarea rows="6" cols="50">Ecrivez-ici votre commentaire</textarea>
+        </div>
+        <div class="div__button">
+            <button type="button" class="button">Valider</button>
+        </div>
+        </section>
+    </main>
+
+     {# IMPORTATION DU FOOTER #}
+    {% block modalFooter %}
+        {% include ('global/modals/modalFooter.html.twig') %}
+    {% endblock %}
+    {# FIN IMPORTATION #}
+
+
+</body>
+</html>
