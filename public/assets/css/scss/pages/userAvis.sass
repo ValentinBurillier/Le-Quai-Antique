@@ -28,7 +28,16 @@ body
 
 main
   height: 80%
-
+.section__top
+  height: 70%
+  display: flex
+  justify-content: center
+  align-items: center
+.main__container
+  width: 352px
+  border-radius: 5%
+  margin-left: auto
+  margin-right: auto
 footer
   height: 5%
   display: flex
@@ -40,13 +49,13 @@ footer
   font-size: 150%
 
 .section__bottom
-  height: 45%
+  height: 35%
   display: flex
   flex-direction: column
-  justify-content: center
+  justify-content: flex-start
 
   & p
-    font-size: 150%
+    font-size: 170%
     line-height: 170%
     padding: 0% 5%
 
@@ -65,3 +74,120 @@ footer
 .btnNo
   background: red
 /* RESPONSIVE */
+
+@media screen and (min-width: 500px) and (min-height: 568px)
+  .section__bottom p
+    width: 352px
+    font-size: 180%
+    margin-left: auto
+    margin-right: auto
+    padding: 2% 5%
+  .main__containerBtn
+    width: 352px
+    margin-left: auto
+    margin-right: auto
+
+
+@media screen and (min-width: 700px) and (min-height: 568px)
+  .main__nav a
+    font-size: 180%
+@media screen and (min-width: 700px) and (min-height: 568px)
+  .section__bottom p
+    padding: initial
+    font-size: 190%
+
+@media screen and (min-width: 700px) and (min-height: 568px)
+  .main__containerBtn
+    padding: 0%
+    & button
+      font-size: 130%
+      height: 170%
+      width: 30%
+
+@media screen and (min-width: 1100px) and (min-height: 568px)
+  .header
+    width: initial
+    & h1
+      font-size: 350%
+@media screen and (min-width: 1100px) and (min-height: 568px)
+  .section__top
+    height: 65%
+@media screen and (min-width: 1100px) and (min-height: 568px)
+  .main__container
+    width: 500px
+    background-size: cover
+@media screen and (min-width: 1100px) and (min-height: 568px)
+  .main__nav a
+    font-size: 220%
+@media screen and (min-width: 1100px) and (min-height: 568px)
+  .section__bottom p
+    font-size: 220%
+@media screen and (min-width: 1100px) and (min-height: 568px)
+  .section__bottom div
+    justify-content: space-around
+    padding: 0%
+@media screen and (min-width: 1100px) and (min-height: 568px)
+  .nav__ul li a
+    font-size: 150%
+@media screen and (min-width: 1100px) and (min-height: 568px)
+  footer a
+    font-size: 150%
+
+@media screen and (min-width: 1350px) and (min-height: 568px)
+  .main__container
+    width: 600px
+    height: -webkit-fill-available
+    background-size: cover
+
+@media screen and (min-width: 700px) and (min-height: 600px)
+  .main__container
+    width: 500px
+    background-size: cover
+@media screen and (min-width: 1350px) and (min-height: 600px)
+  .main__container
+    width: 700px
+    height: -webkit-fill-available
+
+@media screen and (min-width: 352px) and (min-height:700px)
+  .main__container
+    height: 300px
+    background-size: cover
+@media screen and (min-width: 352px) and (min-height:700px)
+  .main__nav a
+    font-size: 180%
+@media screen and (min-width: 352px) and (min-height:700px)
+  .section__bottom p
+    font-size: 180%
+@media screen and (min-width: 352px) and (min-height:700px)
+  .button
+    height: 200%
+    width: 25%
+    font-size: 140%
+@media screen and (min-width: 700px) and (min-height:700px)
+  .main__nav a
+    font-size: 250%
+@media screen and (min-width: 700px) and (min-height:700px)
+  .section__bottom p
+    font-size: 220%
+@media screen and (min-width: 700px) and (min-height:700px)
+  .section__bottom div
+    justify-content: space-around
+@media screen and (min-width: 1350px) and (min-height:700px)
+  .section__bottom
+    justify-content: center
+@media screen and (min-width: 1350px) and (min-height:700px)
+  .main__container
+    height: 100%
+
+
+@media screen and (min-width: 1100px) and (min-height:750px)
+  .section__bottom p
+    font-size: 240%
+    width: 500px
+
+@media screen and (min-width: 1350px) and (min-height:850px)
+  .section__bottom p
+    font-size: 260%
+  .main__containerBtn button
+    font-size: 150%
+
