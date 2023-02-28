@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ConnectController!{% endblock %}
+
+{% block body %}
+{{form_start(form)}}
+    {{ form_row(form.mail) }}
+    {{ form_row(form.password) }}
+    <input type="submit">
+{{form_end(form)}}
+{% endblock %}
