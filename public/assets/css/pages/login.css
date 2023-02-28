@@ -18,6 +18,7 @@ li {
   list-style: none;
 }
 
+/* COLORS */
 /* IMPORTATION BODY */
 body {
   background: url("../../images/background/bg-small.jpg");
@@ -488,235 +489,108 @@ h2 {
     width: 100vw;
   }
 }
-/* IMPORTATION BgIntuser */
-/* ADAPTE DE BASE DEVICE 352 X 568 PX */
-.main__container {
-  height: 250px;
-  width: 100vw;
-  background: url("../../images/img_table_xl.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+/* IMPORTATION BOUTON */
+.button {
+  height: 70%;
+  width: 30%;
+  background: #6A2600;
+  border-radius: 10%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
 }
 
-/* RESPONSIVE DIAGONALE -> LARGE*/
-@media screen and (min-width: 460px) and (min-height: 700px) {
-  .main__container {
-    width: 90%;
-    height: 350px;
-  }
+/* CONFIG DE BASE 320 * 568PX */
+body {
+  width: 100vw;
+  height: 100vh;
 }
-@media screen and (min-width: 716px) and (min-height: 874px) {
-  .main__container {
-    width: 90%;
-    height: 80%;
-  }
-}
-@media screen and (min-width: 950px) and (min-height: 874px) {
-  .main__container {
-    width: 850px;
-  }
-}
-@media screen and (min-width: 1300px) and (min-height: 874px) {
-  .main__container {
-    width: 950px;
-  }
-}
-/* RESPONSIVE LARGE AND MAX HEIGHT 568PX*/
-@media screen and (min-width: 584px) and (max-height: 568px) {
-  .main__container {
-    width: 584px;
-    height: 300px;
-  }
-}
-@media screen and (min-width: 930px) and (max-height: 568px) {
-  .main__container {
-    width: 650px;
-    height: 350px;
-  }
-}
-@media screen and (min-width: 1350px) and (max-height: 568px) {
-  .main__container {
-    width: 950px;
-    height: 350px;
-  }
-}
-/* RESPONSIVE LARGE AND MAX HEIGHT 650PX*/
-@media screen and (min-width: 616px) and (max-height: 650px) {
-  .main__container {
-    height: 80%;
-  }
-}
-@media screen and (min-width: 1050px) and (max-height: 650px) {
-  .main__container {
-    width: 75%;
-  }
-}
-@media screen and (min-width: 1350px) and (max-height: 650px) {
-  .main__container {
-    width: 65%;
-  }
-}
-/* RESPONSIVE LARGE AND MAX HEIGHT 750PX*/
-@media screen and (min-width: 440px) and (max-height: 750px) {
-  .main__container {
-    height: 70%;
-  }
-}
-@media screen and (min-width: 1300px) and (max-height: 750px) {
-  .main__container {
-    width: 65%;
-  }
-}
-/* RESPONSIVE LARGE AND MAX HEIGHT 873PX*/
-@media screen and (min-width: 800px) and (max-height: 873px) {
-  .main__container {
-    width: 70%;
-  }
-}
-@media screen and (min-width: 1000px) and (max-height: 873px) {
-  .main__container {
-    width: 70%;
-  }
-}
-@media screen and (min-width: 1350px) and (max-height: 873px) {
-  .main__container {
-    width: 945px;
-    height: 90%;
-  }
-}
-/* RESPONSIVE LARGE AND MIN HEIGHT 1160PX*/
-@media screen and (min-width: 1160px) and (min-height: 1165px) {
-  .main__container {
-    width: 70%;
-    height: 90%;
-  }
-}
-/* IMPORTATION BgIntuser */
-.main__nav {
-  height: 100%;
+
+/* FORMULAIRE DE CONNEXION */
+form {
+  height: 80%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
   padding: 5%;
-  margin-left: 10%;
+  align-items: center;
+  justify-content: center;
+  row-gap: 6%;
+}
+form h2 {
+  font-size: 250%;
+  line-height: 150%;
+}
+form label {
+  font-size: 200%;
+}
+form input {
+  width: 80%;
+  height: 10%;
+  color: black;
+  font-size: 150%;
+}
+form .button {
+  height: 10%;
 }
 
-/* RESPONSIVE DIAGONALE -> LARGE*/
-.main__nav a {
-  font-weight: bold;
-  font-size: 2rem;
-}
-
-@media screen and (min-width: 460px) and (min-height: 700px) {
-  .main__nav a {
-    font-size: 2.5rem;
+/* RESPONSIVE LARGEUR PUIS HAUTEUR */
+@media screen and (min-width: 500px) and (min-height: 568px) {
+  form {
+    width: 80%;
+    row-gap: 3%;
+    margin: 0 auto;
+  }
+  form h2 {
+    font-size: 270%;
+    line-height: 150%;
+  }
+  form label {
+    font-size: 220%;
+  }
+  form input {
+    width: 90%;
+    height: 15%;
+    font-size: 170%;
+  }
+  form .button {
+    margin-top: auto;
   }
 }
-@media screen and (min-width: 716px) and (min-height: 874px) {
-  .main__nav a {
-    font-size: 3.5rem;
+@media screen and (min-width: 700px) and (min-height: 568px) {
+  form {
+    width: 65%;
   }
 }
-/* RESPONSIVE LARGE AND MAX HEIGHT 568PX*/
-@media screen and (min-width: 584px) and (max-height: 568px) {
-  .main__nav a {
-    font-size: 3rem;
-  }
-}
-@media screen and (min-width: 1350px) and (max-height: 568px) {
-  .main__nav a {
-    font-size: 3.5rem;
-  }
-}
-/* RESPONSIVE LARGE AND MAX HEIGHT 650PX*/
-@media screen and (min-width: 850px) and (max-height: 650px) {
-  .main__nav {
+@media screen and (min-width: 1350px) and (min-height: 568px) {
+  form {
+    width: 45%;
     padding: 2%;
   }
-}
-@media screen and (min-width: 616px) and (max-height: 650px) {
-  .main__nav a {
-    font-size: 3rem;
+  form h2 {
+    font-size: 300%;
+  }
+  form input {
+    font-size: 250%;
+  }
+  form .button {
+    margin-top: 8vh;
+    font-size: 150%;
   }
 }
-@media screen and (min-width: 616px) and (max-height: 650px) {
-  .main__nav a {
-    font-size: 3rem;
+@media screen and (min-width: 891px) and (min-height: 700px) {
+  form .button {
+    margin-top: 8vh;
   }
 }
-@media screen and (min-width: 1880px) and (max-height: 650px) {
-  .main__nav a {
-    font-size: 3.5rem;
+@media screen and (min-width: 891px) and (min-height: 750px) {
+  form .button {
+    font-size: 150%;
   }
 }
-/* RESPONSIVE LARGE AND MAX HEIGHT 750PX*/
-@media screen and (min-width: 440px) and (max-height: 750px) {
-  .main__nav a {
-    font-size: 2.5rem;
+@media screen and (min-width: 500px) and (min-height: 800px) {
+  form .button {
+    margin-top: 8vh;
+    font-size: 150%;
+    width: 35%;
   }
-}
-@media screen and (min-width: 900px) and (max-height: 750px) {
-  .main__nav a {
-    font-size: 3.5rem;
-  }
-}
-/* RESPONSIVE LARGE AND MAX HEIGHT 873PX*/
-@media screen and (min-width: 1350px) and (max-height: 873px) {
-  .main__nav a {
-    font-size: 4rem;
-  }
-}
-/* RESPONSIVE LARGE AND MAX HEIGHT 1064PX*/
-@media screen and (min-width: 1010px) and (min-height: 1060px) {
-  .main__nav a {
-    font-size: 5rem;
-  }
-}
-@media screen and (min-width: 2437px) and (min-height: 1165px) {
-  .main__nav a {
-    font-size: 6rem;
-  }
-}
-/* PERSONNALISATION DE LA PAGE */
-/* RESPONSIVE DE BASE 352 x 568 px */
-body {
-  height: 100vh;
-  width: 100vw;
-}
-
-.header {
-  position: initial;
-  transform: initial;
-}
-
-@media screen and (min-width: 1000px) and (min-height: 874px) {
-  .header {
-    width: initial;
-  }
-}
-@media screen and (min-width: 1100px) and (max-height: 568px) {
-  .header {
-    width: initial;
-  }
-}
-/* RESPONSIVE LARGE AND MAX HEIGHT 750PX*/
-@media screen and (min-width: 1100px) and (max-height: 750px) {
-  .header {
-    width: initial;
-  }
-}
-main {
-  height: 75%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-footer {
-  height: 10%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: 2%;
 }
