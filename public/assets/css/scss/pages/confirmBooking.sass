@@ -1,0 +1,105 @@
+/* RESET */ 
+@import '../base/_reset'
+/* IMPORTATION BODY */
+@import '../components/sections/_body'
+/* IMPORTATION HEADER */
+@import '../components/sections/_header'
+
+/* IMPORTATION BOUTON */
+@import '../components/_button'
+
+/* FOOTER PART */
+@import '../components/sections/_footer'
+/* CONFIG DE BASE 320 * 568PX */
+body
+  width: 100vw
+  height: 100vh
+
+/* BASES CONFIGURATION 320 * 568 px*/
+main
+  height: 80%
+  display: flex
+  flex-direction: column
+  padding: 5%
+  align-items: center
+  justify-content: center
+  row-gap: 6%
+form
+  display: flex
+  align-items: center
+  justify-content: space-around
+  flex-direction: column
+  height: 100%
+.form__title2
+  font-size: 250%
+  line-height: 150%
+.form__input
+  width: 80%
+  height: 10%
+  font-size: 180%
+  display: flex
+  justify-content: center
+  align-items: center
+  font-weight: bold
+  margin: 0 auto
+.form__input::placeholder
+  color: black
+.button
+  height: 10%
+  width: 35%
+
+/* RESPONSIVE LARGEUR PUIS HAUTEUR */
+@media screen and (min-width: 500px) and (min-height: 568px)
+  main
+    padding: 2% 5%
+    .button
+      font-size: 150%
+
+@media screen and (min-width: 700px) and (min-height: 568px)
+  .form__title2
+    font-size: 280%
+  .form__input
+    text-transform: uppercase
+
+@media screen and (min-width: 1000px) and (min-height: 568px)
+  form
+    width: 50%
+
+@media screen and (min-width: 1500px) and (min-height: 568px)
+  main
+    padding: 0% 5%
+    .form__title2
+      font-size: 320%
+    .form__input
+      font-size: 220%
+      letter-spacing: 1px
+    .button
+      width: 25%
+
+@media screen and (min-width: 1500px) and (min-height: 650px)
+  .form__input
+    width: 60%
+
+@media screen and (min-width: 500px) and (min-height: 750px)
+  .form
+    width: 80%
+    &__input
+      text-transform: uppercase
+
+@media screen and (min-width: 700px) and (min-height: 750px)
+  .form__input
+    width: 70%
+
+@media screen and (min-width: 1000px) and (min-height: 750px)
+  .form__input
+    width: 50%
+
+@media screen and (min-width: 1500px) and (min-height: 750px)
+  main .form__input
+    width: 45%
+    letter-spacing: 2px
+    font-size: 250%
+
+  main .button
+    width: 20%
+    font-size: 175%

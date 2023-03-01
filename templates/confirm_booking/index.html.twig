@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr-Fr">
+{# HEAD PART #}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block title %}
+  <title>Connection - Le Quai Antique</title>
+{% endblock %}
+{% block stylesheets %}
+  <link href="{{ asset('assets/css/pages/confirmBooking.css')}}" rel="stylesheet" type="text/css">
+{% endblock %}
+</head>
+
+{# BODY PART #}
+{% block body %}
+<body>
+    {# IMPORTATION DU HEADER #}
+    {% block modalHeader %}
+        {% include ('global/modals/modalHeader.html.twig') %}
+    {% endblock %}
+    {# FIN IMPORTATION #}
+
+    {# START MAIN#}
+    <main>
+      <form method="POST" action="felicitation.php" class="form">
+        <h2 class="form__title2">Confirmer la réservation</h2>
+        <input class="form__input" type="text" name="lastName" placeholder="Nom">
+        <input class="form__input" type="text" name="firstName" placeholder="Prenom">
+        <input class="form__input" type="tel" name="phone" placeholder="Telephone">
+        <input class="form__input" type="email" name="email" placeholder="Email">
+        <button class="button" type="submit">Valider</button>
+    </main>
+    {# END MAIN #}
+
+    {# IMPORTATION DU FOOTER #}
+    {% block modalFooter %}
+        {% include ('global/modals/modalFooter.html.twig') %}
+    {% endblock %}
+    {# FIN IMPORTATION #}
+
+{% endblock %}
+</body>
+</html>
