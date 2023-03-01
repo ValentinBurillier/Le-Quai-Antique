@@ -18,7 +18,32 @@ li {
   list-style: none;
 }
 
-/* HEADER PART */
+/* IMPORTATION BODY */
+body {
+  background: url("../../images/background/bg-small.jpg");
+}
+
+@media screen and (min-height: 854px) {
+  body {
+    background: url("../../images/background/bg-medium.jpg");
+  }
+}
+@media screen and (min-height: 1281px) {
+  body {
+    background: url("../../images/background/bg-large.jpg");
+  }
+}
+@media screen and (min-width: 1280px) {
+  body {
+    background: url("../../images/background/bg-medium.jpg");
+  }
+}
+@media screen and (min-width: 1920px) {
+  body {
+    background: url("../../images/background/bg-large.jpg");
+  }
+}
+/* IMPORTATION HEADER */
 .container__hero {
   height: 100vh;
   width: 100vw;
@@ -463,130 +488,15 @@ h2 {
     width: 100vw;
   }
 }
-/* MAIN PART */
-.main__divContact {
-  width: 80vw;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(75, 52, 21, 0.8);
-  padding: 10px;
-}
-
-@media screen and (min-width: 700px) {
-  .main__divContact {
-    top: 40%;
-  }
-}
-@media screen and (min-width: 1100px) {
-  .main__divContact {
-    width: 70vw;
-  }
-}
-@media screen and (min-width: 1400px) {
-  .main__divContact {
-    width: 60vw;
-  }
-}
-.main__divContact p {
-  font-size: 3vh;
-}
-
-@media screen and (min-width: 700px) {
-  .main__divContact p {
-    font-size: 4vw;
-  }
-}
-@media screen and (min-width: 1100px) {
-  .main__divContact p {
-    font-size: 3vw;
-  }
-}
-@media screen and (min-width: 1400px) {
-  .main__divContact p {
-    font-size: 2.5vw;
-  }
-}
-.main__divContact a {
-  font-size: 3vh;
-  text-transform: lowercase;
-}
-
-@media screen and (min-width: 700px) {
-  .main__divContact a {
-    font-size: 4vw;
-  }
-}
-@media screen and (min-width: 1100px) {
-  .main__divContact a {
-    font-size: 3vw;
-  }
-}
-@media screen and (min-width: 1400px) {
-  .main__divContact a {
-    font-size: 2.5vw;
-  }
-}
-.main__divlinkSocialNetwork img {
-  width: 7vh;
-}
-
-.main__divlinkSocialNetwork {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-@media screen and (min-width: 700px) {
-  .main__divlinkSocialNetwork {
-    justify-content: center;
-    gap: 7vw;
-  }
-}
-.main__section {
-  width: 70%;
-  position: absolute;
-  top: 65%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: column;
-}
-
-@media screen and (min-width: 700px) {
-  .main__section {
-    top: 60%;
-    gap: 3vh 0;
-  }
-}
-.logo {
-  position: absolute;
-  top: 82%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 40vw;
-  object-fit: cover;
-}
-
-@media screen and (min-width: 900px) {
-  .logo {
-    width: 30vw;
-  }
-}
-@media screen and (min-width: 900px) {
-  .logo {
-    width: 25vw;
-  }
-}
-@media screen and (min-width: 1400px) {
-  .logo {
-    width: 20vw;
-  }
-}
-main {
-  padding: 10pxs;
+/* IMPORTATION BOUTON */
+.button {
+  height: 70%;
+  width: 30%;
+  background: #6A2600;
+  border-radius: 10%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
 }
 
 /* FOOTER PART */
@@ -611,74 +521,139 @@ footer {
     font-size: 1.5vw;
   }
 }
-/* MODIFICATIONS PERSONNALISEES */
-header {
-  height: auto;
-  padding: 10px;
+/* CONFIG DE BASE 320 * 568PX */
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* BASES CONFIGURATION 320 * 568 px*/
+main {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+  align-items: center;
+  justify-content: center;
+  row-gap: 6%;
 }
 
 .main__title2 {
-  font-size: 3.5vh;
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80vw;
+  font-size: 250%;
+  line-height: 150%;
 }
 
-@media screen and (min-width: 700px) {
-  .main__title2 {
-    font-size: 4vh;
-    margin-top: 2vh;
-    top: 20%;
-  }
-}
-@media screen and (min-width: 900px) {
-  .main__title2 {
-    font-size: 3.5vw;
-  }
-}
-@media screen and (min-width: 1100px) {
-  .main__title2 {
-    font-size: 3vw;
-    width: 70vw;
-    top: 23%;
-  }
-}
-@media screen and (min-width: 1400px) {
-  .main__title2 {
-    width: 60vw;
-    font-size: 2.5vw;
-    top: 20%;
-  }
-}
-.main__title3 {
-  font-size: 3.5vh;
-  text-decoration: underline;
+.main__link {
+  width: 80%;
+  height: 10%;
+  font-size: 150%;
+  background: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
 }
 
-@media screen and (min-width: 700px) {
-  .main__title3 {
-    font-size: 5vw;
+.button {
+  height: 10%;
+  width: 35%;
+}
+
+/* RESPONSIVE LARGEUR PUIS HAUTEUR */
+@media screen and (min-width: 500px) and (min-height: 568px) {
+  main {
+    width: 80%;
+    row-gap: 3%;
+    margin: 0 auto;
+  }
+  main .main__title2 {
+    font-size: 270%;
+    line-height: 150%;
+  }
+  main .main__link {
+    width: 90%;
+    height: 15%;
+    font-size: 170%;
+  }
+  main .button {
+    margin-top: 8vh;
   }
 }
-@media screen and (min-width: 900px) {
-  .main__title3 {
-    font-size: 4vw;
+@media screen and (min-width: 700px) and (min-height: 568px) {
+  main {
+    width: 65%;
+  }
+  main .main__link {
+    font-size: 200%;
+  }
+  main .button {
+    font-size: 140%;
   }
 }
-@media screen and (min-width: 1100px) {
-  .main__title3 {
-    font-size: 3vw;
+@media screen and (min-width: 1000px) and (min-height: 568px) {
+  main {
+    width: 55%;
+  }
+  main .button {
+    height: 13%;
+    width: 30%;
   }
 }
-@media screen and (min-width: 1400px) {
-  .main__title3 {
-    font-size: 3vw;
+@media screen and (min-width: 1350px) and (min-height: 568px) {
+  main {
+    width: 45%;
   }
 }
-@media screen and (min-width: 1600px) {
-  .main__title3 {
-    font-size: 2.5vw;
+@media screen and (min-width: 1550px) and (min-height: 568px) {
+  main {
+    width: 27%;
+    row-gap: 5%;
+    padding: 0% 0% 2% 0%;
+  }
+}
+@media screen and (min-width: 1000px) and (min-height: 650px) {
+  main {
+    padding: 0% 0% 2% 0%;
+  }
+  main .button {
+    font-size: 160%;
+  }
+}
+@media screen and (min-width: 320px) and (min-height: 700px) {
+  main {
+    row-gap: 5%;
+    padding: 0% 0% 2% 0%;
+  }
+  main .button {
+    height: 7%;
+  }
+}
+@media screen and (min-width: 500px) and (min-height: 700px) {
+  main .main__link {
+    height: 10%;
+  }
+  main .button {
+    font-size: 130%;
+    width: 32%;
+  }
+}
+@media screen and (min-width: 1000px) and (min-height: 700px) {
+  main {
+    width: 40%;
+  }
+  main .button {
+    font-size: 140%;
+    width: 35%;
+    height: 10%;
+    font-weight: 600;
+  }
+}
+@media screen and (min-width: 1500px) and (min-height: 700px) {
+  main {
+    width: 30%;
+  }
+  main .button {
+    font-size: 170%;
   }
 }

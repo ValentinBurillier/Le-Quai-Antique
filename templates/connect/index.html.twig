@@ -1,11 +1,45 @@
-{% extends 'base.html.twig' %}
-
-{% block title %}Hello ConnectController!{% endblock %}
-
-{% block body %}
-{{form_start(form)}}
-    {{ form_row(form.mail) }}
-    {{ form_row(form.password) }}
-    <input type="submit">
-{{form_end(form)}}
+<!DOCTYPE html>
+<html lang="fr-Fr">
+{# HEAD PART #}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block title %}
+  <title>Connection - Le Quai Antique</title>
 {% endblock %}
+{% block stylesheets %}
+  <link href="{{ asset('assets/css/pages/connect.css')}}" rel="stylesheet" type="text/css">
+{% endblock %}
+</head>
+
+{# BODY PART #}
+{% block body %}
+<body>
+    {# IMPORTATION DU HEADER #}
+    {% block modalHeader %}
+        {% include ('global/modals/modalHeader.html.twig') %}
+    {% endblock %}
+    {# FIN IMPORTATION #}
+
+    {# START MAIN#}
+    <main>
+      <h2 class="main__title2">Je n'ai pas de compte</h2>
+      <a href="#" class="main__link">Incrivez-vous</a>
+
+       <h2 class="main__title2">J'ai déjà un compte</h2>
+      <a href="#" class="main__link">Je me connecte</a>
+
+      <button class="button">Continuer</button>
+    </main>
+    {# END MAIN #}
+
+    {# IMPORTATION DU FOOTER #}
+    {% block modalFooter %}
+        {% include ('global/modals/modalFooter.html.twig') %}
+    {% endblock %}
+    {# FIN IMPORTATION #}
+
+{% endblock %}
+</body>
+</html>

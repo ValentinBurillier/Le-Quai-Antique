@@ -1,0 +1,143 @@
+/* RESET */ 
+@import '../base/_reset'
+/* IMPORTATION BODY */
+@import '../components/sections/_body'
+/* IMPORTATION HEADER */
+@import '../components/sections/_header'
+
+/* IMPORTATION BOUTON */
+@import '../components/_button'
+
+/* FOOTER PART */
+@import '../components/sections/_footer'
+/* CONFIG DE BASE 320 * 568PX */
+body
+  width: 100vw
+  height: 100vh
+
+/* BASES CONFIGURATION 320 * 568 px*/
+main
+  height: 80%
+  display: flex
+  flex-direction: column
+  padding: 5%
+  align-items: center
+  justify-content: center
+  row-gap: 6%
+
+.main__title2
+  font-size: 250%
+  line-height: 150%
+.main__link
+  width: 80%
+  height: 10%
+  font-size: 150%
+  background: white
+  color: black
+  display: flex
+  justify-content: center
+  align-items: center
+  font-weight: bold
+.button
+  height: 10%
+  width: 35%
+
+  
+/* RESPONSIVE LARGEUR PUIS HAUTEUR */
+@media screen and (min-width: 500px) and (min-height: 568px)
+  main
+    width: 80%
+    row-gap: 3%
+    margin: 0 auto
+    & .main__title2
+      font-size: 270%
+      line-height: 150%
+    & .main__link
+      width: 90%
+      height: 15%
+      font-size: 170%
+    & .button
+      margin-top: 8vh
+
+@media screen and (min-width: 700px) and (min-height: 568px)
+  main
+    width: 65%
+    & .main__link
+      font-size: 200%
+    & .button
+      font-size: 140%
+
+@media screen and (min-width: 1000px) and (min-height: 568px)
+  main
+    width: 55%
+    & .button
+      height: 13%
+      width: 30%
+@media screen and (min-width: 1350px) and (min-height: 568px)
+  main
+    width: 45%
+@media screen and (min-width: 1550px) and (min-height: 568px)
+  main
+    width: 27%
+    row-gap: 5%
+    padding: 0% 0% 2% 0%
+
+@media screen and (min-width: 1000px) and (min-height: 650px)
+  main
+     padding: 0% 0% 2% 0%
+     & .button
+      font-size: 160%
+  
+@media screen and (min-width: 320px) and (min-height: 700px)
+  main
+     row-gap: 5%
+     padding: 0% 0% 2% 0%
+     & .button
+      height: 7%
+
+@media screen and (min-width: 500px) and (min-height: 700px)
+  main .main__link
+    height: 10%
+  main .button
+    font-size: 130%
+    width: 32%
+
+@media screen and (min-width: 1000px) and (min-height: 700px)
+  main
+    width: 40%
+  main .button
+    font-size: 140%
+    width: 35%
+    height: 10%
+    font-weight: 600
+
+@media screen and (min-width: 1500px) and (min-height: 700px)
+  main
+    width: 30%
+  main .button
+    font-size: 170%
+// @media screen and (min-width: 1350px) and (min-height: 568px)
+//   main
+//     width: 45%
+//     padding: 2%
+//     & h2
+//       font-size: 300%
+//     & input
+//       font-size: 250%
+//     & .button
+//       margin-top: 8vh
+//       font-size: 150%
+
+// @media screen and (min-width: 891px) and (min-height: 700px)
+//   main .button
+//     margin-top: 8vh
+
+// @media screen and (min-width: 891px) and (min-height: 750px)
+//   main .button
+//     font-size: 150%
+
+// @media screen and (min-width: 500px) and (min-height: 800px)
+//   main .button
+//     margin-top: 8vh
+//     font-size: 150%
+//     width: 35%
