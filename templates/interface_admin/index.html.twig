@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr-Fr">
+{# HEAD PART #}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block title %}
+  <title>Interface Administrateur - Le Quai Antique</title>
+{% endblock %}
+{% block stylesheets %}
+  <link href="{{ asset('assets/css/pages/interfaceAdmin.css')}}" rel="stylesheet" type="text/css">
+{% endblock %}
+</head>
+
+{# BODY PART #}
+{% block body %}
+<body>
+    {# IMPORTATION DU HEADER #}
+    {% block modalHeaderAdmin %}
+        {% include ('global/modals/modalHeaderAdmin.html.twig') %}
+    {% endblock %}
+    {# FIN IMPORTATION #}
+
+    <main class="main">
+
+        {# START TOP SECTION#}
+        <section class="sectionTop">
+            <p>Tables réservées aujourd'hui:</p>
+            <div class="sectionTop__container">
+                <p>Déjeuner:</p>
+                <p>Souper:</p>
+            </div>
+        </section>
+        {# END TOP SECTION #}
+
+        {# START navigation #}
+        <nav class="main__nav">
+            <a href="#" class="main__navLink">Gestion des tables</a>
+            <a href="#" class="main__navLink">Calendrier de réservation</a>
+            <a href="#" class="main__navLink">Données utilisateurs</a>
+            <a href="#" class="main__navLink">Gallerie images</a>
+            <a href="#" class="main__navLink">Avis clients</a>
+            <a href="#" class="main__navLink">Menu / Formules</a>
+            <a href="#" class="main__navLink">Contact</a>
+        </nav>
+        {# END CENTER SECTION #}
+
+        <div class="container__button">
+            <button class="main__button">Accéder au site</button>
+        </div>
+    </main>
+    {# IMPORTATION DU FOOTER #}
+    {% block modalFooter %}
+        {% include ('global/modals/modalFooter.html.twig') %}
+    {% endblock %}
+    {# FIN IMPORTATION #}
+
+{% endblock %}
+</body>
+</html>

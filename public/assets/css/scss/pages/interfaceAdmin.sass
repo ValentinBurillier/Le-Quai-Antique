@@ -1,0 +1,120 @@
+/* RESET */ 
+@import '../base/_reset'
+/* IMPORTATION BODY */
+@import '../components/sections/_bodyInterfaceAdmin'
+/* IMPORTATION HEADER */
+@import '../components/sections/_header'
+
+/* IMPORTATION BOUTON */
+@import '../components/_button'
+
+/* FOOTER PART */
+@import '../components/sections/_footer'
+
+/* CONFIG DE BASE 320 * 568PX */
+main
+  height: 80%
+  padding: 0% 5%
+.sectionTop
+  height: 15%
+  display: flex
+  flex-direction: column
+  justify-content: center
+.sectionTop p
+  font-size: 170%
+  
+.sectionTop div
+  display: flex
+  justify-content: space-around
+
+.main__nav
+  height: 78%
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  padding: 0% 5%
+  & a
+    font-size: 120%
+.container__button
+  height: 7%
+  display: flex
+  justify-content: center
+  align-items: center
+
+.main__button
+  background: #6A2600
+  height: 100%
+  width: 45%
+  font-weight: 600
+  text-transform: uppercase
+  border-radius: 5%
+
+footer
+  column-gap: 2%
+  min-width: -webkit-fill-available
+  /* RESPONSIVE LARGE PUIS HAUTEUR */
+@media screen and (min-width: 500px) and (min-height: 568px)
+  .sectionTop p
+    font-size: 220%
+  .main__nav a 
+    font-size: 170%
+  .main__button
+    width: 35%
+    font-size: 120%
+
+@media screen and (min-width: 800px) and (min-height: 568px)
+  footer a
+    font-size: 120%
+
+@media screen and (min-width: 1000px) and (min-height: 568px)
+  .sectionTop
+    width: 60%
+    margin: auto
+  .main__button
+    width: 22%
+    font-size: 130%
+    letter-spacing: 1px
+
+@media screen and (min-width: 1350px) and (min-height: 568px)
+  .header__nav
+    width: 50%
+    display: initial
+  h1
+    font-size: 450%
+  .header__iconUser
+    font-size: 450%
+  .main__button
+    width: 17%
+
+@media screen and (min-width: 320px) and (min-height: 700px)
+  .main__nav a
+    font-size: 150%
+  .sectionTop p
+    font-size: 190%
+
+@media screen and (min-width: 700px) and (min-height: 700px)
+  .sectionTop p
+    font-size: 270%
+  .main__nav a
+    font-size: 175%
+
+@media screen and (min-width: 320px) and (min-height: 800px)
+  .main__nav
+    padding: 20px
+
+@media screen and (min-width: 1300px) and (min-height: 800px)
+  .sectionTop p
+    font-size: 300%
+  .main__nav a
+    font-size: 230%
+
+@media screen and (min-width: 320px) and (min-height: 850px)
+  .sectionTop p
+    font-size: 250%
+  .main__nav a
+    font-size: 190%
+
+@media screen and (min-width: 1650px) and (min-height: 850px)
+  .sectionTop p
+    font-size: 320%
+    line-height: 150%
