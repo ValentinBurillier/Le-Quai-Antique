@@ -598,3 +598,89 @@ main {
   width: 70%;
   height: 30%;
 }
+
+@media screen and (min-width: 450px) and (min-height: 568px) {
+  .container__title2 {
+    width: 80%;
+  }
+  .main__title2 {
+    font-size: 200%;
+  }
+  .section__container {
+    width: 80%;
+  }
+  .btnTop {
+    width: 25%;
+  }
+  .btnBottom {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 600px) and (min-height: 568px) {
+  .container__title2 {
+    width: 60%;
+  }
+  .section__container {
+    width: 70%;
+  }
+  .btnTop {
+    font-size: 130%;
+    width: 22%;
+  }
+  .btnBottom {
+    font-size: 130%;
+    width: 45%;
+  }
+}
+@media screen and (min-width: 800px) and (min-height: 568px) {
+  .main {
+    max-width: 700px;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 1350px) and (min-height: 568px) {
+  .main {
+    max-width: 900px;
+    margin: auto;
+  }
+  .main__title2 {
+    font-size: 250%;
+  }
+  .section__container {
+    width: 60%;
+  }
+  .btnTop {
+    width: 15%;
+  }
+  .btnBottom {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 1350px) and (min-height: 700px) {
+  main {
+    padding: 3vh 0;
+  }
+  .section__container {
+    width: 55%;
+  }
+  .section__container p {
+    font-size: 270%;
+  }
+  .btnTop {
+    font-size: 170%;
+    width: 20%;
+  }
+  .btnBottom {
+    width: 30%;
+    font-size: 170%;
+    height: 35%;
+  }
+}
+@media screen and (min-width: 1350px) and (min-height: 800px) {
+  .main__title2 {
+    font-size: 300%;
+  }
+  .section__container {
+    padding: 2vh;
+  }
+}
