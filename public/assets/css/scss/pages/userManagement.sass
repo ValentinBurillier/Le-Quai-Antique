@@ -1,0 +1,119 @@
+/* RESET */ 
+@import '../base/_reset'
+/* IMPORTATION BODY */
+@import '../components/sections/_bodyInterfaceAdmin'
+/* IMPORTATION HEADER */
+@import '../components/sections/_header'
+
+/* IMPORTATION BOUTON */
+@import '../components/_button'
+
+/* FOOTER PART */
+@import '../components/sections/_footer'
+
+/* CONFIG DE BASE 320 * 568PX */
+main
+  padding: 2vh 5vw
+  display: flex
+  flex-direction: column
+  row-gap: 2vh
+  height: 80%
+  overflow-y: scroll
+.firstSection
+  display: flex
+  column-gap: 2vw
+  justify-content: center
+  height: 7%
+  & img
+    width: 6vh
+    object-fit: contain
+    height: 100%
+.secondSection
+  height: 68%
+  & .secondSection__container
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    align-items: flex-start
+    height: 100%
+    & p
+      font-size: 170%
+.thirdSection
+  height: 25%
+  & div
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+  & p
+    font-size: 170%
+footer
+  column-gap: 2%
+  min-width: -webkit-fill-available
+  width: 100vw
+  background: black
+  border-top: 1px solid white
+
+@media screen and ( min-width: 450px) and (min-height: 568px)
+  .main
+    padding: 2vh 15vw
+    border-left: 1px solid white
+    border-right: 1px solid white
+  .title2
+    font-size: 250%
+
+@media screen and ( min-width: 550px) and (min-height: 568px)
+  .main
+    padding: 2vh 15px
+    width: 350px
+    margin: auto
+  footer
+    border: none
+
+@media screen and (min-width: 700px) and (min-height: 568px)
+  .nav__div
+    align-items: center
+  h1
+    font-size: 300%
+  .header__iconUser
+    width: none
+  .main
+    border-left: 1px solid white
+    border-right: 1px solid white
+
+@media screen and (min-width: 1000px) and (min-height: 568px)
+  .header
+    padding: 10px 5vw
+    width: 700px
+    margin: auto
+    border-left: 1px solid white
+    border-right: 1px solid white
+  .main
+    width: 700px
+  .secondSection .secondSection__container
+    align-items: center
+  .thirdSection div
+    align-items: center
+  footer
+    border-left: 1px solid white
+    border-right: 1px solid white
+    width: 700px
+    & a
+      font-size: 150%
+  
+@media screen and (min-width: 1000px) and (min-height: 568px)
+  footer
+    width: 700px
+    margin: auto
+    min-width: initial
+    & a
+      font-size: 150%
+
+@media screen and (min-width: 1000px) and (min-height: 750px)
+  .secondSection .secondSection__container p
+    font-size: 250%
+  .thirdSection
+    display: flex
+    flex-direction: column
+    justify-content: center
+    & p
+      font-size: 200%

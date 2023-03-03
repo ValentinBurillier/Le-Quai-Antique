@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr-Fr">
+{# HEAD PART #}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block title %}
+  <title>Gestion utilisateur - Le Quai Antique</title>
+{% endblock %}
+{% block stylesheets %}
+  <link href="{{ asset('assets/css/pages/userManagement.css')}}" rel="stylesheet" type="text/css">
+{% endblock %}
+</head>
+
+{# BODY PART #}
+{% block body %}
+<body>
+    {# IMPORTATION DU HEADER #}
+    {% block modalHeaderAdmin %}
+        {% include ('global/modals/modalHeaderAdmin.html.twig') %}
+    {% endblock %}
+    {# FIN IMPORTATION #}
+
+    <main class="main">
+        <section class="firstSection">
+            <img src={{ asset('assets/images/arrow_left.png') }} class="firstSection__arrowLeft">
+            <h2 class="firstSection__title2 title2">Utilisateur</h2>
+        </section>
+
+        <section class="secondSection">
+            <div class="secondSection__container">
+                <p>Nom : Burillier</p>
+                <p>Prénom : Valentin</p>
+                <p>E-mail : valentin.burillier@gmail.com</p>
+                <p>Nb convives : 2</p>
+                <p>Allergies</p>
+            </div>
+        </section>
+
+        <section class="thirdSection">
+            <h2 class="thirsSection__title2 title2">Réservation en cours</h2>
+            <div>
+                <p>Date :</p>
+                <p>Heure :</p>
+                <p>Nb convives :</p>
+            </div>
+        </section>
+    </main>
+    {# IMPORTATION DU FOOTER #}
+    {% block modalFooter %}
+        {% include ('global/modals/modalFooter.html.twig') %}
+    {% endblock %}
+    {# FIN IMPORTATION #}
+
+{% endblock %}
+</body>
+</html>
