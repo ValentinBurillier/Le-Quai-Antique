@@ -1,0 +1,105 @@
+/* RESET */ 
+@import '../base/_reset'
+/* IMPORTATION BODY */
+@import '../components/sections/_bodyInterfaceAdmin'
+/* IMPORTATION HEADER */
+@import '../components/sections/_header'
+
+/* IMPORTATION BOUTON */
+@import '../components/_button'
+
+/* FOOTER PART */
+@import '../components/sections/_footer'
+
+/* CONFIG DE BASE 320 * 568PX */
+main
+  padding: 0% 5vw
+  display: flex
+  flex-direction: column
+  row-gap: 2vh
+  height: 80%
+  overflow-y: scroll
+.firstSection
+  display: flex
+  column-gap: 2vw
+  justify-content: center
+  & img
+    width: 6vh
+    object-fit: contain
+    height: 100%
+.secondSection
+  display: flex
+  flex-direction: column
+  row-gap: 2vh
+  & h2
+    font-size: 190%
+  & .usersList
+    display: flex
+    flex-direction: column
+    row-gap: 1vh
+  & p
+    font-size: 170%
+footer
+  column-gap: 2%
+  min-width: -webkit-fill-available
+  width: 100vw
+  background: black
+  border-top: 1px solid white
+/* RESPONSIVE LARGE PUIS HAUTEUR */
+@media screen and (min-width: 400px) and (min-height: 568px)
+  .secondSection
+    & h2
+      font-size: 250%
+    & div p
+      font-size: 200%
+
+@media screen and (min-width: 500px) and (min-height: 568px)
+  .firstSection
+    & .firstSection__title2
+      font-size: 290%
+
+  .secondSection .usersList
+    flex-direction: row
+    flex-wrap: wrap
+    gap: 1rem 5rem
+    padding: 2rem
+    justify-content: center
+
+@media screen and (min-width: 700px) and (min-height: 568px)
+  .nav__div
+    align-items: center
+  h1
+    font-size: 300%
+  .header__iconUser
+    width: none
+  
+
+@media screen and (min-width: 1000px) and (min-height: 568px)
+  body
+    padding: 2vh
+  .header
+    padding: 10px 5vw
+    width: 840px
+    margin: auto
+    border-left: 1px solid white
+    border-right: 1px solid white
+  .main
+    width: 840px
+    margin: auto
+    border-left: 1px solid white
+    border-right: 1px solid white
+  footer a
+    font-size: 120%
+
+@media screen and (min-width: 1350px) and (min-height: 568px)
+  .header
+    padding: initial
+  .header__nav
+    display: initial
+    width: 90%
+
+@media screen and (min-width: 1700px) and (min-height: 568px)
+  .header__iconUser
+    height: 51px
+    width: 51px
+    
