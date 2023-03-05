@@ -12,10 +12,22 @@ class ContactInterfaceType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('phonenumber')
-            ->add('email')
-            ->add('facebook')
-            ->add('instagram')
+            ->add('phonenumber', null, [
+                'label' => 'Téléphone',
+                'attr' => ['placeholder' => 'test']
+                ])
+            ->add('email', null, [
+                'label' => 'E-mail',
+                'attr' => ['placeholder' => 'test']
+                ])
+            ->add('facebook', null, [
+                'label' => 'Facebook',
+                'attr' => ['placeholder' => 'test']
+                ])
+            ->add('instagram', null, [
+                'label' => 'Instagram',
+                'attr' => ['placeholder' => 'test']
+                ])
         ;
     }
 
