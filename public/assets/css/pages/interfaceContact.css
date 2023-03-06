@@ -506,141 +506,200 @@ footer {
 }
 /* CONFIG DE BASE 320 * 568PX */
 main {
-  padding: 2vh 5vw;
+  height: 80%;
+  padding: 0px 10px;
   display: flex;
   flex-direction: column;
-  row-gap: 2vh;
-  height: 80%;
-  overflow-y: scroll;
+  row-gap: 5vh;
+  max-width: 400px;
+  margin: auto;
 }
-
-.firstSection {
+main h2 {
+  font-size: 250%;
+}
+main .main__section {
   display: flex;
-  column-gap: 2vw;
   justify-content: center;
-  height: 7%;
+  column-gap: 5%;
+  align-items: center;
 }
-.firstSection img {
-  width: 6vh;
+main .main__section img {
+  height: 7vw;
+  width: 7vw;
   object-fit: contain;
-  height: 100%;
+  max-height: 45px;
+  max-width: 45px;
+  min-height: 30px;
+  min-width: 30px;
 }
 
-.secondSection {
-  height: 68%;
-}
-.secondSection .secondSection__container {
+form {
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: flex-start;
-  height: 100%;
+  width: 80%;
+  align-self: center;
 }
-.secondSection .secondSection__container p {
-  font-size: 170%;
-}
-
-.thirdSection {
-  height: 25%;
-}
-.thirdSection div {
+form div {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  justify-content: space-between;
 }
-.thirdSection p {
-  font-size: 170%;
+form div label {
+  font-size: 150%;
+}
+form div input {
+  box-shadow: 4px 3px 0px 0px grey;
+  color: black;
+  height: 4vh;
+  font-size: 150%;
+  width: 65%;
+}
+form .button {
+  align-self: center;
+  width: 35%;
+  height: 10%;
+  box-shadow: 1px 1px 20px 6px saddlebrown;
+  max-height: 40px;
 }
 
-footer {
-  column-gap: 2%;
-  min-width: -webkit-fill-available;
-  width: 100vw;
-  background: black;
-  border-top: 1px solid white;
+/* RESPONSIVE LARGEUR MIN 320PX PUIS HAUTEUR MIN568PX */
+@media screen and (min-width: 400px) and (min-height: 568px) {
+  main {
+    row-gap: 2vh;
+  }
+  form div label {
+    font-size: 1.7rem;
+  }
+  form div input {
+    height: 30px;
+    font-size: 130%;
+  }
 }
-
-@media screen and (min-width: 450px) and (min-height: 568px) {
-  .main {
-    padding: 2vh 15vw;
+@media screen and (min-width: 600px) and (min-height: 568px) {
+  .header {
+    width: 400px;
+    margin: auto;
+  }
+  main {
     border-left: 1px solid white;
     border-right: 1px solid white;
   }
-  .title2 {
-    font-size: 250%;
-  }
-}
-@media screen and (min-width: 550px) and (min-height: 568px) {
-  .main {
-    padding: 2vh 15px;
-    width: 350px;
-    margin: auto;
-  }
-  footer {
-    border: none;
-  }
-}
-@media screen and (min-width: 700px) and (min-height: 568px) {
   .nav__div {
     align-items: center;
   }
-  h1 {
+  .nav__div h1 {
+    font-size: 2.5rem;
+  }
+  .nav__div .header__iconUser {
+    height: 50px;
+    width: 50px;
+  }
+  footer a {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 950px) and (min-height: 568px) {
+  .header {
+    width: 550px;
+  }
+  main {
+    max-width: 550px;
+  }
+  main .main__section {
+    column-gap: 30px;
+  }
+  main h2 {
+    font-size: 3.2rem;
+  }
+  .nav__div h1 {
+    font-size: 3.5rem;
+  }
+  form div label {
+    font-size: 2.2rem;
+  }
+  form div input {
+    font-size: 180%;
+    width: 290px;
+  }
+}
+@media screen and (min-width: 1350px) and (min-height: 568px) {
+  .header {
+    max-width: 650px;
+    width: 650px;
+  }
+  .header .header__nav {
+    justify-content: space-between;
+  }
+  .header .nav__div {
+    width: 100%;
+  }
+  main {
+    max-width: 650px;
+    width: 650px;
+  }
+}
+@media screen and (min-width: 1550px) and (min-height: 568px) {
+  .header {
+    max-width: 750px;
+    width: 750px;
+  }
+  main {
+    max-width: 750px;
+    width: 750px;
+  }
+  main form {
+    width: 65%;
+  }
+  main form .button {
+    width: 150px;
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1750px) and (min-height: 568px) {
+  .header {
+    max-width: 850px;
+    width: 850px;
+  }
+  main {
+    max-width: 850px;
+    width: 850px;
+  }
+  form div input {
+    width: 320px;
+  }
+}
+@media screen and (min-width: 320px) and (min-height: 700px) {
+  main h2 {
     font-size: 300%;
   }
-  .header__iconUser {
-    width: none;
-  }
-  .main {
-    border-left: 1px solid white;
-    border-right: 1px solid white;
+  form div label {
+    font-size: 165%;
   }
 }
-@media screen and (min-width: 1000px) and (min-height: 568px) {
-  .header {
-    padding: 10px 5vw;
-    width: 700px;
-    margin: auto;
-    border-left: 1px solid white;
-    border-right: 1px solid white;
+@media screen and (min-width: 600px) and (min-height: 700px) {
+  .nav__div h1 {
+    font-size: 3rem;
   }
-  .main {
-    width: 700px;
-  }
-  .secondSection .secondSection__container {
-    align-items: center;
-  }
-  .thirdSection div {
-    align-items: center;
-  }
-  footer {
-    border-left: 1px solid white;
-    border-right: 1px solid white;
-    width: 700px;
-  }
-  footer a {
-    font-size: 150%;
-  }
-}
-@media screen and (min-width: 1000px) and (min-height: 568px) {
-  footer {
-    width: 700px;
-    margin: auto;
-    min-width: initial;
-  }
-  footer a {
-    font-size: 150%;
-  }
-}
-@media screen and (min-width: 1000px) and (min-height: 750px) {
-  .secondSection .secondSection__container p {
-    font-size: 250%;
-  }
-  .thirdSection {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .thirdSection p {
+  form div label {
     font-size: 200%;
+  }
+  form div input {
+    font-size: 150%;
+  }
+}
+@media screen and (min-width: 1550px) and (min-height: 750px) {
+  .nav__div h1 {
+    font-size: 4rem;
+  }
+  main h2 {
+    font-size: 3.7rem;
+  }
+  form div label {
+    font-size: 2.7rem;
+  }
+  form div input {
+    font-size: 200%;
+    height: 40px;
   }
 }
