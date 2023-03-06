@@ -16,13 +16,18 @@ class InterfaceContactController extends AbstractController
     #[Route('/interface/contact', name: 'app_interface_contact')]
     public function index(Request $request, ContactRestaurantRepository $contact, ManagerRegistry $getDoctrine): Response
     {
-        $contact = new ContactRestaurant();
+        // RECUP DATA CONTACT BDD & IMPORTATION VUE TWIG IN DEFAULT VALUE
+        $datadb = $getDoctrine->getManager()->getRepository(ContactRestaurant::class)->find(1);
+
+        // CREATE FORM
         $form = $this->createForm(ContactInterfaceType::class);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
+
             // RECUP ID 1 BDD ----
             $id = $getDoctrine->getManager();
             $user = $id->getRepository(ContactRestaurant::class)->find(1);
+            
             // -----
 
             $phoneNumber = $form['phonenumber']->getData();
@@ -37,18 +42,13 @@ class InterfaceContactController extends AbstractController
             $instagram = $form['instagram']->getData();
             $user->setInstagram($instagram); 
 
-
-            // $contact->setPhonenumber($phoneNumber);
-            // $contact->setEmail($email);
-            // $contact->setFacebook($facebook);
-            // $contact->setInstagram($instagram);
-
             $entityManager = $getDoctrine->getManager();
             $entityManager->persist($user);
             $entityManager->flush();
         }
         return $this->render('interface_contact/index.html.twig', [
             'form' => $form->createView(),
+            'contact' => $datadb,
         ]);
     }
 }

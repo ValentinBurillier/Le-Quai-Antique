@@ -13,20 +13,16 @@ class ContactInterfaceType extends AbstractType
     {
         $builder
             ->add('phonenumber', null, [
-                'label' => 'Téléphone',
-                'attr' => ['placeholder' => 'test']
+                'label' => 'Téléphone'
                 ])
             ->add('email', null, [
-                'label' => 'E-mail',
-                'attr' => ['placeholder' => 'test']
+                'label' => 'E-mail'
                 ])
             ->add('facebook', null, [
-                'label' => 'Facebook',
-                'attr' => ['placeholder' => 'test']
+                'label' => 'Facebook'
                 ])
             ->add('instagram', null, [
-                'label' => 'Instagram',
-                'attr' => ['placeholder' => 'test']
+                'label' => 'Instagram'
                 ])
         ;
     }
