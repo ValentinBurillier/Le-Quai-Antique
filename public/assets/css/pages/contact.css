@@ -63,7 +63,7 @@ h1 {
 }
 @media screen and (min-width: 700px) {
   h1 {
-    font-size: 8vw;
+    font-size: 400%;
   }
 }
 @media screen and (min-width: 830px) {
@@ -181,6 +181,11 @@ h1 {
 @media screen and (min-width: 414px) {
   a {
     font-size: 3vw;
+  }
+}
+@media screen and (min-width: 700px) {
+  a {
+    font-size: 150%;
   }
 }
 @media screen and (min-width: 830px) {
