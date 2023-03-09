@@ -56,6 +56,8 @@ main
     color: black
     font-size: 1.2rem
     letter-spacing: 1px
+.reserved
+  display: none
 .div__button
   width: min-content
   position: absolute
@@ -96,6 +98,14 @@ main
     font-size: 1.2rem
 
 @media screen and (min-width: 700px) and (min-height: 568px)
+  h1
+    font-size: 4rem
+  .header__nav
+    max-width: 600px
+  .header__iconUser
+    width: 4rem
+  .nav__ul li a
+    font-size: 1.5rem
   main .main__img
     background: url('../../../../assets/images/menu-md.jpg')
     background-size: cover
@@ -103,15 +113,85 @@ main
     background-position-x: -5rem
     background-position-y: -1.1rem
   .main__container
-    width: 370px
+    max-width: 450px
+    padding-left: 2.5rem
+    padding-right: 2.5rem
     & .entree__title2
       font-size: 3.5rem
     & .title
       font-size: 2rem
     & .description
       font-size: 1.7rem
+    & .price
+      font-size: 1.7rem
   .arrow_linkRight
-    right: 0.1rem
+    right: -2rem
     & img
       width: 5rem
       height: 5rem
+  .div__button
+    transform: translate(-50%, 0%)
+    height: auto
+    & .button
+      height: 3.5rem
+      font-size: 1.5rem
+      width: 10rem
+
+@media screen and (min-width: 1350px) and (min-height: 568px)
+  .header
+    height: 10%
+  .header__nav
+    max-width: initial
+  main
+    height: 85%
+    & .main__img
+      background: url('../../../../assets/images/menu-l.jpg')
+      width: 1000px
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: center
+      & .main__container
+        height: 100%
+        left: 60%
+        top: 50%
+        max-height: initial
+  .arrow_linkRight
+    right: 2rem
+  .reserved
+    display: block
+    max-width: 300px
+    position: absolute
+    font-size: 3rem
+    text-align: center
+    left: 3.5%
+    top: 38%
+  .div__button
+    position: absolute
+    left: 18.5%
+    bottom: 32%
+  
+
+@media screen and (min-width: 1350px) and (min-height: 650px)
+  main
+    display: flex
+  main .main__img
+    width: 1000px
+    height: 554px
+    align-self: center
+
+@media screen and (min-width: 1350px) and (min-height: 650px)
+  main .main__img
+    width: 1200px
+    height: 640px
+  
+  .reserved
+    left: 4.5%
+    width: 350px
+
+  .div__button 
+    left: 19%
+    bottom: 34%
+    & .button
+      height: 4rem
+      font-size: 2rem
+      width: 12rem
