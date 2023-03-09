@@ -628,12 +628,3 @@ main .main__img {
     font-size: 1.2rem;
   }
 }
-@media screen and (min-width: 700px) and (min-height: 568px) {
-  main .main__img {
-    background: url("../../../../assets/images/menu-md.jpg");
-    background-size: cover;
-    width: 600px;
-    background-position-x: -5rem;
-    background-position-y: -1.1rem;
-  }
-}
