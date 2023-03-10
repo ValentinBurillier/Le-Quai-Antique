@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Desserts - Le Quai Antique{% endblock %}
+
+{% block stylesheets %}
+  <link href="{{ asset('assets/css/pages/desserts.css')}}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block body %}
+
+    {% block modalHeader %} 
+        {% include ('global/modals/modalHeader.html.twig') %} 
+    {% endblock %}
+
+    {% block Menu %}
+        {% include ('global/modals/modalDesserts.html.twig') %}
+    {% endblock %}
+
+    {# IMPORTATION DU FOOTER #}
+    {% block modalFooter %}
+        {% include ('global/modals/modalFooter.html.twig') %}
+    {% endblock %}
+    {# FIN IMPORTATION #}
+
+{% endblock %}

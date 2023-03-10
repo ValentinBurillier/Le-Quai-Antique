@@ -1,0 +1,24 @@
+{% block Menu %}
+<main> 
+        <section class="main__img">
+
+            <div class="main__container">
+                <h2 class="entree__title2">Desserts</h2>
+                {% for item in items %}
+                    <p class="entree__paragraphe title">{{ item.title }}</p>
+                    <p class="entree__paragraphe description">{{ item.description }}</p>
+                    <p class="entree__paragraphe price">{{ item.price }}€</p>
+                {% endfor %}
+            </div>
+            <a href="#" class="arrow_linkLeft"><img src="{{ asset('assets/images/chevron-gauche.png')}}" alt="flèche gauche"></a>
+            <a href="#" class="arrow_linkRight"><img src="{{ asset('assets/images/chevron_droit.png')}}" alt="flèche droite"></a>
+            <div class="div__button">
+                <button type="button" class="button">Réservez</button>
+            </div>
+
+            {# DISPLAY WIDTH >=1350px #}
+            <p class="reserved">Réservez votre table dès maintenant</p>
+        </section>
+        
+</main>
+{% endblock %}
