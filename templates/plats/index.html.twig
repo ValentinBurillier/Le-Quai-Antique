@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Plats - Le Quai Antique{% endblock %}
+
+{% block stylesheets %}
+  <link href="{{ asset('assets/css/pages/plats.css')}}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block body %}
+
+    {% block modalHeader %} 
+        {% include ('global/modals/modalHeader.html.twig') %} 
+    {% endblock %}
+
+    {% block Menu %}
+        {% include ('global/modals/modalPlats.html.twig') %}
+    {% endblock %}
+
+    {# IMPORTATION DU FOOTER #}
+    {% block modalFooter %}
+        {% include ('global/modals/modalFooter.html.twig') %}
+    {% endblock %}
+    {# FIN IMPORTATION #}
+
+{% endblock %}

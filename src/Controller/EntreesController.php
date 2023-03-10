@@ -13,10 +13,10 @@ class EntreesController extends AbstractController
     public function index(EntreesRepository $entreesList): Response
     {
         // DATABASE DATA RECOVERY
-        $entrees = $entreesList->findAll();
+        $items = $entreesList->findAll();
         return $this->render('entrees/index.html.twig', [
             'controller_name' => 'EntreesController',
-            'entrees' => $entrees,
+            'items' => $items,
         ]);
     }
 }
