@@ -1,0 +1,102 @@
+{% extends 'global/modals/modalMenu.html.twig' %}
+{% block title %}Vins - Le Quai Antique{% endblock %}
+{% block stylesheets %}
+  <link href="{{ asset('assets/css/pages/vins2.css')}}" rel="stylesheet" type="text/css">
+{% endblock %}
+{% block Menu %}
+<main> 
+        <section class="main__img">
+
+            <div class="main__container">
+                <h2 class="entree__title2">Nos Vins</h2>
+                <section class="wines__container">
+                <section class="redWines">
+
+                    <ul class="wine__List">
+                        <li><h3 class="wine__title">Vins rouges</h3></li>
+                        <ul class="wine__ListPrice2">
+                            <li><p class="wines__paragraphe price14">14cl</p></li>
+                            <li><p class="wines__paragraphe price75">75cl</p></li>
+                        </ul>
+
+                    </ul>
+                
+                    <ul class="wine__List">
+                        <li><p class="wines__paragraphe wineName">{{ vR1.title }}</p></li>
+                        <ul class="wine__ListPrice">
+                            <li> <p class="wines__paragraphe price14">{{ vR1.price14 }}€</p></li>
+                            <li><p class="wines__paragraphe price75">{{ vR1.price75 }}€</p></li>
+                        </ul>
+                    </ul>
+
+                    <ul class="wine__List">
+                        <li><p class="wines__paragraphe wineName">{{ vR2.title }}</p></li>
+                        <ul class="wine__ListPrice">
+                            <li> <p class="wines__paragraphe price14">{{ vR2.price14 }}€</p></li>
+                            <li><p class="wines__paragraphe price75">{{ vR2.price75 }}€</p></li>
+                        </ul>
+                    </ul>
+
+                    <ul class="wine__List">
+                        <li><p class="wines__paragraphe wineName">{{ vR3.title }}</p></li>
+                        <ul class="wine__ListPrice">
+                            <li> <p class="wines__paragraphe price14">{{ vR3.price14 }}€</p></li>
+                            <li><p class="wines__paragraphe price75">{{ vR3.price75 }}€</p></li>
+                        </ul>
+                    </ul>
+                    </section>
+
+                    <section class="whiteWines">
+                    <h3 class="wine__title">Vins blancs</h3>
+                    <ul class="wine__List">
+                        <li><p class="wines__paragraphe wineName">{{ vb4.title }}</p></li>
+                        <ul class="wine__ListPrice">
+                            <li> <p class="wines__paragraphe price14">{{ vb4.price14 }}€</p></li>
+                            <li><p class="wines__paragraphe price75">{{ vb4.price75 }}€</p></li>
+                        </ul>
+                    </ul>
+
+                    <ul class="wine__List">
+                        <li><p class="wines__paragraphe wineName">{{ vb5.title }}</p></li>
+                        <ul class="wine__ListPrice">
+                            <li> <p class="wines__paragraphe price14">{{ vb5.price14 }}€</p></li>
+                            <li><p class="wines__paragraphe price75">{{ vb5.price75 }}€</p></li>
+                        </ul>
+                    </ul>
+                    </section>
+
+                    <section class="pinkWines">
+
+                    <h3 class="wine__title">Vins rosés</h3>
+
+                    <ul class="wine__List">
+                        <li><p class="wines__paragraphe wineName">{{ vr6.title }}</p></li>
+                        <ul class="wine__ListPrice">
+                            <li> <p class="wines__paragraphe price14">{{ vr6.price14 }}€</p></li>
+                            <li><p class="wines__paragraphe price75">{{ vr6.price75 }}€</p></li>
+                        </ul>
+                    </ul>
+
+                    <ul class="wine__List">
+                        <li><p class="wines__paragraphe wineName">{{ vr7.title }}</p></li>
+                        <ul class="wine__ListPrice">
+                            <li> <p class="wines__paragraphe price14">{{ vr7.price14 }}€</p></li>
+                            <li><p class="wines__paragraphe price75">{{ vr7.price75 }}€</p></li>
+                        </ul>
+                    </ul>
+                    </section>
+                    </section>
+     
+            </div>
+            <a href="#" class="arrow_linkLeft"><img src="{{ asset('assets/images/chevron-gauche.png')}}" alt="flèche gauche"></a>
+            <a href="#" class="arrow_linkRight"><img src="{{ asset('assets/images/chevron_droit.png')}}" alt="flèche droite"></a>
+            <div class="div__button">
+                <button type="button" class="button">Réservez</button>
+            </div>
+
+            {# DISPLAY WIDTH >=1350px #}
+            <p class="reserved">Réservez votre table dès maintenant</p>
+        </section>
+        
+</main>
+{% endblock %}
