@@ -20,10 +20,10 @@ class Wines
     private ?string $title = null;
 
     #[ORM\Column]
-    private ?int $Price_14_cL = null;
+    private ?int $price14 = null;
 
     #[ORM\Column]
-    private ?int $Price_75_cL = null;
+    private ?int $price75 = null;
 
     public function getId(): ?int
     {
@@ -54,26 +54,26 @@ class Wines
         return $this;
     }
 
-    public function getPrice14CL(): ?int
+    public function getPrice14(): ?int
     {
-        return $this->Price_14_cL;
+        return $this->price14;
     }
 
-    public function setPrice14CL(int $Price_14_cL): self
+    public function setPrice14(int $price14): self
     {
-        $this->Price_14_cL = $Price_14_cL;
+        $this->price14 = $price14;
 
         return $this;
     }
 
-    public function getPrice75CL(): ?int
+    public function getPrice75(): ?int
     {
-        return $this->Price_75_cL;
+        return $this->price75;
     }
 
-    public function setPrice75CL(int $Price_75_cL): self
+    public function setPrice75(int $price75): self
     {
-        $this->Price_75_cL = $Price_75_cL;
+        $this->price75 = $price75;
 
         return $this;
     }
