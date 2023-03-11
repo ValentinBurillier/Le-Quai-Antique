@@ -21,16 +21,16 @@
     <main>
         <h2 class="main__title2">Une question ? Nous sommes disponibles du lundi au vendredi de 11H à 21H</h2>
         <div class="main__divContact">
-            <p>Téléphone: <a href="tel:+33612345678">06-12-34-56-78</a></p>
-            <p>E-mail: <a href="mailto:lequaiantique@gmail.com">lequaiantique@gmail.com</a></p>
+            <p>Téléphone: <a href="tel:+33{{link.phonenumber}}">0{{link.phonenumber}}</a></p>
+            <p>E-mail: <a href="mailto:{{ link.email }}">{{ link.email }}</a></p>
         </div>
         
         <section class="main__section">
             <h3 class="main__title3">Nos réseaux sociaux</h3>
             <div class="main__divlinkSocialNetwork">
-                <img src="{{ asset('assets/images/Social_Network/icon-facebook.png')}}" alt="logo facebook">
-                <img src="{{ asset('assets/images/Social_Network/icon-instagram.png')}}" alt="logo instagram">
-                <img src="{{ asset('assets/images/Social_Network/icon-whatsapp.png')}}" alt="logo whatsapp">
+                <a href="{{ link.facebook }}"><img src="{{ asset('assets/images/Social_Network/icon-facebook.png')}}" alt="logo facebook"></a>
+                <a href="{{ link.instagram }}"><img src="{{ asset('assets/images/Social_Network/icon-instagram.png')}}" alt="logo instagram"></a>
+                <a href="tel:+33{{ link.phonenumber }}"><img src="{{ asset('assets/images/Social_Network/icon-whatsapp.png')}}" alt="logo whatsapp"></a>
             </div>
         </section>
         <img src="{{ asset('assets/images/logo.png')}}" alt="Logo Le Quai Antique" class="logo">
