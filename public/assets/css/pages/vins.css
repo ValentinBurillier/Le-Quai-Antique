@@ -676,3 +676,78 @@ ul {
 .arrow_linkRight {
   display: none;
 }
+
+@media screen and (min-width: 350px) and (min-height: 568px) {
+  .arrow_linkLeft {
+    left: 2rem;
+  }
+}
+@media screen and (min-width: 380px) and (min-height: 568px) {
+  main .main__img {
+    background-position: initial;
+    margin: auto;
+    width: 375px;
+  }
+  .arrow_linkLeft {
+    left: 2.5rem;
+  }
+}
+@media screen and (min-width: 650px) and (min-height: 568px) {
+  h1 {
+    font-size: 4rem;
+  }
+  .header__nav {
+    max-width: 600px;
+  }
+  .header__iconUser {
+    width: 4rem;
+  }
+  .nav__ul li a {
+    font-size: 1.5rem;
+  }
+  main .main__img {
+    background: url("../../../../assets/images/menu-md.jpg");
+    background-size: cover;
+    width: 600px;
+    background-position-x: -5rem;
+    background-position-y: -1.1rem;
+  }
+  .main__container {
+    max-width: 450px;
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+  .entree__title2 {
+    font-size: 3rem;
+  }
+  .wine__title {
+    font-size: 2rem;
+  }
+  .wines__paragraphe {
+    font-size: 1.8rem;
+  }
+  .arrow_linkLeft {
+    left: 3rem;
+  }
+  .arrow_linkLeft img {
+    width: 5rem;
+    height: 5rem;
+  }
+  .div__button {
+    transform: translate(-50%, 0%);
+    height: auto;
+  }
+  .div__button .button {
+    height: 3.5rem;
+    font-size: 1.3rem;
+    width: 10rem;
+  }
+  footer a {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 1350px) and (min-height: 568px) {
+  .header__nav {
+    max-width: initial;
+  }
+}
