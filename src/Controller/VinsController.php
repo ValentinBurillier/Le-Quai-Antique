@@ -12,16 +12,23 @@ class VinsController extends AbstractController
     #[Route('/vins', name: 'app_vins')]
     public function index(WinesRepository $winesRepository): Response
     {
-        $items = $winesRepository->findAll();
-        foreach ($items as $v => $u) {
-            dump($u);
-            dump($u->getCategory());
-            dump(gettype($u));
-        }
-        die;
+        $vR1 = $winesRepository->find(1);
+        $vR2 = $winesRepository->find(2);
+        $vR3 = $winesRepository->find(3);
+        $vb4 = $winesRepository->find(4);
+        $vb5 = $winesRepository->find(5);
+        $vr6 = $winesRepository->find(6);
+        $vr7 = $winesRepository->find(7);
+        
         return $this->render('vins/index.html.twig', [
             'controller_name' => 'VinsController',
-            'items' => $items
+            'vR1' => $vR1,
+            'vR2' => $vR2,
+            'vR3' => $vR3,
+            'vb4' => $vb4,
+            'vb5' => $vb5,
+            'vr6' => $vr6,
+            'vr7' => $vr7
         ]);
     }
 }

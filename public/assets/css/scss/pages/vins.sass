@@ -42,20 +42,81 @@ main
   transform: translate(-50%, -50%)
   padding-left: 1rem
   padding-right: 1rem
-  & .entree__title2
-    color: black
-    font-size: 2.7rem
-  & .title
-    color: black
-    font-size: 1.6rem
-  & .description
-    color: #AD5E00
-    font-size: 1.4rem
-    letter-spacing: 0.5px
-  & .price
-    color: black
-    font-size: 1.2rem
-    letter-spacing: 1px
+
+
+.entree__title2
+  color: black
+  font-size: 2.7rem
+  height: 10%
+
+.wines__container
+  height: 90%
+  & .redWines
+    height: 40%
+    display: flex
+    flex-direction: column
+    justify-content: space-evenly
+  & .whiteWines
+    height: 30%
+    display: flex
+    flex-direction: column
+    justify-content: space-evenly
+  & .pinkWines
+    height: 30%
+    display: flex
+    flex-direction: column
+    justify-content: space-evenly
+
+
+.wine__List
+  display: flex
+  justify-content: space-between
+
+.wine__ListPrice
+  display: flex
+  gap: 1rem
+
+.wines__paragraphe
+  color: black
+  font-size: 1.5rem
+  letter-spacing: 1px
+
+
+ul
+  display: flex
+
+.wine__title
+  color: black
+  text-align: left
+  font-size: 1.5rem
+
+.wine__ListPrice2
+  gap: 5px
+.wineName
+  color: #AD5E00
+
+
+
+
+
+
+
+
+
+
+
+
+.title
+  color: black
+  font-size: 1.6rem
+.description
+  color: #AD5E00
+  font-size: 1.4rem
+  letter-spacing: 0.5px
+.price
+  color: black
+  font-size: 1.2rem
+  letter-spacing: 1px
 .reserved
   display: none
 .div__button
@@ -69,9 +130,9 @@ main
     font-size: 1.1rem
     width: 8rem
 
-.arrow_linkRight
+.arrow_linkLeft
   position: absolute
-  right: -1.5rem
+  left: 1.5rem
   top: 50%
   transform: translate(-50%, -50%)
   height: auto
@@ -80,356 +141,358 @@ main
     height: 3rem
     width: 3rem
     object-fit: contain
+.arrow_linkRight
+  display: none
 
-@media screen and (min-width: 350px) and (min-height: 568px)
-  .arrow_linkRight
-    right: -1rem
+// @media screen and (min-width: 350px) and (min-height: 568px)
+//   .arrow_linkRight
+//     right: -1rem
 
-@media screen and (min-width: 380px) and (min-height: 568px)
-  main .main__img
-    background-position: initial
-    margin: auto
-    width: 375px
-  .arrow_linkRight
-    right: -0.5rem
+// @media screen and (min-width: 380px) and (min-height: 568px)
+//   main .main__img
+//     background-position: initial
+//     margin: auto
+//     width: 375px
+//   .arrow_linkRight
+//     right: -0.5rem
 
-@media screen and (min-width: 650px) and (min-height: 568px)
-  footer a
-    font-size: 1.2rem
+// @media screen and (min-width: 650px) and (min-height: 568px)
+//   footer a
+//     font-size: 1.2rem
 
-@media screen and (min-width: 700px) and (min-height: 568px)
-  h1
-    font-size: 4rem
-  .header__nav
-    max-width: 600px
-  .header__iconUser
-    width: 4rem
-  .nav__ul li a
-    font-size: 1.5rem
-  main .main__img
-    background: url('../../../../assets/images/menu-md.jpg')
-    background-size: cover
-    width: 600px
-    background-position-x: -5rem
-    background-position-y: -1.1rem
-  .main__container
-    max-width: 450px
-    padding-left: 2.5rem
-    padding-right: 2.5rem
-    & .entree__title2
-      font-size: 3.5rem
-    & .title
-      font-size: 2rem
-    & .description
-      font-size: 1.7rem
-    & .price
-      font-size: 1.7rem
-  .arrow_linkRight
-    right: -2rem
-    & img
-      width: 5rem
-      height: 5rem
-  .div__button
-    transform: translate(-50%, 0%)
-    height: auto
-    & .button
-      height: 3.5rem
-      font-size: 1.3rem
-      width: 10rem
+// @media screen and (min-width: 700px) and (min-height: 568px)
+//   h1
+//     font-size: 4rem
+//   .header__nav
+//     max-width: 600px
+//   .header__iconUser
+//     width: 4rem
+//   .nav__ul li a
+//     font-size: 1.5rem
+//   main .main__img
+//     background: url('../../../../assets/images/menu-md.jpg')
+//     background-size: cover
+//     width: 600px
+//     background-position-x: -5rem
+//     background-position-y: -1.1rem
+//   .main__container
+//     max-width: 450px
+//     padding-left: 2.5rem
+//     padding-right: 2.5rem
+//     & .entree__title2
+//       font-size: 3.5rem
+//     & .title
+//       font-size: 2rem
+//     & .description
+//       font-size: 1.7rem
+//     & .price
+//       font-size: 1.7rem
+//   .arrow_linkRight
+//     right: -2rem
+//     & img
+//       width: 5rem
+//       height: 5rem
+//   .div__button
+//     transform: translate(-50%, 0%)
+//     height: auto
+//     & .button
+//       height: 3.5rem
+//       font-size: 1.3rem
+//       width: 10rem
 
-@media screen and (min-width: 1350px) and (min-height: 568px)
-  .header
-    height: 10%
-  .header__nav
-    max-width: initial
-  main
-    height: 85%
-    & .main__img
-      background: url('../../../../assets/images/menu-l.jpg')
-      width: 1000px
-      background-size: cover
-      background-repeat: no-repeat
-      background-position: center
-      & .main__container
-        height: 100%
-        left: 60%
-        top: 50%
-        max-height: initial
-  .arrow_linkRight
-    right: 2rem
-  .reserved
-    display: block
-    max-width: 300px
-    position: absolute
-    font-size: 3rem
-    text-align: center
-    left: 3.5%
-    top: 38%
-  .div__button
-    position: absolute
-    left: 18.5%
-    bottom: 32%
+// @media screen and (min-width: 1350px) and (min-height: 568px)
+//   .header
+//     height: 10%
+//   .header__nav
+//     max-width: initial
+//   main
+//     height: 85%
+//     & .main__img
+//       background: url('../../../../assets/images/menu-l.jpg')
+//       width: 1000px
+//       background-size: cover
+//       background-repeat: no-repeat
+//       background-position: center
+//       & .main__container
+//         height: 100%
+//         left: 60%
+//         top: 50%
+//         max-height: initial
+//   .arrow_linkRight
+//     right: 2rem
+//   .reserved
+//     display: block
+//     max-width: 300px
+//     position: absolute
+//     font-size: 3rem
+//     text-align: center
+//     left: 3.5%
+//     top: 38%
+//   .div__button
+//     position: absolute
+//     left: 18.5%
+//     bottom: 32%
   
 
-@media screen and (min-width: 380px) and (min-height: 620px)
-  .main__container
-    top: 45%
+// @media screen and (min-width: 380px) and (min-height: 620px)
+//   .main__container
+//     top: 45%
 
-@media screen and (min-width: 700px) and (min-height: 620px)
-  .main__container
-    top: 50%
+// @media screen and (min-width: 700px) and (min-height: 620px)
+//   .main__container
+//     top: 50%
 
-@media screen and (min-width: 1350px) and (min-height: 650px)
-  main
-    display: flex
-  main .main__img
-    width: 1000px
-    height: 554px
-    align-self: center
+// @media screen and (min-width: 1350px) and (min-height: 650px)
+//   main
+//     display: flex
+//   main .main__img
+//     width: 1000px
+//     height: 554px
+//     align-self: center
     
 
-@media screen and (min-width: 1350px) and (min-height: 650px)
-  main .main__img
-    width: 1200px
-    height: -webkit-fill-available
+// @media screen and (min-width: 1350px) and (min-height: 650px)
+//   main .main__img
+//     width: 1200px
+//     height: -webkit-fill-available
   
-  .reserved
-    left: 1.5%
-    width: 500px
-    max-width: 400px
-    font-size: 3.5rem
-  .div__button 
-    left: 19%
-    bottom: 34%
-    & .button
-      height: 4rem
-      font-size: 1.8rem
-      width: 12rem
-  .main__container
-    padding: 3rem
-    max-width: 520px
-    & .entree__title2
-      font-size: 4.5rem
-    & .title
-      font-size: 2.5rem
-    & .description
-      font-size: 2rem
-    & .price
-      font-size: 2rem
-  .arrow_linkRight
-    right: 4rem
+//   .reserved
+//     left: 1.5%
+//     width: 500px
+//     max-width: 400px
+//     font-size: 3.5rem
+//   .div__button 
+//     left: 19%
+//     bottom: 34%
+//     & .button
+//       height: 4rem
+//       font-size: 1.8rem
+//       width: 12rem
+//   .main__container
+//     padding: 3rem
+//     max-width: 520px
+//     & .entree__title2
+//       font-size: 4.5rem
+//     & .title
+//       font-size: 2.5rem
+//     & .description
+//       font-size: 2rem
+//     & .price
+//       font-size: 2rem
+//   .arrow_linkRight
+//     right: 4rem
 
 
-@media screen and (min-width: 380px) and (min-height: 659px)
-  .main__container
-    height: 60vh
+// @media screen and (min-width: 380px) and (min-height: 659px)
+//   .main__container
+//     height: 60vh
 
-@media screen and (min-width: 700px) and (min-height: 659px)
-  .main__container
-    height: 66vh
+// @media screen and (min-width: 700px) and (min-height: 659px)
+//   .main__container
+//     height: 66vh
 
-@media screen and (min-width: 320px) and (min-height: 700px)
-  .main__container
-    height: 60vh
+// @media screen and (min-width: 320px) and (min-height: 700px)
+//   .main__container
+//     height: 60vh
 
-@media screen and (min-width: 380px) and (min-height: 700px)
-  main .main__img
-    background-position: center
-  .main__container
-    top: 50%
-    height: 55vh
+// @media screen and (min-width: 380px) and (min-height: 700px)
+//   main .main__img
+//     background-position: center
+//   .main__container
+//     top: 50%
+//     height: 55vh
 
-@media screen and (min-width: 550px) and (min-height: 700px)
-  main .main__img
-    width: 450px
-    background: url('../../../../assets/images/menu-md.jpg')
-    background-position: right
-    background-repeat: no-repeat
-  .main__container
-    max-width: 340px
-    height: 60vh
-    & .entree__title2
-      font-size: 3.5rem
-    & .title
-      font-size: 2.2rem
-    & .description
-      font-size: 1.7rem
-    & .price
-      font-size: 1.7rem
-  .div__button
-    bottom: -2%
-    & .button
-      height: 3.5rem
-      font-size: 1.2rem
-      width: 10rem
+// @media screen and (min-width: 550px) and (min-height: 700px)
+//   main .main__img
+//     width: 450px
+//     background: url('../../../../assets/images/menu-md.jpg')
+//     background-position: right
+//     background-repeat: no-repeat
+//   .main__container
+//     max-width: 340px
+//     height: 60vh
+//     & .entree__title2
+//       font-size: 3.5rem
+//     & .title
+//       font-size: 2.2rem
+//     & .description
+//       font-size: 1.7rem
+//     & .price
+//       font-size: 1.7rem
+//   .div__button
+//     bottom: -2%
+//     & .button
+//       height: 3.5rem
+//       font-size: 1.2rem
+//       width: 10rem
 
 
-@media screen and (min-width: 700px) and (min-height: 700px)
-  main .main__img
-    width: 550px
-  .main__container
-    top: 51%
-    height: 90vh
-    max-width: 400px
+// @media screen and (min-width: 700px) and (min-height: 700px)
+//   main .main__img
+//     width: 550px
+//   .main__container
+//     top: 51%
+//     height: 90vh
+//     max-width: 400px
 
-@media screen and (min-width: 1350px) and (min-height: 700px)
-  main .main__img
-    width: initial
-  .header
-    height: 10%
-  .header__nav
-    max-width: initial
-  main
-    height: 85%
-    & .main__img
-      background: url('../../../../assets/images/menu-l.jpg')
-      width: 1000px
-      background-size: cover
-      background-repeat: no-repeat
-      background-position: center
-      & .main__container
-        height: 100%
-        left: 60%
-        top: 50%
-        max-height: initial
-        max-width: 500px
-        & .entree__title2
-          font-size: 4.5rem
-        & .title
-          font-size: 3rem
-        & .description
-          font-size: 2.1rem
-        & .price
-          font-size: 2rem
-  .arrow_linkRight
-    right: 1rem
-  .reserved
-    display: block
-    max-width: 300px
-    position: absolute
-    font-size: 3rem
-    text-align: center
-    left: 2.5%
-    top: 38%
-  .div__button
-    position: absolute
-    left: 18%
-    bottom: 35%
+// @media screen and (min-width: 1350px) and (min-height: 700px)
+//   main .main__img
+//     width: initial
+//   .header
+//     height: 10%
+//   .header__nav
+//     max-width: initial
+//   main
+//     height: 85%
+//     & .main__img
+//       background: url('../../../../assets/images/menu-l.jpg')
+//       width: 1000px
+//       background-size: cover
+//       background-repeat: no-repeat
+//       background-position: center
+//       & .main__container
+//         height: 100%
+//         left: 60%
+//         top: 50%
+//         max-height: initial
+//         max-width: 500px
+//         & .entree__title2
+//           font-size: 4.5rem
+//         & .title
+//           font-size: 3rem
+//         & .description
+//           font-size: 2.1rem
+//         & .price
+//           font-size: 2rem
+//   .arrow_linkRight
+//     right: 1rem
+//   .reserved
+//     display: block
+//     max-width: 300px
+//     position: absolute
+//     font-size: 3rem
+//     text-align: center
+//     left: 2.5%
+//     top: 38%
+//   .div__button
+//     position: absolute
+//     left: 18%
+//     bottom: 35%
 
-@media screen and (min-width: 320px) and (min-height: 750px)
-  .main__container
-    height: 50vh
+// @media screen and (min-width: 320px) and (min-height: 750px)
+//   .main__container
+//     height: 50vh
 
-@media screen and (min-width: 550px) and (min-height: 750px)
-  .main__container
-    height: 60vh
+// @media screen and (min-width: 550px) and (min-height: 750px)
+//   .main__container
+//     height: 60vh
 
-@media screen and (min-width: 700px) and (min-height: 750px)
-  .main__container
-    max-height: 490px
-    top: 50%
-    left: 50%
-    height: 100%
-    & .entree__title2
-      font-size: 4rem
-    & .title
-      font-size: 2.5rem
-    & .description
-      font-size: 2rem
-    & .price
-      font-size: 2rem
-  .arrow_linkRight
-    right: -1.7rem
-  .div__button
-    bottom: 0%
+// @media screen and (min-width: 700px) and (min-height: 750px)
+//   .main__container
+//     max-height: 490px
+//     top: 50%
+//     left: 50%
+//     height: 100%
+//     & .entree__title2
+//       font-size: 4rem
+//     & .title
+//       font-size: 2.5rem
+//     & .description
+//       font-size: 2rem
+//     & .price
+//       font-size: 2rem
+//   .arrow_linkRight
+//     right: -1.7rem
+//   .div__button
+//     bottom: 0%
 
-@media screen and (min-width: 1100px) and (min-height: 750px)
-  main
-    display: flex
-    & .main__img
-      height: 99%
-  .header
-    height: 10%
-  .header__nav
-    max-width: initial
-  main
-    height: 85%
-    & .main__img
-      background: url('../../../../assets/images/menu-l.jpg')
-      width: 1000px
-      background-size: cover
-      background-repeat: no-repeat
-      background-position: center
-      & .main__container
-        height: 100%
-        left: 60%
-        top: 50%
-        max-height: initial
-        max-width: 500px
-        & .entree__title2
-          font-size: 4.5rem
-        & .title
-          font-size: 3rem
-        & .description
-          font-size: 2.1rem
-        & .price
-          font-size: 2rem
-  .arrow_linkRight
-    right: 1rem
-  .reserved
-    display: block
-    max-width: 300px
-    position: absolute
-    font-size: 3rem
-    text-align: center
-    left: 2.5%
-    top: 38%
-  .div__button
-    position: absolute
-    left: 18%
-    bottom: 35%
+// @media screen and (min-width: 1100px) and (min-height: 750px)
+//   main
+//     display: flex
+//     & .main__img
+//       height: 99%
+//   .header
+//     height: 10%
+//   .header__nav
+//     max-width: initial
+//   main
+//     height: 85%
+//     & .main__img
+//       background: url('../../../../assets/images/menu-l.jpg')
+//       width: 1000px
+//       background-size: cover
+//       background-repeat: no-repeat
+//       background-position: center
+//       & .main__container
+//         height: 100%
+//         left: 60%
+//         top: 50%
+//         max-height: initial
+//         max-width: 500px
+//         & .entree__title2
+//           font-size: 4.5rem
+//         & .title
+//           font-size: 3rem
+//         & .description
+//           font-size: 2.1rem
+//         & .price
+//           font-size: 2rem
+//   .arrow_linkRight
+//     right: 1rem
+//   .reserved
+//     display: block
+//     max-width: 300px
+//     position: absolute
+//     font-size: 3rem
+//     text-align: center
+//     left: 2.5%
+//     top: 38%
+//   .div__button
+//     position: absolute
+//     left: 18%
+//     bottom: 35%
 
-@media screen and (min-width: 1100px) and (min-height: 850px)
-  main .main__img
-    height: 95%
-    & .main__container 
-      padding: 2rem
-      & .entree__title2
-        font-size: 5rem
-      & .title
-        font-size: 3.1rem
-      & .description
-        font-size: 2.3rem
-      & .price
-        font-size: 2.1rem
-  .div__button
-    bottom: 40%
-    & .button
-      font-size: 1.3rem
+// @media screen and (min-width: 1100px) and (min-height: 850px)
+//   main .main__img
+//     height: 95%
+//     & .main__container 
+//       padding: 2rem
+//       & .entree__title2
+//         font-size: 5rem
+//       & .title
+//         font-size: 3.1rem
+//       & .description
+//         font-size: 2.3rem
+//       & .price
+//         font-size: 2.1rem
+//   .div__button
+//     bottom: 40%
+//     & .button
+//       font-size: 1.3rem
 
-@media screen and (min-width: 1800px) and (min-height: 850px)
-  main .main__img
-    width: 1250px
-    & .main__container
-      max-width: 600px
-      padding: 2rem 4rem
-      & .entree__title2
-        font-size: 6rem
-      & .title
-        font-size: 3rem
-      & .description
-        font-size: 2.5rem
-      & .price
-        font-size: 2.3rem
-  .reserved
-    font-size: 3.2rem
-    max-width: 350px
-    left: 4%
-  .div__button
-    bottom: 37%
-    & .button
-      height: 4rem
-      width: 12rem
-      font-size: 1.8rem
+// @media screen and (min-width: 1800px) and (min-height: 850px)
+//   main .main__img
+//     width: 1250px
+//     & .main__container
+//       max-width: 600px
+//       padding: 2rem 4rem
+//       & .entree__title2
+//         font-size: 6rem
+//       & .title
+//         font-size: 3rem
+//       & .description
+//         font-size: 2.5rem
+//       & .price
+//         font-size: 2.3rem
+//   .reserved
+//     font-size: 3.2rem
+//     max-width: 350px
+//     left: 4%
+//   .div__button
+//     bottom: 37%
+//     & .button
+//       height: 4rem
+//       width: 12rem
+//       font-size: 1.8rem
 
 // END RESPONSIVE 1880px * 874px
