@@ -1,0 +1,40 @@
+{% block Menu %}
+<main> 
+        <section class="main__img">
+            <div class="main__container">
+                <h2 class="entree__title2">Menu</h2>
+                <section class="container__formules">
+                <h3 class="entree__title3 itemColor">Formules du jour</h3>
+                {% if items.entreeanddish > 0 %}
+                    <div class="formule">
+                    <h4 class="itemColor entree__title4">Entrée + plat</h4>
+                    <p class="item__paragraphe itemColor">{{ items.entreeanddish }}€</p>
+                    </div>
+                {% endif %}
+
+                {% if items.dishanddessert > 0 %}
+                    <div class="formule">
+                    <h4 class="itemColor entree__title4">Plat + dessert</h4>
+                    <p class="item__paragraphe itemColor">{{ items.dishanddessert }}€</p>
+                    </div>
+                {% endif %}
+
+                {% if items.entreeanddessert > 0 %}
+                    <div class="formule">
+                    <h4 class="itemColor entree__title4">Entrée + dessert</h4>
+                    <p class="item__paragraphe itemColor">{{ items.entreeanddessert }}€</p>
+                    </div>
+                {% endif %}
+                </section>
+            </div>
+            <a href="/entrees" class="arrow_linkRight"><img src="{{ asset('assets/images/chevron_droit.png')}}" alt="flèche droite"></a>
+            <div class="div__button">
+                <button type="button" class="button">Réservez</button>
+            </div>
+
+            {# DISPLAY WIDTH >=1350px #}
+            <p class="reserved">Réservez votre table dès maintenant</p>
+        </section>
+        
+</main>
+{% endblock %}
