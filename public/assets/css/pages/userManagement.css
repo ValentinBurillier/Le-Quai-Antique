@@ -508,6 +508,7 @@ footer {
   transform: translate(-50%, -50%);
   height: 5%;
   column-gap: 1vw;
+  width: 100%;
 }
 
 @media screen and (min-width: 900px) {
