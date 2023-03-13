@@ -13,7 +13,6 @@ class InterfaceCalendrierController extends AbstractController
     {
         $displayArrowLeft = true;
         return $this->render('interface_calendrier/index.html.twig', [
-            'controller_name' => 'InterfaceCalendrierController',
             'displayArrowLeft' => $displayArrowLeft,
         ]);
     }

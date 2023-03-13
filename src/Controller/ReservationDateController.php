@@ -11,6 +11,9 @@ class ReservationDateController extends AbstractController
     #[Route('/reservation/date', name: 'app_reservation_date')]
     public function index(): Response
     {
-        return $this->render('reservation_date/index.html.twig');
+        $displayArrowLeft = false;
+        return $this->render('reservation_date/index.html.twig', [
+            'displayArrowLeft' => $displayArrowLeft,
+        ]);
     }
 }
