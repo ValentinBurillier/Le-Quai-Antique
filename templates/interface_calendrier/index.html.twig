@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+{# HEAD PART #}
+{% block title %}Interface Admin Calendrier- Le Quai Antique{% endblock %}
+{% block stylesheets %}
+  <link href="{{ asset('assets/css/pages/adminCalendrier.css')}}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{# BODY PART #}
+{% block body %}
+
+    {# IMPORTATION DU HEADER #}
+    {% block modalHeader %}
+        {% include ('global/modals/modalHeaderAdmin.html.twig') %}
+    {% endblock %}
+    {# FIN IMPORTATION #}
+
+    {% block agendaReservationDate %}
+        {% include ('global/modals/modalAgenda.html.twig') %}
+    {% endblock %}
+
+    {# IMPORTATION DU FOOTER #}
+    {% block modalFooter %}
+        {% include ('global/modals/modalFooter.html.twig') %}
+    {% endblock %}
+    {# FIN IMPORTATION #}
+{% endblock %}

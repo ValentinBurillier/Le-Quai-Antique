@@ -1,7 +1,15 @@
 {% block agendaReservationDate %}
 
 <main class="section__agendaContainer">
-  <h2 class="title2__month">Mars 2023</h2>
+    {% if displayArrowLeft %}
+      <div class="main__topContainer">
+      <img src={{ asset('assets/images/arrow_left.png') }} class="firstSection__arrowLeft">
+      <h2 class="title2__month">Mars 2023</h2>
+      </div>
+    {% else %}
+      <h2 class="title2__month">Mars 2023</h2>
+    {% endif %}
+  
   <section class="section__datesContainer">
     <ul class="list__daysOfTheWeek">
       <li><p>L</p></li>

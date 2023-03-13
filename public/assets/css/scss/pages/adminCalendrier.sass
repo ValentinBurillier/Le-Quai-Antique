@@ -1,0 +1,71 @@
+/* RESET */ 
+@import '../base/_reset'
+
+/* IMPORTATION BODY */
+@import '../components/sections/MenuFormules/_body'
+
+/* IMPORTATION BODY BACKGROUND */
+@import '../components/sections/_bodyInterfaceAdmin'
+
+/* IMPORTATION HEADER */
+@import '../components/sections/MenuFormules/_headerMenu'
+
+/* IMPORTATION MAIN */
+@import '../components/sections/MenuFormules/_main'
+
+/* IMPORTATION CALENDAR RESERVATION */
+@import '../components/_agendaReservation'
+
+/* IMPORTATION BOUTON GENERAL*/
+@import '../components/_button'
+
+/* IMPORTATION DU FOOTER */
+@import '../components/sections/MenuFormules/_footerMenu'
+.main__topContainer
+  display: flex
+  justify-content: center
+  align-items: center
+  gap: 1rem
+  & .firstSection__arrowLeft
+    height: 30px
+    width: 30px
+.div__button
+  height: 10%
+  display: flex
+  justify-content: center
+  align-items: center
+  & .button
+    font-size: 1.3rem
+    width: 10rem
+
+@media screen and (min-width: 600px) and (min-height: 568px)
+  .main__topContainer
+    gap: 2rem
+    & .firstSection__arrowLeft
+      height: 45px
+      width: 45px
+
+@media screen and (min-width: 1350px) and (min-height: 568px)
+  .header
+    padding: 10px
+    width: 100vw
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 10%
+    & .header__nav
+      width: 800px
+      max-width: initial
+      & .nav__div
+        justify-content: space-between
+        width: 100%
+        margin-bottom: none
+  .main__topContainer
+    gap: 5rem
+
+@media screen and (min-width: 1350px) and (min-height: 874px)
+  .main__topContainer
+    gap: 5rem
+    & .firstSection__arrowLeft
+      height: 55px
+      width: 55px
