@@ -27,13 +27,21 @@
                 {% endif %}
                 </section>
             </div>
-            <a href="/entrees" class="arrow_linkRight"><img src="{{ asset('assets/images/chevron_droit.png')}}" alt="flèche droite"></a>
-            <div class="div__button">
-                <button type="button" class="button">Réservez</button>
-            </div>
 
-            {# DISPLAY WIDTH >=1350px #}
-            <p class="reserved">Réservez votre table dès maintenant</p>
+             {% block ArrowLinks %}
+                {% include 'global/modals/modalArrowLinks.html.twig' %}
+            {% endblock %}
+
+            {% block ReservedText %}
+                {% include 'global/modals/modalReservedText.html.twig' %}
+            {% endblock %}
+            
+           {% block button %}
+                {% set textbtn = 'Réservez' %}
+                {% include 'global/modals/modalButton.html.twig' %}
+            {% endblock %}
+
+            
         </section>
         
 </main>

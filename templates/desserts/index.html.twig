@@ -7,13 +7,12 @@
 {% endblock %}
 
 {% block body %}
-
     {% block modalHeader %} 
         {% include ('global/modals/modalHeader.html.twig') %} 
     {% endblock %}
 
     {% block Menu %}
-        {% include ('global/modals/modalDesserts.html.twig') %}
+        {% include ('global/modals/modalMenu.html.twig') %}
     {% endblock %}
 
     {# IMPORTATION DU FOOTER #}
@@ -21,5 +20,4 @@
         {% include ('global/modals/modalFooter.html.twig') %}
     {% endblock %}
     {# FIN IMPORTATION #}
-
 {% endblock %}

@@ -1,0 +1,14 @@
+{% block ArrowLinks %}
+
+{% if (displayArrowLeft == true) %}
+<a href="{{ linkLeft }}" class="arrow_linkLeft">
+  <img src="{{ asset('assets/images/chevron-gauche.png')}}" alt="flèche gauche">
+</a>
+{% endif %}
+
+{% if (displayArrowRight == true) %}
+<a href="{{ linkRight }}" class="arrow_linkRight">
+  <img src="{{ asset('assets/images/chevron_droit.png')}}" alt="flèche droite">
+</a>
+{% endif %}
+{% endblock %}

@@ -20,6 +20,13 @@ li {
 
 /* IMPORTATION BODY */
 body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* IMPORTATION BODY BACKGROUND */
+body {
   background: url("../../images/background/bg-small.jpg");
 }
 
@@ -504,7 +511,100 @@ h2 {
     width: 100vw;
   }
 }
-/* IMPORTATION BOUTON */
+/* IMPORTATION ARROWLEFT*/
+.arrow_linkLeft {
+  position: absolute;
+  left: 1.5rem;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: auto;
+  width: auto;
+}
+.arrow_linkLeft img {
+  height: 3rem;
+  width: 3rem;
+  object-fit: contain;
+}
+
+@media screen and (min-width: 350px) and (min-height: 568px) {
+  .arrow_linkLeft {
+    left: 2rem;
+  }
+}
+@media screen and (min-width: 380px) and (min-height: 568px) {
+  .arrow_linkLeft {
+    left: 2.5rem;
+  }
+}
+@media screen and (min-width: 700px) and (min-height: 568px) {
+  .arrow_linkLeft {
+    left: 3rem;
+  }
+  .arrow_linkLeft img {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+@media screen and (min-width: 1350px) and (min-height: 568px) {
+  .arrow_linkLeft {
+    left: 1.1rem;
+  }
+}
+/* IMPORTATION RESERVED PARAGRAPHE */
+.reserved {
+  display: none;
+}
+
+@media screen and (min-width: 1350px) and (min-height: 568px) {
+  .reserved {
+    display: block;
+    max-width: 300px;
+    position: absolute;
+    font-size: 3rem;
+    text-align: center;
+    left: 3.5%;
+    top: 38%;
+  }
+}
+@media screen and (min-width: 1350px) and (min-height: 650px) {
+  .reserved {
+    left: 1.5%;
+    width: 500px;
+    max-width: 400px;
+    font-size: 3.5rem;
+  }
+}
+@media screen and (min-width: 1350px) and (min-height: 700px) {
+  .reserved {
+    display: block;
+    max-width: 300px;
+    position: absolute;
+    font-size: 3rem;
+    text-align: center;
+    left: 2.5%;
+    top: 38%;
+  }
+}
+@media screen and (min-width: 1100px) and (min-height: 750px) {
+  .reserved {
+    display: block;
+    max-width: 300px;
+    position: absolute;
+    font-size: 3rem;
+    text-align: center;
+    left: 2.5%;
+    top: 38%;
+  }
+}
+@media screen and (min-width: 1800px) and (min-height: 850px) {
+  .reserved {
+    font-size: 3.2rem;
+    max-width: 350px;
+    left: 4%;
+  }
+}
+/* IMPORTATION PERSONALISED BUTTON */
+/* IMPORTATION BOUTON GENERAL*/
 .button {
   height: 70%;
   width: 30%;
@@ -515,6 +615,136 @@ h2 {
   font-weight: bold;
 }
 
+.div__button {
+  width: min-content;
+  position: absolute;
+  bottom: -3.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.div__button .button {
+  height: 3rem;
+  font-size: 1.3rem;
+  width: 9rem;
+}
+
+@media screen and (min-width: 700px) and (min-height: 568px) {
+  .div__button {
+    transform: translate(-50%, 0%);
+    height: auto;
+    bottom: 0%;
+  }
+  .div__button .button {
+    height: 3.5rem;
+    font-size: 1.3rem;
+    width: 10rem;
+  }
+}
+@media screen and (min-width: 1350px) and (min-height: 568px) {
+  .div__button {
+    position: absolute;
+    left: 18.5%;
+    bottom: 32%;
+  }
+}
+@media screen and (min-width: 1350px) and (min-height: 650px) {
+  .div__button {
+    left: 19%;
+    bottom: 34%;
+  }
+  .div__button .button {
+    height: 4rem;
+    font-size: 1.8rem;
+    width: 12rem;
+  }
+}
+@media screen and (min-width: 550px) and (min-height: 700px) {
+  .div__button {
+    bottom: 2%;
+  }
+  .div__button .button {
+    height: 3.5rem;
+    font-size: 1.2rem;
+    width: 10rem;
+  }
+}
+@media screen and (min-width: 700px) and (min-height: 700px) {
+  .div__button {
+    bottom: 0%;
+  }
+}
+@media screen and (min-width: 1350px) and (min-height: 700px) {
+  .div__button {
+    position: absolute;
+    left: 18%;
+    bottom: 35%;
+  }
+  .div__button .button {
+    height: 4rem;
+    font-size: 1.8rem;
+    width: 13rem;
+  }
+}
+@media screen and (min-width: 320px) and (min-height: 750px) {
+  .div__button {
+    bottom: 0%;
+  }
+}
+@media screen and (min-width: 550px) and (min-height: 750px) {
+  .div__button {
+    bottom: -3%;
+  }
+}
+@media screen and (min-width: 700px) and (min-height: 750px) {
+  .div__button {
+    bottom: 0%;
+  }
+}
+@media screen and (min-width: 1100px) and (min-height: 750px) {
+  .div__button {
+    position: absolute;
+    left: 18%;
+    bottom: 35%;
+  }
+  .div__button .button {
+    height: 4rem;
+    font-size: 1.8rem;
+    width: 13rem;
+  }
+}
+@media screen and (min-width: 550px) and (min-height: 850px) {
+  .div__button {
+    bottom: 0%;
+  }
+  .div__button .button {
+    height: 3.5rem;
+    font-size: 1.5rem;
+    width: 11rem;
+  }
+}
+@media screen and (min-width: 700px) and (min-height: 850px) {
+  .div__button {
+    bottom: 2%;
+  }
+}
+@media screen and (min-width: 1100px) and (min-height: 850px) {
+  .div__button {
+    bottom: 40%;
+  }
+  .div__button .button {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 1800px) and (min-height: 850px) {
+  .div__button {
+    bottom: 37%;
+  }
+  .div__button .button {
+    height: 4rem;
+    width: 12rem;
+    font-size: 1.8rem;
+  }
+}
 /* FOOTER PART */
 footer {
   display: flex;
@@ -529,6 +759,11 @@ footer {
   width: 100%;
 }
 
+@media screen and (min-width: 650px) and (min-height: 568px) {
+  footer a {
+    font-size: 1.2rem;
+  }
+}
 @media screen and (min-width: 900px) {
   footer a {
     font-size: 2vw;
@@ -540,12 +775,6 @@ footer {
   }
 }
 /* BASES CONFIGURATION 320 * 568px */
-body {
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-}
-
 main {
   height: 80%;
   width: 100vw;
@@ -655,54 +884,11 @@ ul {
   letter-spacing: 1px;
 }
 
-.reserved {
-  display: none;
-}
-
-.div__button {
-  width: min-content;
-  position: absolute;
-  bottom: 0%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.div__button .button {
-  height: auto;
-  font-size: 1.1rem;
-  width: 8rem;
-}
-
-.arrow_linkLeft {
-  position: absolute;
-  left: 1.5rem;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  height: auto;
-  width: auto;
-}
-.arrow_linkLeft img {
-  height: 3rem;
-  width: 3rem;
-  object-fit: contain;
-}
-
-.arrow_linkRight {
-  display: none;
-}
-
-@media screen and (min-width: 350px) and (min-height: 568px) {
-  .arrow_linkLeft {
-    left: 2rem;
-  }
-}
 @media screen and (min-width: 380px) and (min-height: 568px) {
   main .main__img {
     background-position: initial;
     margin: auto;
     width: 375px;
-  }
-  .arrow_linkLeft {
-    left: 2.5rem;
   }
 }
 @media screen and (min-width: 650px) and (min-height: 568px) {
@@ -739,22 +925,6 @@ ul {
   .wines__paragraphe {
     font-size: 1.8rem;
   }
-  .arrow_linkLeft {
-    left: 3rem;
-  }
-  .arrow_linkLeft img {
-    width: 5rem;
-    height: 5rem;
-  }
-  .div__button {
-    transform: translate(-50%, 0%);
-    height: auto;
-  }
-  .div__button .button {
-    height: 3.5rem;
-    font-size: 1.3rem;
-    width: 10rem;
-  }
   footer a {
     font-size: 1.2rem;
   }
@@ -782,23 +952,6 @@ ul {
     top: 50%;
     max-height: initial;
   }
-  .arrow_linkLeft {
-    left: 1.1rem;
-  }
-  .reserved {
-    display: block;
-    max-width: 300px;
-    position: absolute;
-    font-size: 3rem;
-    text-align: center;
-    left: 3.5%;
-    top: 38%;
-  }
-  .div__button {
-    position: absolute;
-    left: 18.5%;
-    bottom: 32%;
-  }
 }
 @media screen and (min-width: 380px) and (min-height: 620px) {
   .main__container {
@@ -810,16 +963,6 @@ ul {
     top: 50%;
   }
 }
-@media screen and (min-width: 380px) and (min-height: 650px) {
-  .div__button {
-    bottom: 0%;
-  }
-  .div__button .button {
-    height: 3rem;
-    font-size: 1.3rem;
-    width: 10rem;
-  }
-}
 @media screen and (min-width: 1350px) and (min-height: 650px) {
   main {
     display: flex;
@@ -828,9 +971,6 @@ ul {
     width: 1000px;
     height: 554px;
     align-self: center;
-  }
-  .div__button {
-    bottom: 32%;
   }
 }
 @media screen and (min-width: 380px) and (min-height: 659px) {
@@ -846,14 +986,6 @@ ul {
 @media screen and (min-width: 320px) and (min-height: 700px) {
   .main__container {
     height: 60vh;
-  }
-  .div__button {
-    bottom: -2%;
-  }
-  .div__button .button {
-    height: 3rem;
-    font-size: 1.3rem;
-    width: 10rem;
   }
 }
 @media screen and (min-width: 380px) and (min-height: 700px) {
@@ -886,19 +1018,6 @@ ul {
   .wines__paragraphe {
     font-size: 1.8rem;
   }
-  .div__button {
-    bottom: 1%;
-  }
-  .div__button .button {
-    height: 3.5rem;
-    font-size: 1.2rem;
-    width: 10rem;
-  }
-}
-@media screen and (min-width: 650px) and (min-height: 700px) {
-  .div__button {
-    bottom: 5%;
-  }
 }
 @media screen and (min-width: 700px) and (min-height: 700px) {
   main .main__img {
@@ -908,9 +1027,6 @@ ul {
     top: 51%;
     height: 90vh;
     max-width: 400px;
-  }
-  .div__button {
-    bottom: -1%;
   }
 }
 @media screen and (min-width: 1350px) and (min-height: 700px) {
@@ -956,23 +1072,6 @@ ul {
   .price75 {
     font-size: 2.2rem;
   }
-  .arrow_linkRight {
-    right: 1rem;
-  }
-  .reserved {
-    display: block;
-    max-width: 300px;
-    position: absolute;
-    font-size: 3rem;
-    text-align: center;
-    left: 2.5%;
-    top: 38%;
-  }
-  .div__button {
-    position: absolute;
-    left: 18%;
-    bottom: 35%;
-  }
 }
 @media screen and (min-width: 1100px) and (min-height: 750px) {
   main {
@@ -1011,38 +1110,6 @@ ul {
   .wines__paragraphe {
     font-size: 2.2rem;
   }
-  .arrow_linkRight {
-    right: 1rem;
-  }
-  .reserved {
-    display: block;
-    max-width: 300px;
-    position: absolute;
-    font-size: 3rem;
-    text-align: center;
-    left: 2.5%;
-    top: 38%;
-  }
-  .div__button {
-    position: absolute;
-    left: 18%;
-    bottom: 35%;
-  }
-}
-@media screen and (min-width: 320px) and (min-height: 800px) {
-  .div__button {
-    bottom: 0%;
-  }
-}
-@media screen and (min-width: 550px) and (min-height: 800px) {
-  .div__button {
-    bottom: -1%;
-  }
-}
-@media screen and (min-width: 650px) and (min-height: 800px) {
-  .div__button {
-    bottom: 2%;
-  }
 }
 @media screen and (min-width: 1100px) and (min-height: 800px) {
   .main__container .entree__title2 {
@@ -1050,13 +1117,6 @@ ul {
   }
   .wines__paragraphe {
     font-size: 2.5rem;
-  }
-  .div__button {
-    bottom: 40%;
-  }
-  .div__button .button {
-    font-size: 1.5rem;
-    width: 11rem;
   }
 }
 @media screen and (min-width: 1100px) and (min-height: 850px) {
@@ -1078,12 +1138,6 @@ ul {
   main .main__img .main__container .price {
     font-size: 2.1rem;
   }
-  .div__button {
-    bottom: 40%;
-  }
-  .div__button .button {
-    font-size: 1.3rem;
-  }
 }
 @media screen and (min-width: 1800px) and (min-height: 850px) {
   main .main__img {
@@ -1104,18 +1158,5 @@ ul {
   }
   main .main__img .main__container .price {
     font-size: 2.3rem;
-  }
-  .reserved {
-    font-size: 3.2rem;
-    max-width: 350px;
-    left: 4%;
-  }
-  .div__button {
-    bottom: 37%;
-  }
-  .div__button .button {
-    height: 4rem;
-    width: 12rem;
-    font-size: 1.8rem;
   }
 }

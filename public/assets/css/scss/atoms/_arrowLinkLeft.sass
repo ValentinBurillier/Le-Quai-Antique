@@ -1,0 +1,30 @@
+.arrow_linkLeft
+  position: absolute
+  left: 1.5rem
+  top: 50%
+  transform: translate(-50%, -50%)
+  height: auto
+  width: auto
+  & img
+    height: 3rem
+    width: 3rem
+    object-fit: contain
+
+@media screen and (min-width: 350px) and (min-height: 568px)
+  .arrow_linkLeft
+    left: 2rem
+
+@media screen and (min-width: 380px) and (min-height: 568px)
+  .arrow_linkLeft
+    left: 2.5rem
+
+@media screen and (min-width: 700px) and (min-height: 568px)
+  .arrow_linkLeft
+    left: 3rem
+    & img
+      width: 5rem
+      height: 5rem
+
+@media screen and (min-width: 1350px) and (min-height: 568px)
+  .arrow_linkLeft
+    left: 1.1rem

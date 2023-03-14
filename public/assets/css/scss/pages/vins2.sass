@@ -1,21 +1,28 @@
 /* RESET */ 
 @import '../base/_reset'
+
 /* IMPORTATION BODY */
-@import '../components/sections/_body'
+@import '../layout/_bodyMenu'
+
+/* IMPORTATION BODY BACKGROUND */
+@import '../components/sections/_bodyBg'
+
 /* IMPORTATION HEADER */
 @import '../components/sections/_header'
 
-/* IMPORTATION BOUTON */
-@import '../components/_button'
+/* IMPORTATION ARROWLEFT*/
+@import '../atoms/_arrowLinkLeft'
+
+/* IMPORTATION RESERVED PARAGRAPHE */
+@import '../components/sections/MenuFormules/_reserved'
+
+/* IMPORTATION PERSONALISED BUTTON */
+@import '../components/sections/MenuFormules/_btn'
 
 /* FOOTER PART */
 @import '../components/sections/_footer'
 
 /* BASES CONFIGURATION 320 * 568px */
-body
-  height: 100vh
-  width: 100vw
-  overflow: hidden
 
 main
   height: 80%
@@ -67,7 +74,6 @@ main
     flex-direction: column
     justify-content: space-evenly
 
-
 .wine__List
   display: flex
   justify-content: space-between
@@ -82,7 +88,6 @@ main
   font-size: 1.5rem
   letter-spacing: 1px
 
-
 ul
   display: flex
 
@@ -96,17 +101,6 @@ ul
 .wineName
   color: #AD5E00
 
-
-
-
-
-
-
-
-
-
-
-
 .title
   color: black
   font-size: 1.6rem
@@ -118,44 +112,12 @@ ul
   color: black
   font-size: 1.2rem
   letter-spacing: 1px
-.reserved
-  display: none
-.div__button
-  width: min-content
-  position: absolute
-  bottom: 0%
-  left: 50%
-  transform: translate(-50%, -50%)
-  & .button
-    height: auto
-    font-size: 1.1rem
-    width: 8rem
-
-.arrow_linkLeft
-  position: absolute
-  left: 1.5rem
-  top: 50%
-  transform: translate(-50%, -50%)
-  height: auto
-  width: auto
-  & img
-    height: 3rem
-    width: 3rem
-    object-fit: contain
-.arrow_linkRight
-  display: none
-
-@media screen and (min-width: 350px) and (min-height: 568px)
-  .arrow_linkLeft
-    left: 2rem
 
 @media screen and (min-width: 380px) and (min-height: 568px)
   main .main__img
     background-position: initial
     margin: auto
     width: 375px
-  .arrow_linkLeft
-    left: 2.5rem
 
 @media screen and (min-width: 650px) and (min-height: 568px)
   h1
@@ -182,18 +144,6 @@ ul
     font-size: 2rem
   .wines__paragraphe
     font-size: 1.8rem
-  .arrow_linkLeft
-    left: 3rem
-    & img
-      width: 5rem
-      height: 5rem
-  .div__button
-    transform: translate(-50%, 0%)
-    height: auto
-    & .button
-      height: 3.5rem
-      font-size: 1.3rem
-      width: 10rem
   footer a
     font-size: 1.2rem
 
@@ -215,20 +165,6 @@ ul
         left: 60%
         top: 50%
         max-height: initial
-  .arrow_linkLeft
-    left: 1.1rem
-  .reserved
-    display: block
-    max-width: 300px
-    position: absolute
-    font-size: 3rem
-    text-align: center
-    left: 3.5%
-    top: 38%
-  .div__button
-    position: absolute
-    left: 18.5%
-    bottom: 32%
   
 @media screen and (min-width: 380px) and (min-height: 620px)
   .main__container
@@ -237,14 +173,6 @@ ul
   .main__container
     top: 50%
 
-@media screen and (min-width: 380px) and (min-height: 650px)
-  .div__button
-    bottom: 0%
-    & .button
-      height: 3rem
-      font-size: 1.3rem
-      width: 10rem
-
 @media screen and (min-width: 1350px) and (min-height: 650px)
   main
     display: flex
@@ -252,8 +180,6 @@ ul
     width: 1000px
     height: 554px
     align-self: center
-  .div__button
-    bottom: 32%
 
 @media screen and (min-width: 380px) and (min-height: 659px)
   .main__container
@@ -266,12 +192,6 @@ ul
 @media screen and (min-width: 320px) and (min-height: 700px)
   .main__container
     height: 60vh
-  .div__button
-    bottom: -2%
-    & .button
-      height: 3rem
-      font-size: 1.3rem
-      width: 10rem
 
 @media screen and (min-width: 380px) and (min-height: 700px)
   main .main__img
@@ -296,16 +216,6 @@ ul
     font-size: 2rem
   .wines__paragraphe
     font-size: 1.8rem
-  .div__button
-    bottom: 1%
-    & .button
-      height: 3.5rem
-      font-size: 1.2rem
-      width: 10rem
-
-@media screen and (min-width: 650px) and (min-height: 700px)
-  .div__button
-    bottom: 5%
 
 @media screen and (min-width: 700px) and (min-height: 700px)
   main .main__img
@@ -314,8 +224,6 @@ ul
     top: 51%
     height: 90vh
     max-width: 400px
-  .div__button
-    bottom: -1%
 
 @media screen and (min-width: 1350px) and (min-height: 700px)
   main .main__img
@@ -349,20 +257,6 @@ ul
     font-size: 2.2rem
   .price75
     font-size: 2.2rem
-  .arrow_linkRight
-    right: 1rem
-  .reserved
-    display: block
-    max-width: 300px
-    position: absolute
-    font-size: 3rem
-    text-align: center
-    left: 2.5%
-    top: 38%
-  .div__button
-    position: absolute
-    left: 18%
-    bottom: 35%
 
 @media screen and (min-width: 1100px) and (min-height: 750px)
   main
@@ -392,43 +286,12 @@ ul
     font-size: 3rem
   .wines__paragraphe
     font-size: 2.2rem
-  .arrow_linkRight
-    right: 1rem
-  .reserved
-    display: block
-    max-width: 300px
-    position: absolute
-    font-size: 3rem
-    text-align: center
-    left: 2.5%
-    top: 38%
-  .div__button
-    position: absolute
-    left: 18%
-    bottom: 35%
-
-@media screen and ( min-width: 320px) and (min-height: 800px)
-  .div__button
-    bottom: 0%
-
-@media screen and ( min-width: 550px) and (min-height: 800px)
-  .div__button
-    bottom: -1%
-
-@media screen and ( min-width: 650px) and (min-height: 800px)
-  .div__button
-    bottom: 2%
   
 @media screen and (min-width: 1100px) and (min-height: 800px)
   .main__container .entree__title2
     font-size: 4.5rem
   .wines__paragraphe
     font-size: 2.5rem
-  .div__button
-    bottom: 40%
-    & .button
-      font-size: 1.5rem
-      width: 11rem
 
 @media screen and (min-width: 1100px) and (min-height: 850px)
   main .main__img
@@ -443,10 +306,6 @@ ul
         font-size: 2.3rem
       & .price
         font-size: 2.1rem
-  .div__button
-    bottom: 40%
-    & .button
-      font-size: 1.3rem
 
 @media screen and (min-width: 1800px) and (min-height: 850px)
   main .main__img
@@ -462,15 +321,5 @@ ul
         font-size: 2.5rem
       & .price
         font-size: 2.3rem
-  .reserved
-    font-size: 3.2rem
-    max-width: 350px
-    left: 4%
-  .div__button
-    bottom: 37%
-    & .button
-      height: 4rem
-      width: 12rem
-      font-size: 1.8rem
 
 // END RESPONSIVE 1880px * 874px

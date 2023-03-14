@@ -1,0 +1,10 @@
+{% block MenuCard %}
+<div class="main__container">
+    <h2 class="entree__title2">{{ title }}</h2>
+    {% for item in items %}
+        <p class="entree__paragraphe title">{{ item.title }}</p>
+        <p class="entree__paragraphe description">{{ item.description }}</p>
+        <p class="entree__paragraphe price">{{ item.price }}€</p>
+    {% endfor %}
+</div>
+{% endblock %}

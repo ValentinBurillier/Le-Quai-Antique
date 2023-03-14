@@ -1,8 +1,3 @@
-{% extends 'global/modals/modalMenu.html.twig' %}
-{% block title %}Vins - Le Quai Antique{% endblock %}
-{% block stylesheets %}
-  <link href="{{ asset('assets/css/pages/vins2.css')}}" rel="stylesheet" type="text/css">
-{% endblock %}
 {% block Menu %}
 <main> 
         <section class="main__img">
@@ -88,15 +83,18 @@
                     </section>
      
             </div>
-            <a href="#" class="arrow_linkLeft"><img src="{{ asset('assets/images/chevron-gauche.png')}}" alt="flèche gauche"></a>
-            <a href="#" class="arrow_linkRight"><img src="{{ asset('assets/images/chevron_droit.png')}}" alt="flèche droite"></a>
-            <div class="div__button">
-                <button type="button" class="button">Réservez</button>
-            </div>
+            {% block ArrowLinks %}
+                {% include 'global/modals/modalArrowLinks.html.twig' %}
+            {% endblock %}
 
-            {# DISPLAY WIDTH >=1350px #}
-            <p class="reserved">Réservez votre table dès maintenant</p>
+            {% block ReservedText %}
+                {% include 'global/modals/modalReservedText.html.twig' %}
+            {% endblock %}
+            
+            {% block button %}
+                {% set textbtn = 'Réservez' %}
+                {% include 'global/modals/modalButton.html.twig' %}
+            {% endblock %}
         </section>
-        
 </main>
 {% endblock %}
