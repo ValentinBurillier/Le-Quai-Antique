@@ -11,7 +11,7 @@
 @import '../components/sections/MenuFormules/_headerMenu'
 
 /* IMPORT MAIN PADDING */
-@import '../layout/mainPadding'
+@import '../layout/_mainPadding'
 
 /* IMPORTATION BOUTON MENU PAGE */
 @import '../components/sections/MenuFormules/_btn'
@@ -23,10 +23,9 @@
 @import '../layout/_totalOpacity'
 .main
   height: 80%
-
 .section__topContainer
   display: flex
-  height: 30%
+  height: 20%
   gap: 1rem
 .section__bottomContainer
   height: 70%
@@ -51,3 +50,73 @@
   height: 75%
 .bottomContainer__title2
   height: 25%
+.div__button
+  height: 10%
+@media screen and (min-width: 400px) and (min-height: 568px)
+  .section__topContainer
+    display: flex
+    justify-content: space-between
+    align-items: center
+    & .topContainer__title2
+      font-size: 2.2rem
+@media screen and (min-width: 450px) and (min-height: 568px)
+  .section__topContainer .topContainer__title2
+    font-size: 2.4rem
+  .input__number
+    width: 60px
+    height: 60px
+
+@media screen and (min-width: 700px) and (min-height: 568px)
+  .section__topContainer .topContainer__title2
+    font-size: 3.2rem
+    padding: 10px
+  .input__number
+    width: 70px
+    height: 70px
+  .bottomContainer__title2
+    font-size: 2.7rem
+    height: 30%
+  .input__textArea
+    height: 70%
+  .div__button
+    position: initial
+    margin: auto
+    transform: initial
+
+@media screen and (min-width: 1350px) and (min-height: 568px)
+  .main
+    height: 85%
+  .section__topContainer
+    height: 15%
+  .section__bottomContainer
+    height: 75%
+  .div__button .button
+    height: 4.2rem
+    font-size: 1.7rem
+    width: 13rem
+
+@media screen and (min-width: 320px) and (min-height: 650px)
+  .section__bottomContainer
+    justify-content: space-evenly
+  .input__textArea
+    height: 50%
+@media screen and (min-width: 320px) and (min-height: 750px)
+  .main
+    display: flex
+    justify-content: center
+
+@media screen and (min-width: 1100px) and (min-height: 750px)
+  .main
+    height: 85%
+
+@media screen and (min-width: 1350px) and (min-height: 750px)
+  .bottomContainer__title2
+    font-size: 3rem
+
+@media screen and (min-width: 450px) and (min-height: 800px)
+  .bottomContainer__title2
+    font-size: 2.3rem
+
+@media screen and (min-width: 1350px) and (min-height: 800px)
+  .bottomContainer__title2
+    font-size: 3.2rem

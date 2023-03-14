@@ -551,11 +551,63 @@ h2 {
   }
 }
 /* IMPORT MAIN PADDING */
-.main__Container {
+.main__container {
   height: 100%;
   padding: 2rem;
+  max-width: 320px;
+  margin: auto;
 }
 
+@media screen and (min-width: 400px) and (min-height: 568px) {
+  .main__container {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 2rem;
+  }
+}
+@media screen and (min-width: 450px) and (min-height: 568px) {
+  .main__container {
+    max-width: 370px;
+  }
+}
+@media screen and (min-width: 700px) and (min-height: 568px) {
+  .main__container {
+    max-width: 500px;
+    row-gap: 1rem;
+  }
+}
+@media screen and (min-width: 1350px) and (min-height: 568px) {
+  .main__container {
+    max-width: 700px;
+  }
+}
+@media screen and (min-width: 1350px) and (min-height: 650px) {
+  .main__container {
+    max-width: 500px;
+  }
+}
+@media screen and (min-width: 320px) and (min-height: 750px) {
+  .main__container {
+    height: 80%;
+  }
+}
+@media screen and (min-width: 700px) and (min-height: 750px) {
+  .main__container {
+    height: 100%;
+  }
+}
+@media screen and (min-width: 1350px) and (min-height: 750px) {
+  .main__container {
+    max-width: 700px;
+  }
+}
+@media screen and (min-width: 450px) and (min-height: 800px) {
+  .main__container {
+    height: 100%;
+  }
+}
 /* IMPORTATION BOUTON MENU PAGE */
 /* IMPORTATION BOUTON GENERAL*/
 .button {
@@ -744,7 +796,7 @@ footer {
 
 .section__topContainer {
   display: flex;
-  height: 30%;
+  height: 20%;
   gap: 1rem;
 }
 
@@ -781,4 +833,100 @@ footer {
 
 .bottomContainer__title2 {
   height: 25%;
+}
+
+.div__button {
+  height: 10%;
+}
+
+@media screen and (min-width: 400px) and (min-height: 568px) {
+  .section__topContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .section__topContainer .topContainer__title2 {
+    font-size: 2.2rem;
+  }
+}
+@media screen and (min-width: 450px) and (min-height: 568px) {
+  .section__topContainer .topContainer__title2 {
+    font-size: 2.4rem;
+  }
+  .input__number {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media screen and (min-width: 700px) and (min-height: 568px) {
+  .section__topContainer .topContainer__title2 {
+    font-size: 3.2rem;
+    padding: 10px;
+  }
+  .input__number {
+    width: 70px;
+    height: 70px;
+  }
+  .bottomContainer__title2 {
+    font-size: 2.7rem;
+    height: 30%;
+  }
+  .input__textArea {
+    height: 70%;
+  }
+  .div__button {
+    position: initial;
+    margin: auto;
+    transform: initial;
+  }
+}
+@media screen and (min-width: 1350px) and (min-height: 568px) {
+  .main {
+    height: 85%;
+  }
+  .section__topContainer {
+    height: 15%;
+  }
+  .section__bottomContainer {
+    height: 75%;
+  }
+  .div__button .button {
+    height: 4.2rem;
+    font-size: 1.7rem;
+    width: 13rem;
+  }
+}
+@media screen and (min-width: 320px) and (min-height: 650px) {
+  .section__bottomContainer {
+    justify-content: space-evenly;
+  }
+  .input__textArea {
+    height: 50%;
+  }
+}
+@media screen and (min-width: 320px) and (min-height: 750px) {
+  .main {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1100px) and (min-height: 750px) {
+  .main {
+    height: 85%;
+  }
+}
+@media screen and (min-width: 1350px) and (min-height: 750px) {
+  .bottomContainer__title2 {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 450px) and (min-height: 800px) {
+  .bottomContainer__title2 {
+    font-size: 2.3rem;
+  }
+}
+@media screen and (min-width: 1350px) and (min-height: 800px) {
+  .bottomContainer__title2 {
+    font-size: 3.2rem;
+  }
 }
