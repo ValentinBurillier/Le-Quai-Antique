@@ -15,16 +15,16 @@
         <section class="main__container">
             <div class="section__topContainer">
                 <h2 class="topContainer__title2 title2">Nombre de personnes</h2>
-                <input type="" class="input__number input">
+                <input type="number" class="input__number input" id="number" value="2">
             </div>
             <div class="section__bottomContainer">
                 <h2 class="bottomContainer__title2 title2">Allergies vous concernant et votre / vos convive(s)</h2>
-                <input type="Textarea" class="input__textArea input">
+                <input type="text" class="input__textArea input" id="allergy">
             </div>
+            {# BUTTON IMPORTATION #}
             {% block button %}
-            <div class="div__button">
-                <button type="button" class="button" onClick="window.location.href='{{ linkButton }}'">{{ textbtn }}</button>
-            </div>
+            {% set textbtn = 'Continuer' %}
+              {% include ('global/modals/modalButton.html.twig') %}
             {% endblock %}
         </section>
     </main>
@@ -34,4 +34,5 @@
     {% endblock %}
     {# FIN IMPORTATION #}
 
+<script src="{{ asset('assets/js/details_reservation.js')}}"></script>
 {% endblock %}

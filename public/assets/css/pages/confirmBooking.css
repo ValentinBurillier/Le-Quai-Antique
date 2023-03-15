@@ -529,6 +529,11 @@ footer {
   width: 100%;
 }
 
+@media screen and (min-width: 650px) and (min-height: 568px) {
+  footer a {
+    font-size: 1.2rem;
+  }
+}
 @media screen and (min-width: 900px) {
   footer a {
     font-size: 2vw;
@@ -578,6 +583,7 @@ form {
   align-items: center;
   font-weight: bold;
   margin: 0 auto;
+  color: black;
 }
 
 .form__input::placeholder {

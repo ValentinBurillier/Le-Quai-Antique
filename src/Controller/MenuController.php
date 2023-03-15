@@ -12,7 +12,7 @@ class MenuController extends AbstractController
 {
     #[Route('/menu', name: 'app_menu')]
     public function index(FormulasRepository $formulasRepository): Response
-    {   
+    {   $disabled = 'enable';
         $linkLeft = null;
         $linkRight = "/entrees";
         $linkButton = "/reservation/date";
@@ -28,6 +28,7 @@ class MenuController extends AbstractController
             'displayArrowLeft' => $displayArrowLeft,
             'displayArrowRight' => $displayArrowRight,
             'items' => $items,
+            'disabled' => $disabled,
         ]);
     }
 }

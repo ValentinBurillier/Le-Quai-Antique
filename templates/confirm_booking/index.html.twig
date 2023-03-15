@@ -21,16 +21,17 @@
         {% include ('global/modals/modalHeader.html.twig') %}
     {% endblock %}
     {# FIN IMPORTATION #}
-
     {# START MAIN#}
     <main>
-      <form method="POST" action="felicitation.php" class="form">
+      {# ESPACE FORMULAIRE #}
+      {{ form_start(form) }}
         <h2 class="form__title2">Confirmer la réservation</h2>
-        <input class="form__input" type="text" name="lastName" placeholder="Nom">
-        <input class="form__input" type="text" name="firstName" placeholder="Prenom">
-        <input class="form__input" type="tel" name="phone" placeholder="Telephone">
-        <input class="form__input" type="email" name="email" placeholder="Email">
+        {{ form_widget(form.lastName, {'attr': {'class': 'form__input'}}) }}
+        {{ form_widget(form.firstName, {'attr': {'class': 'form_input'}}) }}
+        {{ form_widget(form.phonenumber, {'attr': {'class': 'form_input'}}) }}
+        {{ form_widget(form.email, {'attr': {'class': 'form_input'}}) }}
         <button class="button" type="submit">Valider</button>
+      {{ form_end(form) }}
     </main>
     {# END MAIN #}
 

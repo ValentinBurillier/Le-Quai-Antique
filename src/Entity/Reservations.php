@@ -14,8 +14,8 @@ class Reservations
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column(type: Types::DATETIME_MUTABLE)]
-    private ?\DateTimeInterface $dateofreservation = null;
+    #[ORM\Column(length: 255)]
+    private ?string $dateofreservation = null;
 
     #[ORM\Column(length: 255)]
     private ?string $slotoftheday = null;
@@ -23,8 +23,8 @@ class Reservations
     #[ORM\Column]
     private ?int $numberofpersons = null;
 
-    #[ORM\Column(type: Types::ARRAY)]
-    private array $allergy = [];
+    #[ORM\Column(length: 255)]
+    private ?string $allergy = null;
 
     #[ORM\Column(length: 255)]
     private ?string $firstName = null;
@@ -43,12 +43,12 @@ class Reservations
         return $this->id;
     }
 
-    public function getDateofreservation(): ?\DateTimeInterface
+    public function getDateofreservation(): ?string
     {
         return $this->dateofreservation;
     }
 
-    public function setDateofreservation(\DateTimeInterface $dateofreservation): self
+    public function setDateofreservation(string $dateofreservation): self
     {
         $this->dateofreservation = $dateofreservation;
 
@@ -79,12 +79,13 @@ class Reservations
         return $this;
     }
 
-    public function getAllergy(): array
+    public function getAllergy(): ?string
+    
     {
         return $this->allergy;
     }
 
-    public function setAllergy(array $allergy): self
+    public function setAllergy(string $allergy): self
     {
         $this->allergy = $allergy;
 
