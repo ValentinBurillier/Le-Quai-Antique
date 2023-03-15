@@ -8,9 +8,22 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class LunchPageController extends AbstractController
 {
-    #[Route('/lunch/page', name: 'app_lunch_page')]
+    #[Route('/reservation/dejeuner', name: 'app_lunch_page')]
     public function index(): Response
     {
-        return $this->render('lunch_page/index.html.twig');
+        if (!isset($_COOKIE['hour'])) {
+            $disabled = 'disabled';
+        } else {
+            $disabled = 'enable';
+        }
+        $linkButton = '/diner/page';
+        $textbtn = '';
+        $displayArrowLeft = false;
+        return $this->render('reservation_dejeuner/index.html.twig', [
+            'displayArrowLeft' => $displayArrowLeft,
+            'linkButton' => $linkButton,
+            'textbtn' => $textbtn,
+            'disabled' => $disabled,
+        ]);
     }
 }

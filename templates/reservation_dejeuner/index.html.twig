@@ -26,16 +26,20 @@
         <section class="container__title2">
             <h2 class="main__title2">Sélectionnez un créneau pour le déjeuner</h2>
         </section>
-        <section class="section__container">
-            <p>11H00</p>
-            <p>12H00</p>
-            <p>13H00</p>
-            <p>14H00</p>
+        <section class="section__container" id="time">
+            <p id="11:00">11H00</p>
+            <p id="12:00">12H00</p>
+            <p id="13:00">13H00</p>
+            <p id="14:00">14H00</p>
         </section>
 
         <section class="section__button">
-            <button class="button btnTop">Continuer</button>
-            <button class="button btnBottom">Réserver pour le souper</button>
+            {# BUTTON IMPORTATION #}
+            {% block button %}
+            {% set textbtn = 'Continuer' %}
+              {% include ('global/modals/modalButton.html.twig') %}
+              <button class="button btnBottom" onClick="window.location.href='{{ linkButton }}'">Réserver pour le souper</button>
+            {% endblock %}
         </section>
     </main>
 
@@ -46,5 +50,6 @@
     {# FIN IMPORTATION #}
 
 {% endblock %}
+<script src="{{asset('assets/js/reservation_dejeuner.js')}}"></script>
 </body>
 </html>
