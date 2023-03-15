@@ -16,7 +16,7 @@ class LunchPageController extends AbstractController
         } else {
             $disabled = 'enable';
         }
-        $linkButton = '/diner/page';
+        $linkButton = '/reservation/details';
         $textbtn = '';
         $displayArrowLeft = false;
         return $this->render('reservation_dejeuner/index.html.twig', [

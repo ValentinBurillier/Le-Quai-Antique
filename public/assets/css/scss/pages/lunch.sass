@@ -1,7 +1,7 @@
 /* RESET */ 
 @import '../base/_reset'
 /* IMPORTATION BODY */
-@import '../components/sections/_body'
+@import '../components/sections/_bodyBg'
 /* IMPORTATION HEADER */
 @import '../components/sections/_header'
 
@@ -53,6 +53,10 @@ main
   align-items: center
   justify-content: center
 
+.section__container p:active
+  background: green
+  border-radius: 10%
+  cursor: pointer
 .section__button
   display: flex
   flex-direction: column
@@ -61,14 +65,18 @@ main
   height: 30%
   gap: 1rem
   width: 100%
-.button
-  width: 50%
-  height: 50%
 
-.btnTop
-  height: 25%
-  width: 35%
-
+.div__button
+  height: 35%
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 40%
+  & .button
+    font-size: 1.2rem
+    width: 100%
+    height: 70%
+  
 .btnBottom
   width: 70%
   height: 30%

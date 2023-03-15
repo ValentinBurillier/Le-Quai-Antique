@@ -820,6 +820,7 @@ footer {
 
 .input {
   border-radius: 10%;
+  font-size: 2rem;
 }
 
 .input__number {
