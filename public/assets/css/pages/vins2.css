@@ -625,7 +625,7 @@ h2 {
 .div__button .button {
   height: 3rem;
   font-size: 1.3rem;
-  width: 9rem;
+  width: 10rem;
 }
 
 @media screen and (min-width: 700px) and (min-height: 568px) {

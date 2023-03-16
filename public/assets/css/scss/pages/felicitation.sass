@@ -1,0 +1,73 @@
+/* RESET */ 
+@import '../base/_reset'
+
+/* IMPORTATION BODY */
+@import '../layout/_bodyMenu'
+
+/* IMPORTATION BODY BACKGROUND */
+@import '../components/sections/_bodyBg'
+
+/* IMPORTATION HEADER */
+@import '../components/sections/MenuFormules/_headerMenu'
+
+/* IMPORTATION BOUTON MENU PAGE */
+@import '../components/sections/MenuFormules/_btn'
+
+/* IMPORTATION DU FOOTER */
+@import '../components/sections/MenuFormules/_footerMenu'
+
+/* IMPORT OPACITY */
+@import '../layout/_totalOpacity'
+
+
+/* BASES CONFIGURATION 320 * 568px */
+main
+  height: 80%
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+
+.container__felicitation
+  background: white
+  height: 70%
+  display: flex
+  justify-content: center
+  align-items: center
+  max-width: 320px
+  margin: auto
+  & p
+    color: black
+    font-size: 2.5rem
+    text-align: center
+    line-height: 150%
+
+/* START RESPONSIVE WIDTH TO HEIGHT */
+@media screen and (min-width: 320px) and (max-width: 1800px)
+  .div__button
+    left: 50%
+    bottom: 2%
+    
+@media screen and (min-width: 400px) and (min-height: 568px)
+  .container__felicitation
+    max-width: 80%
+    padding: 1.5vw
+    border-radius: 5% 0%
+    box-shadow: 2px 2px 20px 20px #463617
+    & p
+      font-size: 2.5rem
+
+@media screen and (min-width: 750px) and (min-height: 568px)
+  .container__felicitation
+    max-width: 70%
+    padding: 2vw
+    & p
+      font-size: 3rem
+
+@media screen and (min-width: 850px) and (min-height: 568px)
+  .container__felicitation
+    max-width: 600px
+  
+@media screen and (min-width: 1350px) and (min-height: 568px)
+  .header
+    height: 15%
