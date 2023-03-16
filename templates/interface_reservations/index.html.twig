@@ -31,7 +31,7 @@
                 <ul class="list__container">
                     {% for data in datas %}
                         <li class="list__item">
-                            <p class="list__user">{{ data.lastName }} {{ data.firstName }} | {{data.numberofpersons }}P | {{ data.slotoftheday }}</p>
+                            <p class="list__user">{{ data.lastName }} {{ data.firstName }} | {{data.numberofpersons }}P | {{ data.slotoftheday }} | {{ data.dateofreservation }}</p>
                             <button type="submit" class="list__btn">X</button>
                         </li>
                     {% endfor %}
@@ -45,5 +45,5 @@
     {% endblock %}
     {# FIN IMPORTATION #}
 
-
+<script src="{{asset('assets/js/intReservations.js')}}"></script>
 {% endblock %}
