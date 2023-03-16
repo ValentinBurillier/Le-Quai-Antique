@@ -2,7 +2,7 @@
 {# HEAD PART #}
 {% block title %}Réservations - Le Quai Antique{% endblock %}
 {% block stylesheets %}
-  <link href="{{ asset('assets/css/pages/interfaceReservations.css')}}" rel="stylesheet" type="text/css">
+  <link href="{{ asset('assets/css/pages/interfaceReservations2.css')}}" rel="stylesheet" type="text/css">
 {% endblock %}
 
 {# BODY PART #}
@@ -23,17 +23,19 @@
         </section>
 
         <section class="main__sectionContainer">
-            <section class="container__lunch">
-                <h3 class="mainSectionContainer__title3">Réservation déjeuner</h3>
-                <img src="{{ asset('assets/images/arrowBottom.png') }}" alt="fleche pour afficher les reservations" class="img__arrowBottom"/>
+                <div>
+                    <h3 class="mainSectionContainer__title3">Réservation déjeuner</h3>
+                    <img src="{{ asset('assets/images/arrowBottom.png') }}" alt="fleche pour afficher les reservations" class="img__arrowBottom"/>
+                </div>
 
-            </section>
-
-            <section class="container__diner">
-                <h3 class="mainSectionContainer__title3">Réservation diner</h3>
-                <img src="{{ asset('assets/images/arrowBottom.png') }}" alt="fleche pour afficher les reservations" class="img__arrowBottom"/>
-            </section>
-
+                <ul class="list__container">
+                    {% for data in datas %}
+                        <li class="list__item">
+                            <p class="list__user">{{ data.lastName }} {{ data.firstName }} | {{data.numberofpersons }}P | {{ data.slotoftheday }}</p>
+                            <button type="submit" class="list__btn">X</button>
+                        </li>
+                    {% endfor %}
+                </ul>
         </section>
     </main>
 
