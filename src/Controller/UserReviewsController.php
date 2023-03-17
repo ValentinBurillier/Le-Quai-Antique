@@ -7,11 +7,13 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 #[Route('/user')]
-class InformationsController extends AbstractController
+class UserReviewsController extends AbstractController
 {
-    #[Route('/informations', name: 'app_informations')]
+    #[Route('/reviews', name: 'app_user_reviews')]
     public function index(): Response
     {
-        return $this->render('informations/index.html.twig');
+        return $this->render('user_reviews/index.html.twig', [
+            'controller_name' => 'UserReviewsController',
+        ]);
     }
 }

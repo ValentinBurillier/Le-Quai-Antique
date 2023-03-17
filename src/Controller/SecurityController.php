@@ -19,7 +19,10 @@ class SecurityController extends AbstractController
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
         if ($this->getUser()) {
-            return $this->redirectToRoute('account');
+            // Si role = admin
+            return $this->redirectToRoute('app_interface_admin');
+            // Si role = user
+            return $this->redirectToRoute('/user/home');
         }
 
         // get the login error if there is one
@@ -33,6 +36,7 @@ class SecurityController extends AbstractController
     #[Route(path: '/logout', name: 'app_logout')]
     public function logout(): void
     {
+        $this->redirectToRoute('app_accueil');
         throw new \LogicException('This method can be blank - it will be intercepted by the logout key on your firewall.');
     }
 }
