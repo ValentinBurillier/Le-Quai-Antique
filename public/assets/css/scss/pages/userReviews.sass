@@ -1,0 +1,85 @@
+/* RESET */ 
+@import '../base/_reset'
+
+/* IMPORTATION BODY */
+@import '../components/sections/_bodyBg'
+
+/* IMPORTATION HEADER */
+@import '../components/sections/_header'
+
+/* IMPORTATION BgIntuser */
+@import '../components/sections/_bgIntUser'
+
+/* IMPORTATION BgIntuser */
+@import '../components/sections/InterfaceUser/_mainNav'
+
+/* FOOTER PART */
+@import '../components/sections/_footer'
+.main
+  height: 75%
+
+.firstSection
+  display: flex
+  column-gap: 2vw
+  justify-content: center
+  align-items: center
+  margin-top: 1rem
+  column-gap: 1rem
+  & img
+    width: 6vh
+    object-fit: contain
+    height: 100%
+  & .firstSection__title2
+    text-transform: uppercase
+
+.container__reviews
+  margin-top: 2rem
+  display: flex
+  flex-direction: column
+  row-gap: 2rem
+.review
+  background: #D9D9D9
+  padding: 1rem
+  width: 80%
+  margin: auto
+  border-radius: 5%
+  position: relative
+  max-width: 280px
+  margin: auto
+  & .review__p
+    color: black
+    height: auto
+    font-size: 1.5rem
+  & .btn__review
+    background: none
+    color: red
+    font-weight: bold
+    border: none
+    position: absolute
+    right: 1%
+    top: 0%
+
+.noReview
+  position: fixed
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  font-size: 3rem
+  width: 90%
+  max-width: 500px
+  background: rgb(58 58 58 / 50%)
+  height: 70%
+  max-height: 300px
+  display: flex
+  justify-content: center
+  align-items: center
+  box-shadow: 5px 20px 20px
+  border-radius: 5%
+@media screen and (min-width: 450px) and (min-height: 568px)
+  .firstSection
+    column-gap: 2rem
+    & img
+      max-width: 30px
+      max-height: 30px
+    & .firstSection__title2
+      font-size: 2.5rem
