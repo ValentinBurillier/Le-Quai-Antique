@@ -13,7 +13,7 @@ class UserReservationController extends AbstractController
     public function index(): Response
     {
         return $this->render('user_reservation/index.html.twig', [
-            'controller_name' => 'UserReservationController',
+            
         ]);
     }
 }

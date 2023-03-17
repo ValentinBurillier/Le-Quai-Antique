@@ -20,25 +20,21 @@
     {% endblock %}
     {# FIN IMPORTATION #}
 
-    <main>
+    <main class="main">
         {# PREMIERE SECTION#}
         <section class="main__section1">
             <div class="section1__container">
                 <img src={{asset('assets/images/arrow_left.png')}}>
                 <h3>Informations</h3>
             </div>
-
-
-            {{ form_start(form) }}
-                {{ form_row(form.lastName, {'attr': {'value' : lastName }} )}}
-                {{ form_row(form.firstName, {'attr': {'value' : firstName }} )}}
-                {{ form_row(form.phoneNumber, {'attr': {'value' : phoneNumber }} )}}
-                {{ form_row(form.number, {'attr': {'value' : number }} )}}
-                {{ form_row(form.email, {'attr': {'value' : email }} )}}
-            {{ form_end(form) }}
+            <ul>
+                <li>Nom : {{ lastName }}</li>
+                <li>Prénom : {{ firstName }}</li>
+                <li>E-mail : {{ email }}</li>
+                <li>Téléphone : {{ phoneNumber }}</li>
+            </ul>
         </section>
         {# FIN PREMIERE SECTION #}
-            <button type="submit" class="button">Valider</buttton>
 
         {# DEUXIEME SECTION #}
         <section class="main__section2">
@@ -49,7 +45,7 @@
                     <input type="text" value={{ number }}>
                 </div>
             </div>
-            <button class="button" type="button">Confirmer</button>
+            <button class="button" type="submit">Confirmer</button>
         </section>
         {# FIN DEUXIEME SECTION #}
     </main>
