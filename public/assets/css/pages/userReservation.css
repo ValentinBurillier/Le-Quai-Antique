@@ -1,0 +1,1040 @@
+/* RESET */  /* COLORS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+li {
+  list-style: none;
+}
+
+/* IMPORTATION BODY */
+body {
+  background: url("../../images/background/bg-small.jpg");
+}
+
+@media screen and (min-height: 854px) {
+  body {
+    background: url("../../images/background/bg-medium.jpg");
+  }
+}
+@media screen and (min-height: 1281px) {
+  body {
+    background: url("../../images/background/bg-large.jpg");
+  }
+}
+@media screen and (min-width: 1280px) {
+  body {
+    background: url("../../images/background/bg-medium.jpg");
+  }
+}
+@media screen and (min-width: 1920px) {
+  body {
+    background: url("../../images/background/bg-large.jpg");
+  }
+}
+/* IMPORTATION HEADER */
+.container__hero {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  background: url("../../images/background/bg-small.jpg");
+}
+
+@media screen and (min-height: 854px) {
+  .container__hero {
+    background: url("../../images/background/bg-medium.jpg");
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container__hero {
+    background: url("../../images/background/bg-medium.jpg");
+  }
+}
+@media screen and (min-height: 1281px) {
+  .container__hero {
+    background: url("../../images/background/bg-large.jpg");
+  }
+}
+@media screen and (min-width: 1920px) {
+  .container__hero {
+    background: url("../../images/background/bg-large.jpg");
+  }
+}
+h1 {
+  font-size: 2.5rem;
+}
+
+/* RESPONSIVE */
+@media screen and (min-width: 360px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 414px) {
+  h1 {
+    font-size: 3.2rem;
+  }
+}
+@media screen and (min-width: 700px) {
+  h1 {
+    font-size: 400%;
+  }
+}
+@media screen and (min-width: 830px) {
+  h1 {
+    font-size: 7vw;
+  }
+}
+@media screen and (min-width: 1000px) {
+  h1 {
+    font-size: 5vw;
+  }
+}
+@media screen and (min-width: 1350px) {
+  h1 {
+    font-size: 3vw;
+  }
+}
+@media screen and (min-width: 1830px) {
+  h1 {
+    font-size: 2.5vw;
+  }
+}
+.header__iconUser {
+  width: 40px;
+  height: auto;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 375px) {
+  .header__iconUser {
+    width: 45px;
+  }
+}
+@media screen and (min-width: 460px) {
+  .header__iconUser {
+    width: 8vw;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .header__iconUser {
+    width: 5vw;
+  }
+}
+@media screen and (min-width: 1350px) {
+  .header__iconUser {
+    width: 3vw;
+  }
+}
+@media screen and (min-width: 1830px) {
+  .header__iconUser {
+    width: 4vw;
+  }
+}
+@media screen and (min-width: 414px) {
+  .header__nav {
+    width: 380px;
+  }
+}
+@media screen and (min-width: 460px) {
+  .header__nav {
+    width: 80vw;
+  }
+}
+@media screen and (min-width: 700px) {
+  .header__nav {
+    width: 70vw;
+  }
+}
+@media screen and (min-width: 1350px) {
+  .header__nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 95vw;
+  }
+  .nav__div {
+    align-items: center;
+    gap: 1vw;
+  }
+}
+.nav__div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.div__title1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav__ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*.header__title3
+ * position: absolute
+ * top: 50%
+ * left: 50%
+ * transform: translate(-50%, -50%)
+ * text-align: center
+ * text-decoration: underline */
+@media screen and (min-width: 360px) {
+  a {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 414px) {
+  a {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (min-width: 414px) {
+  a {
+    font-size: 3vw;
+  }
+}
+@media screen and (min-width: 700px) {
+  a {
+    font-size: 150%;
+  }
+}
+@media screen and (min-width: 830px) {
+  a {
+    font-size: 2.5vw;
+  }
+}
+@media screen and (min-width: 1100px) {
+  a {
+    font-size: 2vw;
+  }
+}
+@media screen and (min-width: 1350px) {
+  a {
+    font-size: 2vw;
+  }
+  .nav__ul {
+    gap: 4vw;
+  }
+  a {
+    font-size: 1.5vw;
+  }
+}
+.div__title2 {
+  width: 100vw;
+  margin: 1.5rem auto;
+  position: absolute;
+  top: 27%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(75, 52, 21, 0.8);
+  padding: 10px;
+}
+
+@media screen and (min-width: 414px) {
+  .div__title2 {
+    top: 25%;
+  }
+}
+@media screen and (min-width: 700px) {
+  .div__title2 {
+    width: 70vw;
+  }
+}
+@media screen and (min-width: 830px) {
+  .div__title2 {
+    top: 30%;
+    padding: 2vw;
+  }
+}
+@media screen and (min-width: 1350px) {
+  .div__title2 {
+    padding: 1.4vw;
+    top: 25%;
+  }
+}
+@media screen and (min-width: 1830px) {
+  .div__title2 {
+    width: 50vw;
+  }
+}
+h2 {
+  font-size: 2.2rem;
+}
+
+/* RESPONSIVE */
+@media screen and (min-width: 350px) {
+  h2 {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 414px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 460px) {
+  h2 {
+    font-size: 8vw;
+  }
+}
+@media screen and (min-width: 700px) {
+  h2 {
+    font-size: 5vw;
+  }
+}
+@media screen and (min-width: 1000px) {
+  h2 {
+    font-size: 4vw;
+  }
+}
+@media screen and (min-width: 1100px) {
+  h2 {
+    font-size: 3.2vw;
+  }
+}
+@media screen and (min-width: 1350px) {
+  h2 {
+    font-size: 3vw;
+  }
+}
+@media screen and (min-width: 1830px) {
+  h2 {
+    font-size: 2.5vw;
+  }
+}
+.header__title3 {
+  width: 300px;
+  font-size: 2.3rem;
+  text-decoration: underline;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 350px) {
+  .header__title3 {
+    width: 250px;
+    font-size: 2.2rem;
+  }
+}
+@media screen and (min-width: 360px) {
+  .header__title3 {
+    width: 270px;
+    font-size: 2.5rem;
+    top: 48%;
+  }
+}
+@media screen and (min-width: 414px) {
+  .header__title3 {
+    width: 350px;
+    font-size: 2.5rem;
+    top: 45%;
+  }
+}
+@media screen and (min-width: 460px) {
+  .header__title3 {
+    font-size: 8vw;
+    width: 70%;
+  }
+}
+@media screen and (min-width: 700px) {
+  .header__title3 {
+    font-size: 6vw;
+  }
+}
+@media screen and (min-width: 830px) {
+  .header__title3 {
+    font-size: 5.5vw;
+    top: 55%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .header__title3 {
+    font-size: 4vw;
+    width: 40vw;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .header__title3 {
+    top: 50%;
+  }
+}
+@media screen and (min-width: 1350px) {
+  .header__title3 {
+    font-size: 3.2vw;
+  }
+}
+@media screen and (min-width: 1620px) {
+  .header__title3 {
+    font-size: 2.5vw;
+    width: 30vw;
+  }
+}
+.img__plats {
+  width: 220px;
+}
+
+@media screen and (min-width: 350px) {
+  .img__plats {
+    width: 40vh;
+  }
+}
+@media screen and (min-width: 414px) {
+  .img__plats {
+    width: 350px;
+  }
+}
+@media screen and (min-width: 700px) {
+  .img__plats {
+    width: 50vw;
+  }
+}
+@media screen and (min-width: 830px) {
+  .img__plats {
+    width: 33.33vw;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .img__plats {
+    width: 30vw;
+  }
+}
+@media screen and (min-width: 1350px) {
+  .img__plats {
+    width: 320px;
+  }
+}
+@media screen and (min-width: 1830px) {
+  .img__plats {
+    width: 400px;
+  }
+}
+.gallerie__recettes {
+  margin-top: 1.5rem;
+  display: flex;
+  position: absolute;
+  overflow: hidden;
+  bottom: 0;
+  width: 220px;
+}
+
+@media screen and (min-width: 350px) {
+  .gallerie__recettes {
+    bottom: 2rem;
+    width: 40vh;
+  }
+}
+@media screen and (min-width: 414px) {
+  .gallerie__recettes {
+    width: 350px;
+  }
+}
+@media screen and (min-width: 700px) {
+  .gallerie__recettes {
+    width: 50vw;
+  }
+}
+@media screen and (min-width: 830px) {
+  .gallerie__recettes {
+    justify-content: center;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .gallerie__recettes {
+    gap: 2vw;
+  }
+}
+@media screen and (min-width: 1350px) {
+  .gallerie__recettes {
+    gap: 0vw;
+    justify-content: space-evenly;
+  }
+}
+@media screen and (min-width: 1830px) {
+  .gallerie__recettes {
+    width: 80vw;
+  }
+}
+.section__gallerie {
+  max-width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+/* PERSONNALISATION */
+.header {
+  padding: 10px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15%;
+  animation: slideRight 5s;
+}
+
+@keyframes slideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@media screen and (min-width: 1350px) {
+  .header {
+    width: 100vw;
+  }
+}
+/* IMPORTATION BgIntuser */
+/* ADAPTE DE BASE DEVICE 352 X 568 PX */
+.main__container {
+  height: 250px;
+  width: 100vw;
+  background: url("../../images/img_table_xl.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* RESPONSIVE DIAGONALE -> LARGE*/
+@media screen and (min-width: 460px) and (min-height: 700px) {
+  .main__container {
+    width: 90%;
+    height: 350px;
+  }
+}
+@media screen and (min-width: 716px) and (min-height: 874px) {
+  .main__container {
+    width: 90%;
+    height: 80%;
+  }
+}
+@media screen and (min-width: 950px) and (min-height: 874px) {
+  .main__container {
+    width: 850px;
+  }
+}
+@media screen and (min-width: 1300px) and (min-height: 874px) {
+  .main__container {
+    width: 950px;
+  }
+}
+/* RESPONSIVE LARGE AND MAX HEIGHT 568PX*/
+@media screen and (min-width: 584px) and (max-height: 568px) {
+  .main__container {
+    width: 584px;
+    height: 300px;
+  }
+}
+@media screen and (min-width: 930px) and (max-height: 568px) {
+  .main__container {
+    width: 650px;
+    height: 350px;
+  }
+}
+@media screen and (min-width: 1350px) and (max-height: 568px) {
+  .main__container {
+    width: 950px;
+    height: 350px;
+  }
+}
+/* RESPONSIVE LARGE AND MAX HEIGHT 650PX*/
+@media screen and (min-width: 616px) and (max-height: 650px) {
+  .main__container {
+    height: 80%;
+  }
+}
+@media screen and (min-width: 1050px) and (max-height: 650px) {
+  .main__container {
+    width: 75%;
+  }
+}
+@media screen and (min-width: 1350px) and (max-height: 650px) {
+  .main__container {
+    width: 65%;
+  }
+}
+/* RESPONSIVE LARGE AND MAX HEIGHT 750PX*/
+@media screen and (min-width: 440px) and (max-height: 750px) {
+  .main__container {
+    height: 70%;
+  }
+}
+@media screen and (min-width: 1300px) and (max-height: 750px) {
+  .main__container {
+    width: 65%;
+  }
+}
+/* RESPONSIVE LARGE AND MAX HEIGHT 873PX*/
+@media screen and (min-width: 800px) and (max-height: 873px) {
+  .main__container {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1000px) and (max-height: 873px) {
+  .main__container {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1350px) and (max-height: 873px) {
+  .main__container {
+    width: 945px;
+    height: 90%;
+  }
+}
+/* RESPONSIVE LARGE AND MIN HEIGHT 1160PX*/
+@media screen and (min-width: 1160px) and (min-height: 1165px) {
+  .main__container {
+    width: 70%;
+    height: 90%;
+  }
+}
+/* IMPORTATION BgIntuser */
+.main__nav {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5%;
+  margin-left: 10%;
+}
+
+/* RESPONSIVE DIAGONALE -> LARGE*/
+.main__nav a {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 460px) and (min-height: 700px) {
+  .main__nav a {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 716px) and (min-height: 874px) {
+  .main__nav a {
+    font-size: 3.5rem;
+  }
+}
+/* RESPONSIVE LARGE AND MAX HEIGHT 568PX*/
+@media screen and (min-width: 584px) and (max-height: 568px) {
+  .main__nav a {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 1350px) and (max-height: 568px) {
+  .main__nav a {
+    font-size: 3.5rem;
+  }
+}
+/* RESPONSIVE LARGE AND MAX HEIGHT 650PX*/
+@media screen and (min-width: 850px) and (max-height: 650px) {
+  .main__nav {
+    padding: 2%;
+  }
+}
+@media screen and (min-width: 616px) and (max-height: 650px) {
+  .main__nav a {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 616px) and (max-height: 650px) {
+  .main__nav a {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 1880px) and (max-height: 650px) {
+  .main__nav a {
+    font-size: 3.5rem;
+  }
+}
+/* RESPONSIVE LARGE AND MAX HEIGHT 750PX*/
+@media screen and (min-width: 440px) and (max-height: 750px) {
+  .main__nav a {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 900px) and (max-height: 750px) {
+  .main__nav a {
+    font-size: 3.5rem;
+  }
+}
+/* RESPONSIVE LARGE AND MAX HEIGHT 873PX*/
+@media screen and (min-width: 1350px) and (max-height: 873px) {
+  .main__nav a {
+    font-size: 4rem;
+  }
+}
+/* RESPONSIVE LARGE AND MAX HEIGHT 1064PX*/
+@media screen and (min-width: 1010px) and (min-height: 1060px) {
+  .main__nav a {
+    font-size: 5rem;
+  }
+}
+@media screen and (min-width: 2437px) and (min-height: 1165px) {
+  .main__nav a {
+    font-size: 6rem;
+  }
+}
+/* PERSONNALISATION DE LA PAGE */
+/* RESPONSIVE DE BASE 352 x 568 px */
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+.header {
+  position: initial;
+  transform: initial;
+}
+
+.main__container .noReservationText {
+  font-size: 3rem;
+}
+
+@media screen and (min-width: 1000px) and (min-height: 874px) {
+  .header {
+    width: initial;
+  }
+}
+@media screen and (min-width: 1100px) and (max-height: 568px) {
+  .header {
+    width: initial;
+  }
+}
+/* RESPONSIVE LARGE AND MAX HEIGHT 750PX*/
+@media screen and (min-width: 1100px) and (max-height: 750px) {
+  .header {
+    width: initial;
+  }
+}
+main {
+  height: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.main__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main__container p {
+  font-size: 2rem;
+  width: 80%;
+  line-height: 4rem;
+  font-weight: bold;
+}
+
+.noReservationText {
+  font-size: 3rem;
+}
+
+.div__button {
+  position: absolute;
+  bottom: 5%;
+}
+.div__button .button {
+  background: red;
+  padding: 5px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 5%;
+}
+
+footer {
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2%;
+}
+
+@media screen and (min-width: 500px) and (min-height: 568px) {
+  .main__container p {
+    font-size: 3.5rem;
+    line-height: 5rem;
+  }
+  .div__button {
+    bottom: 0;
+  }
+}
+@media screen and (min-width: 1000px) and (min-height: 568px) {
+  .main__container p {
+    width: 70%;
+  }
+  .div__button .button {
+    font-size: 2rem;
+  }
+  footer a {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1350px) and (min-height: 568px) {
+  .main__container p {
+    width: 60%;
+    font-size: 4rem;
+    line-height: 7rem;
+  }
+  .div__button {
+    bottom: 10%;
+  }
+}
+@media screen and (min-width: 320px) and (min-height: 600px) {
+  .main__container p {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 400px) and (min-height: 600px) {
+  .main__container p {
+    font-size: 3rem;
+  }
+  .div__button .button {
+    font-size: 1.9rem;
+  }
+}
+@media screen and (min-width: 440px) and (min-height: 600px) {
+  .main__container p {
+    line-height: 5rem;
+    font-size: 3.2rem;
+  }
+  .div__button {
+    bottom: 0%;
+  }
+}
+@media screen and (min-width: 900px) and (min-height: 600px) {
+  .main__container p {
+    width: 70%;
+    line-height: 6rem;
+    font-size: 4rem;
+  }
+}
+@media screen and (min-width: 1300px) and (min-height: 600px) {
+  .main__container p {
+    width: 60%;
+    line-height: 6.5rem;
+  }
+}
+@media screen and (min-width: 1350px) and (min-height: 600px) {
+  .main__container p {
+    width: 60%;
+    font-size: 4rem;
+    line-height: 7rem;
+  }
+  .div__button {
+    bottom: 10%;
+  }
+}
+@media screen and (min-width: 400px) and (min-height: 650px) {
+  .main__container p {
+    font-size: 3rem;
+  }
+  .div__button .button {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 600px) and (min-height: 650px) {
+  .main__container p {
+    font-size: 4rem;
+    width: 70%;
+    line-height: 6rem;
+  }
+  .div__button {
+    bottom: 0%;
+  }
+}
+@media screen and (min-width: 1300px) and (min-height: 650px) {
+  .main__container p {
+    font-size: 4rem;
+    width: 70%;
+    line-height: 6rem;
+  }
+}
+@media screen and (min-width: 1300px) and (min-height: 650px) {
+  .main__container p {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1300px) and (min-height: 650px) {
+  .main__container p {
+    width: 70%;
+    font-size: 5rem;
+    line-height: 8rem;
+  }
+  .div__button {
+    bottom: 10%;
+  }
+}
+@media screen and (min-width: 320px) and (min-height: 700px) {
+  .main__container p {
+    font-size: 2.5rem;
+  }
+  .div__button .button {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (min-width: 400px) and (min-height: 700px) {
+  .main__container p {
+    font-size: 3.5rem;
+    width: 90%;
+    line-height: 6rem;
+  }
+  .div__button {
+    bottom: 0%;
+  }
+}
+@media screen and (min-width: 880px) and (min-height: 700px) {
+  .main__container p {
+    font-size: 4.5rem;
+    width: 80%;
+    line-height: 6rem;
+  }
+}
+@media screen and (min-width: 1350px) and (min-height: 700px) {
+  .main__container p {
+    font-size: 5rem;
+    width: 60%;
+    line-height: 8rem;
+  }
+  .div__button {
+    bottom: 10%;
+  }
+  .div__button .button {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 320px) and (min-height: 750px) {
+  .main__container p {
+    font-size: 2.5rem;
+  }
+  .div__button .button {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (min-width: 400px) and (min-height: 750px) {
+  .main__container p {
+    font-size: 3.5rem;
+    width: 90%;
+    line-height: 6rem;
+  }
+  .div__button {
+    bottom: 0%;
+  }
+}
+@media screen and (min-width: 880px) and (min-height: 750px) {
+  .main__container p {
+    font-size: 4.5rem;
+    width: 80%;
+    line-height: 6rem;
+  }
+}
+@media screen and (min-width: 1350px) and (min-height: 750px) {
+  .main__container p {
+    font-size: 5rem;
+    width: 60%;
+    line-height: 8rem;
+  }
+  .div__button {
+    bottom: 10%;
+  }
+  .div__button .button {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 320px) and (min-height: 800px) {
+  .main__container p {
+    font-size: 2.5rem;
+  }
+  .div__button .button {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (min-width: 400px) and (min-height: 800px) {
+  .main__container p {
+    font-size: 3.5rem;
+    width: 90%;
+    line-height: 6rem;
+  }
+  .div__button {
+    bottom: 0%;
+  }
+}
+@media screen and (min-width: 880px) and (min-height: 800px) {
+  .main__container p {
+    font-size: 4.5rem;
+    width: 80%;
+    line-height: 6rem;
+  }
+}
+@media screen and (min-width: 1350px) and (min-height: 800px) {
+  .main__container p {
+    font-size: 5rem;
+    width: 60%;
+    line-height: 8rem;
+  }
+  .div__button {
+    bottom: 10%;
+  }
+  .div__button .button {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 320px) and (min-height: 850px) {
+  .main__container p {
+    font-size: 2.5rem;
+  }
+  .div__button .button {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (min-width: 400px) and (min-height: 850px) {
+  .main__container p {
+    font-size: 3.5rem;
+    width: 90%;
+    line-height: 6rem;
+  }
+  .div__button {
+    bottom: 0%;
+  }
+}
+@media screen and (min-width: 880px) and (min-height: 850px) {
+  .main__container p {
+    font-size: 4.5rem;
+    width: 80%;
+    line-height: 6rem;
+  }
+}
+@media screen and (min-width: 1350px) and (min-height: 850px) {
+  .main__container p {
+    font-size: 5rem;
+    width: 60%;
+    line-height: 8rem;
+  }
+  .div__button {
+    bottom: 10%;
+  }
+  .div__button .button {
+    font-size: 2.5rem;
+  }
+}

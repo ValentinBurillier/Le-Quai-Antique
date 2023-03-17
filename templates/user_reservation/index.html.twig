@@ -1,20 +1,50 @@
-{% extends 'base.html.twig' %}
-
-{% block title %}Hello UserReservationController!{% endblock %}
-
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/valen/Desktop/quaiAntiqueOfficil/Le-Quai-Antique/src/Controller/UserReservationController.php'|file_link(0) }}">src/Controller/UserReservationController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/valen/Desktop/quaiAntiqueOfficil/Le-Quai-Antique/templates/user_reservation/index.html.twig'|file_link(0) }}">templates/user_reservation/index.html.twig</a></code></li>
-    </ul>
-</div>
+<!DOCTYPE html>
+<html lang="fr-Fr">
+{# HEAD PART #}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block title %}
+  <title>Ma réservation - Home</title>
 {% endblock %}
+{% block stylesheets %}
+  <link href="{{ asset('assets/css/pages/userReservation.css')}}" rel="stylesheet" type="text/css">
+{% endblock %}
+</head>
+
+<body>
+    {# IMPORTATION DU HEADER #}
+    {% block modalHeader %}
+        {% include ('global/modals/modalHeader.html.twig') %}
+    {% endblock %}
+    {# FIN IMPORTATION #}
+
+    <main>
+        {% block modalBgIntUser %}
+            {% include ('global/modals/modalBgIntUser.html.twig') %}
+                {% if display == true %}
+                    <p>Table réservée pour le {{ date }} à {{ hour }} pour {{ number }} personnes</p>
+                {% else %}
+                <p class="noReservationText">{{ displayText }}</p>
+                {% endif %}
+            </div>
+
+            {% if display == true %}
+                {% set textbtn = 'Annuler la réservation' %}
+                {% block button %}
+                    {% include('global/modals/modalBtnForm.html.twig') %}
+                {% endblock %}
+            {% endif %}
+        {% endblock %}
+    </main>
+
+     {# IMPORTATION DU FOOTER #}
+    {% block modalFooter %}
+        {% include ('global/modals/modalFooter.html.twig') %}
+    {% endblock %}
+    {# FIN IMPORTATION #}
+
+<script src="{{asset('assets/js/cancelledReservation.js')}}"></script>
+</body>
+</html>
