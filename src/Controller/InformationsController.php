@@ -6,8 +6,10 @@ use App\Entity\User;
 use App\Form\InfosUsersType;
 use App\Repository\InfosUsersRepository;
 use App\Repository\UserRepository;
+use Doctrine\Persistence\ManagerRegistry;
 use Psr\Log\LoggerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Config\SecurityConfig;
@@ -16,7 +18,7 @@ use Symfony\Config\SecurityConfig;
 class InformationsController extends AbstractController
 {
     #[Route('/informations', name: 'app_informations')]
-    public function index(LoggerInterface $loggerInterface, InfosUsersRepository $infosUsersRepository): Response
+    public function index(LoggerInterface $loggerInterface, InfosUsersRepository $infosUsersRepository, Request $request, ManagerRegistry $getDoctrine): Response
     {
         /* GET EMAIL CONNECTED USER */
         $email = $this->getUser()->getUserIdentifier();
@@ -24,6 +26,7 @@ class InformationsController extends AbstractController
         /* GET USER INFOS */
         $user = $infosUsersRepository->findBy([
             'email' => $email]);
+
         if(isset($user) && $user !== '' && isset($user[0])) {
             $firstName = $user[0]->getFirstName();
             $lastName = $user[0]->getLastName();
@@ -36,8 +39,19 @@ class InformationsController extends AbstractController
             $phoneNumber = '';
             $number = '';
         }
-        
         $form = $this->createForm(InfosUsersType ::class);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $user[0]->setFirstName($form['firstName']->getData());
+            $user[0]->setNumber(intval($form['lastName']->getData()));
+            $user[0]->setPhoneNumber($form['phoneNumber']->getData());
+            $user[0]->setNumber($form['number']->getData());
+
+            $entityManager = $getDoctrine->getManager();
+            $entityManager->persist($user[0]);
+            $entityManager->flush();            
+        }
         return $this->render('informations/index.html.twig', [
             'firstName' =>$firstName,
             'lastName' =>$lastName,
@@ -45,6 +59,7 @@ class InformationsController extends AbstractController
             'email' => $email,
             'number' => $number,
             'form' => $form->createView(),
+            'textbtn' => 'Confirmer',
         ]);
     }
 }

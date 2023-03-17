@@ -12,11 +12,21 @@ class InfosUsersType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('lastName')
-            ->add('firstName')
-            ->add('phoneNumber')
-            ->add('number')
-            ->add('email')
+            ->add('lastName', null, [
+                'label' => 'Nom :'
+            ])
+            ->add('firstName', null, [
+                'label' => 'Prénom :'
+            ])
+            ->add('phoneNumber', null, [
+                'label' => 'Téléphone :'
+            ])
+            ->add('number', null, [
+                'label' => 'En général, nous sommes :'
+            ])
+            ->add('email', null, [
+                'label' => 'Email :'
+            ])
         ;
     }
 

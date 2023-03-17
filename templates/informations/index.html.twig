@@ -9,7 +9,7 @@
   <title>Interface Utilisateur - Informations</title>
 {% endblock %}
 {% block stylesheets %}
-  <link href="{{ asset('assets/css/pages/informations2.css')}}" rel="stylesheet" type="text/css">
+  <link href="{{ asset('assets/css/pages/informations3.css')}}" rel="stylesheet" type="text/css">
 {% endblock %}
 </head>
 
@@ -20,10 +20,10 @@
     {% endblock %}
     {# FIN IMPORTATION #}
 
-    <main>
+    <main class="main">
         {# PREMIERE SECTION#}
-        <section class="main__section1">
-            <div class="section1__container">
+        <section class="main__section">
+            <div class="section__container">
                 <img src={{asset('assets/images/arrow_left.png')}}>
                 <h3>Informations</h3>
             </div>
@@ -33,25 +33,15 @@
                 {{ form_row(form.lastName, {'attr': {'value' : lastName }} )}}
                 {{ form_row(form.firstName, {'attr': {'value' : firstName }} )}}
                 {{ form_row(form.phoneNumber, {'attr': {'value' : phoneNumber }} )}}
-                {{ form_row(form.number, {'attr': {'value' : number }} )}}
                 {{ form_row(form.email, {'attr': {'value' : email }} )}}
+                {{ form_row(form.number, {'attr': {'value' : number }} )}}
+                {% block button %}
+                    {% include('global/modals/modalBtnForm.html.twig') %}
+                {% endblock %}
             {{ form_end(form) }}
         </section>
         {# FIN PREMIERE SECTION #}
-            <button type="submit" class="button">Valider</buttton>
 
-        {# DEUXIEME SECTION #}
-        <section class="main__section2">
-            <div class="section2__container">
-                <h3>Ma réservation type</h3>
-                <div class="section2__text">
-                    <p>En général, <br>nous sommes :</p>
-                    <input type="text" value={{ number }}>
-                </div>
-            </div>
-            <button class="button" type="button">Confirmer</button>
-        </section>
-        {# FIN DEUXIEME SECTION #}
     </main>
 
      {# IMPORTATION DU FOOTER #}
