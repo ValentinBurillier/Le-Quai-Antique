@@ -2,7 +2,7 @@
 @import '../base/_reset'
 
 /* IMPORTATION BODY */
-@import '../components/sections/_body'
+@import '../components/sections/_bodyBg'
 
 /* IMPORTATION HEADER */
 @import '../components/sections/_header'
@@ -21,6 +21,27 @@ body
 .header
   position: initial
   transform: initial
+
+.section__bottom
+  position: fixed
+  top: 50%
+  left: 50%
+  height: 100vh
+  width: 100vw
+  transform: translate(-50%, -50%)
+  background: rgba(128, 128, 128, 0.7)
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  row-gap: 1rem
+  & .container
+    max-width: 400px
+    max-height: 400px
+    & .main__paragraph
+      font-size: 2rem
+    & .div__button .button
+      background: black
 @media screen and (min-width: 1000px) and (min-height: 874px)
   .header
     width: initial

@@ -2,15 +2,54 @@
 
 namespace App\Controller;
 
+use App\Entity\ReviewsType;
+use App\Repository\ReservationsRepository;
+use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use tidy;
 
 class UserHomeController extends AbstractController
 {
     #[Route('/user/home', name: 'app_user_home')]
-    public function index(): Response
+    public function index(ReservationsRepository $reservationsRepository, ManagerRegistry $getDoctrine): Response
     {
-        return $this->render('user_home/index.html.twig');
+        $dateReservation = null;
+        $display = false;
+        $email = $this->getUser()->getUserIdentifier();
+        $reservations = $reservationsRepository->findBy([
+            'email' => $email,
+        ]);
+        $todayDate = date('d/m/y');
+        if (isset($reservations[0])) {
+            $dateReservation = $reservations[0]->getDateofreservation();
+        }
+
+        $newDateReservation = strtotime($dateReservation);
+        if ($newDateReservation < time()) {
+            $display = true;
+        }
+        // /* REVIEW COOKIE */
+        $review = new ReviewsType();
+        if(isset($_COOKIE['review']) && ($_COOKIE['review'] !== null) && ($_COOKIE['review'] !== '')) {
+            $review->setDate($todayDate);
+            $review->setEmail($email);
+            $review->setReview($_COOKIE['review']);
+    
+            $entityManager = $getDoctrine->getManager();
+            $entityManager->persist($review);
+            $entityManager->remove($reservations[0]);
+            $entityManager->flush();
+
+            unset($_COOKIE['review']);
+            setcookie('review', '', time() - 3600, '/');
+
+
+        }
+
+        return $this->render('user_home/index.html.twig', [
+            'display' => $display,
+        ]);
     }
 }
