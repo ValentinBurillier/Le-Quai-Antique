@@ -16,6 +16,7 @@ class InterfaceImagesController extends AbstractController
         /* STORAGE NEW IMAGES */
         if(isset($_FILES[1]) && ($_FILES[1]['error'] === 0)) {
             $img1 = $_FILES[1]['tmp_name'];
+            unlink('./assets/images/recettes/recette1.jpg');
             move_uploaded_file($img1, './assets/images/recettes/recette1.jpg');
             unset($_FILES);
         };
