@@ -1,0 +1,28 @@
+.main__secondSection
+  width: 100vw
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  margin: auto
+  & h2
+    font-size: 3rem
+    padding: 1rem
+  & .container__imgs
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    gap: 1.5rem
+    & .img__recette
+      width: 100%
+      object-fit: contain
+
+@media screen and (min-width: 400px) and (min-height: 568px)
+  .main__secondSection .container__imgs .img__recette
+    max-width: 400px
+  
+@media screen and (min-width: 950px) and (min-height: 568px)
+  .main__secondSection .container__imgs
+    flex-direction: row
+    justify-content: center
+    box-shadow: 3px 3px 0px 0px rgb(255, 255, 255)

@@ -10,7 +10,7 @@
   <title>Accueil - Le Quai Antique</title>
 {% endblock %}
 {% block stylesheets %}
-  <link href="{{ asset('assets/css/pages/accueil.css')}}" rel="stylesheet" type="text/css">
+  <link href="{{ asset('assets/css/pages/accueil2.css')}}" rel="stylesheet" type="text/css">
 {% endblock %}
 </head>
 
@@ -55,6 +55,21 @@
             </div>
         </section>
     
+        {# SECTION SECTION #}
+        <section class="main__secondSection">
+            <h2>Plats réalisés par le chef</h2>
+            
+            <section  class="container__imgs">
+                {% for platImg in platImgs %}
+                    {% set y = y + 1 %}
+                    <img src="{{ platPath }}{{ platImg }}" alt="plat du chef" class="img__recette imgPlat{{ y }}">
+                {% endfor %}
+            </section>
+            {% block button %}
+                {% include('global/modals/modalButton.html.twig') %}
+            {% endblock %}
+
+        </section>
     </main>
     {# END MAIN #}
 
