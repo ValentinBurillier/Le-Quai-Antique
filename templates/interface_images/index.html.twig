@@ -18,30 +18,19 @@
       <h2 class="mainSection__title2">Contact</h2>
     </section>
 
+    <form method="POST" enctype="multipart/form-data">
+      {% for resource in resources %}
+        <div class="container__img">
+          <img src="{{ pathStart }}{{ resource }}" alt="recette du chef" class="img__recette">
+          <input type="file" class="input__file" name="{{ i }}" id="{{ i }}">
+        </div>
+        {% set i = i + 1 %}
+      {% endfor %} 
+      {% block button %}
+        {% include('global/modals/modalBtnForm.html.twig') %}
+      {% endblock %}
+    </form>
 
-    <section class="main__sectionContainer">
-      <h3 class="section__title3">Titre : Recette 1</h3>
-      <div>
-      <img src="{{asset('assets/images/recettes/recette1.jpg')}}">
-      <input type="file" class="input__file">
-      </div>
-        {% block button %}
-          {% include('global/modals/modalBtnForm.html.twig') %}
-        {% endblock %}
-    </section>
-
-        {# {% for resource in resources %} #}
-    {# <section class="main__sectionContainer">
-      <h3>Gallerie</h3>
-      {{ form_start(form) }}
-        {{ form_widget(form.title, {'attr': {'class': 'form__title'}}) }}
-        <img src=""
-        {{ form_widget(form.imageFile, {'attr': {'class': 'form__imageFile'}}) }}
-        <button class="button" type="submit">Valider</button>
-      {{ form_end(form) }}
-    </section>
-    {% endfor %} #}
-  
   </main>
 
   {# IMPORTATION DU FOOTER #}
@@ -49,5 +38,6 @@
       {% include ('global/modals/modalFooter.html.twig') %}
   {% endblock %}
   {# FIN IMPORTATION #}
+
 
 {% endblock %}
