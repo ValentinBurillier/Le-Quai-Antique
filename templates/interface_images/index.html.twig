@@ -1,13 +1,53 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Images - Le Quai Antique{% endblock %}
-
+{% block stylesheets %}
+  <link href="{{ asset('assets/css/pages/interfaceImages.css')}}" rel="stylesheet" type="text/css">
+{% endblock %}
 {% block body %}
-<main>
-<h2>Accéder aux images</h2>
-<h3>Gallerie</h3>
 
-{{ form(form) }}
+  {# IMPORTATION DU HEADER #}
+  {% block modalHeaderAdmin %}
+      {% include ('global/modals/modalHeaderAdmin.html.twig') %}
+  {% endblock %}
+  {# FIN IMPORTATION #}
 
-</main>
+  <main class="main">
+    <section class="main__section">
+      <img src="{{ asset('assets/images/arrow_left.png')}}" class="mainSection__arrowImg">
+      <h2 class="mainSection__title2">Contact</h2>
+    </section>
+
+
+    <section class="main__sectionContainer">
+      <h3 class="section__title3">Titre : Recette 1</h3>
+      <div>
+      <img src="{{asset('assets/images/recettes/recette1.jpg')}}">
+      <input type="file" class="input__file">
+      </div>
+        {% block button %}
+          {% include('global/modals/modalBtnForm.html.twig') %}
+        {% endblock %}
+    </section>
+
+        {# {% for resource in resources %} #}
+    {# <section class="main__sectionContainer">
+      <h3>Gallerie</h3>
+      {{ form_start(form) }}
+        {{ form_widget(form.title, {'attr': {'class': 'form__title'}}) }}
+        <img src=""
+        {{ form_widget(form.imageFile, {'attr': {'class': 'form__imageFile'}}) }}
+        <button class="button" type="submit">Valider</button>
+      {{ form_end(form) }}
+    </section>
+    {% endfor %} #}
+  
+  </main>
+
+  {# IMPORTATION DU FOOTER #}
+  {% block modalFooter %}
+      {% include ('global/modals/modalFooter.html.twig') %}
+  {% endblock %}
+  {# FIN IMPORTATION #}
+
 {% endblock %}

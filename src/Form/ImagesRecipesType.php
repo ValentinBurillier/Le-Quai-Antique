@@ -16,7 +16,6 @@ class ImagesRecipesType extends AbstractType
         $builder
             ->add('title')
             ->add('imageFile', VichImageType::class)
-            ->add('submit', SubmitType::class)
         ;
     }
 
