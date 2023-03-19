@@ -30,11 +30,13 @@
         </div>
         <h3 class="header__title3">Découvrez nos plats d'exceptions</h3>
         <section class="section__gallerie">
+
              <div class="gallerie__recettes">
-                <img src="{{ asset('assets/images/recette2.jpg') }}" alt="premier plat" class="img__plats">
-                <img src="{{ asset('assets/images/recette3.jpg') }}" alt="premier plat" class="img__plats">
-                <img src="{{ asset('assets/images/recette1.jpg') }}" alt="premier plat" class="img__plats">
+                {% for resource in resources %}
+                    <img src={{ repertory }}{{ resource }} alt="image recette" class="img__plats">
+                {% endfor %}
             </div>
+            
         </section>
     </section>
 
