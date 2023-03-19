@@ -1,0 +1,92 @@
+/* RESET */ 
+@import '../base/_reset'
+/* IMPORTATION BODY */
+@import '../components/sections/_bodyInterfaceAdmin'
+/* IMPORTATION HEADER */
+@import '../components/sections/_header'
+
+/* IMPORTATION BOUTON */
+@import '../components/_button'
+
+/* FOOTER PART */
+@import '../components/sections/_footer'
+
+/* CONFIG DE BASE 320 * 568PX */
+main
+  height: 80%
+  padding: 0px 10px
+  display: flex
+  flex-direction: column
+  row-gap: 5vh
+  max-width: 400px
+  margin: auto
+  & h2
+    font-size: 250%
+  & .main__section
+    display: flex
+    justify-content: center
+    column-gap: 5%
+    align-items: center
+    & img
+      height: 7vw
+      width: 7vw
+      object-fit: contain
+      max-height: 45px
+      max-width: 45px
+      min-height: 30px
+      min-width: 30px
+form
+  display: flex
+  flex-direction: column
+  row-gap: 4rem
+  width: 100%
+  max-width: 320px
+  margin: auto
+div
+  display: flex
+  justify-content: space-between
+label
+  font-size: 2.5rem
+input
+  width: 100px
+  color: black
+  font-size: 1.8rem
+.button
+  width: fit-content
+  font-size: 1.5rem
+  padding: 0.2rem
+  align-self: center
+
+@media screen and (min-width: 450px) and (min-height: 568px)
+  .header
+    max-width: 380px
+    margin: auto
+    & .header__nav
+      width: 100%
+  main
+    padding: 0rem 2rem
+    border-left: 1px solid white
+    border-right: 1px solid white
+  form
+    max-width: 400px
+
+
+@media screen and (min-width: 700px) and (min-height: 568px)
+  h1
+    font-size: 3.2rem
+  .header__iconUser
+    width: 45px
+
+@media screen and (min-width: 1000px) and (min-height: 568px)
+  main
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    max-height: 500px
+  main h2
+    font-size: 3rem
+  .button
+    font-size: 2rem
+  footer a 
+    font-size: 1.5rem

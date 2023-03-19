@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr-Fr">
+{# HEAD PART #}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block title %}
+  <title>Interface Administrateur - Le Quai Antique</title>
+{% endblock %}
+{% block stylesheets %}
+  <link href="{{ asset('assets/css/pages/interfaceFormules.css')}}" rel="stylesheet" type="text/css">
+{% endblock %}
+</head>
+
+{# BODY PART #}
+{% block body %}
+<body>
+    {# IMPORTATION DU HEADER #}
+    {% block modalHeaderAdmin %}
+        {% include ('global/modals/modalHeaderAdmin.html.twig') %}
+    {% endblock %}
+    {# FIN IMPORTATION #}
+
+    {# START MAIN #}
+    <main>
+        <section class="main__section">
+            <img src="{{ asset('assets/images/arrow_left.png')}}">
+            <h2>Modifier les formumes</h2>
+        </section>
+
+        
+        {{ form_start(form) }}
+            {{ form_row(form.entreeanddish, {'attr': {'value': data.entreeAndDish }}) }}
+            {{ form_row(form.entreeanddessert, {'attr': {'value': data.entreeAndDessert }}) }}
+            {{ form_row(form.dishanddessert, {'attr': {'value': data.dishAndDessert }}) }}
+            <button type="submit" class="button">Valider</buttton>
+        {{ form_end(form) }}
+    </main>
+    {# END MAIN #}
+
+    {# IMPORTATION DU FOOTER #}
+    {% block modalFooter %}
+        {% include ('global/modals/modalFooter.html.twig') %}
+    {% endblock %}
+    {# FIN IMPORTATION #}
+
+{% endblock %}
+</body>
+</html>
