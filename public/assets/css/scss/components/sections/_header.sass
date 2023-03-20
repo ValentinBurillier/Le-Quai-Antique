@@ -15,15 +15,23 @@
   justify-content: center
   align-items: center
   height: 15%
-  animation: slideRight 5s
+  animation: slideRight 1s
+  overflow: hidden
 @keyframes slideRight
   0%
     opacity: 0
-    transform: translateX(200px)
+    transform: translateX(20px)
   100%
     opacity: 1
     transform: translateX(0)
-@media screen and ( min-width: 1350px)
+
+@media screen and ( min-width: 1100px) and (min-height: 568px)
+  .header
+    height: initial
+    max-width: 780px
+    margin: auto
+@media screen and ( min-width: 1350px) and (min-height: 568px)
   .header
     width: 100vw
+    max-width: initial
   
