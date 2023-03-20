@@ -6,10 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 {% block title %}
-  <title>Gestion utilisateur - Le Quai Antique</title>
+  <title>Interface Administrateur - Le Quai Antique</title>
 {% endblock %}
 {% block stylesheets %}
-  <link href="{{ asset('assets/css/pages/interfaceAvisClients2.css')}}" rel="stylesheet" type="text/css">
+  <link href="{{ asset('assets/css/pages/interfaceAvis.css')}}" rel="stylesheet" type="text/css">
 {% endblock %}
 </head>
 
@@ -23,22 +23,27 @@
     {# FIN IMPORTATION #}
 
     <main class="main">
-        <section class="firstSection">
-            <a href="/interface/admin>"<img src={{ asset('assets/images/arrow_left.png') }} class="firstSection__arrowLeft"></a>
-            <h2 class="firstSection__title2 title2">Utilisateur</h2>
+       <section class="firstSection">
+            <a href="/interface/admin"><img src={{ asset('assets/images/arrow_left.png') }} class="firstSection__arrowLeft"></a>
+            <h2 class="firstSection__title2 title2">Avis utilisateurs</h2>
         </section>
 
         <section class="secondSection">
             {% set i = 0 %}
             {% for data in datas %}
-                <ul class="list{{i}}">
+                <ul class="list{{i}} list__container">
                     <li class="item item__data">{{ data.date }}</li>
                     <li class="item item__review">{{ data.review }}</li>
                 </ul>
                 {% set i = i + 1 %}
             {% endfor %}
         </section>
+
+        <div class="container__button">
+            <button class="button" onClick="window.location.href='/'">Accéder au site</button>
+        </div>
     </main>
+    
     {# IMPORTATION DU FOOTER #}
     {% block modalFooter %}
         {% include ('global/modals/modalFooter.html.twig') %}
