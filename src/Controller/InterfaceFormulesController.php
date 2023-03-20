@@ -28,7 +28,7 @@ class InterfaceFormulesController extends AbstractController
         /* SUBMIT DATA IN BDD */
         $form->handleRequest($request);
         // $formulas = new Formulas();
-        if ($form->isValid() && $form->isSubmitted()) {
+        if ($form->isSubmitted() && $form->isValid()) {
             $data->setEntreeanddish($form['entreeanddish']->getData());
             $data->setEntreeanddessert($form['entreeanddessert']->getData());
             $data->setDishanddessert($form['dishanddessert']->getData());
