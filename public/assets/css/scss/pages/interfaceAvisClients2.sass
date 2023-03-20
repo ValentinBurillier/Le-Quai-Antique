@@ -1,0 +1,36 @@
+/* RESET */ 
+@import '../base/_reset'
+/* IMPORTATION BODY */
+@import '../components/sections/_bodyInterfaceAdmin'
+/* IMPORTATION HEADER */
+@import '../components/sections/_header'
+
+/* IMPORTATION BOUTON */
+@import '../components/_button'
+
+/* FOOTER PART */
+@import '../components/sections/_footer'
+
+/* CONFIG DE BASE 320 * 568PX */
+main
+  padding: 0% 5vw
+  display: flex
+  flex-direction: column
+  row-gap: 2vh
+  height: 80%
+  overflow-y: scroll
+  position: relative
+.firstSection
+  display: flex
+  column-gap: 2vw
+  justify-content: center
+  & img
+    width: 6vh
+    object-fit: contain
+    height: 100%
+.secondSection
+  display: flex
+  flex-direction: column
+  row-gap: 2vh
+  & h2
+    font-size: 190%

@@ -19,6 +19,7 @@ main
   row-gap: 2vh
   height: 80%
   overflow-y: scroll
+  position: relative
 .firstSection
   display: flex
   column-gap: 2vw
@@ -33,12 +34,18 @@ main
   row-gap: 2vh
   & h2
     font-size: 190%
-  & .usersList
-    display: flex
-    flex-direction: column
-    row-gap: 1vh
-  & p
-    font-size: 170%
+.usersList
+  display: flex
+  flex-direction: column
+  row-gap: 1.5rem
+.container__userGlobal
+  display: flex
+  flex-direction: column
+  row-gap: 1.5rem
+  border-bottom: 1px solid white
+  margin-bottom: 1.5rem
+.userGlobal
+  font-size: 1.5rem
 footer
   column-gap: 2%
   min-width: -webkit-fill-available
@@ -48,24 +55,35 @@ footer
 /* RESPONSIVE LARGE PUIS HAUTEUR */
 @media screen and (min-width: 400px) and (min-height: 568px)
   .secondSection
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    background: rgb(62 62 62 / 30%)
+    width: 100%
+    box-shadow: 5px 5px 20px
     & h2
       font-size: 250%
-    & div p
-      font-size: 200%
 
 @media screen and (min-width: 500px) and (min-height: 568px)
   .firstSection
     & .firstSection__title2
       font-size: 290%
 
-  .secondSection .usersList
+@media screen and (min-width: 550px) and (min-height: 568px)
+  .main
+    max-width: 450px
+    margin: auto
+  .container__userGlobal
     flex-direction: row
     flex-wrap: wrap
-    gap: 1rem 5rem
-    padding: 2rem
+    column-gap: 2rem
     justify-content: center
-
+    align-items: center
+    padding: 1rem
 @media screen and (min-width: 700px) and (min-height: 568px)
+  .main
+    padding: initial
   .nav__div
     align-items: center
   h1
@@ -81,13 +99,11 @@ footer
     padding: 10px 5vw
     width: 840px
     margin: auto
-    border-left: 1px solid white
-    border-right: 1px solid white
+
   .main
     width: 840px
     margin: auto
-    border-left: 1px solid white
-    border-right: 1px solid white
+
   footer a
     font-size: 120%
 
@@ -97,6 +113,8 @@ footer
   .header__nav
     display: initial
     width: 90%
+  .userGlobal
+    font-size: 2rem
 
 @media screen and (min-width: 1700px) and (min-height: 568px)
   .header__iconUser

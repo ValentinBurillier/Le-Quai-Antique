@@ -24,33 +24,23 @@
 
     <main class="main">
         <section class="firstSection">
-            <img src={{ asset('assets/images/arrow_left.png') }} class="firstSection__arrowLeft">
+            <a href="/interface/admin"><img src={{ asset('assets/images/arrow_left.png') }} class="firstSection__arrowLeft"></a>
             <h2 class="firstSection__title2">Données utilisateurs</h2>
         </section>
 
         <section class="secondSection">
-            <h2 class="secondSection__title2">Liste des utilisateurs <br>A à Z</h2>
+            <h2 class="secondSection__title2">Liste des utilisateurs</h2>
             <div class="usersList">
-                <p>Valentin Burillier</p>
-                <p>Valentin Burillier</p>
-                <p>Valentin Burillier</p>
-                <p>Valentin Burillier</p>
-                <p>Valentin Burillier</p>
-                <p>Valentin Burillier</p>
-                <p>Valentin Burillier</p>
-                <p>Valentin Burillier</p>
-                <p>Valentin Burillier</p>
-                <p>Valentin Burillier</p>
-                <p>Valentin Burillier</p>
-                <p>Valentin Burillier</p>
-                <p>Valentin Burillier</p>
-                <p>Valentin Burillier</p>
-                <p>Valentin Burillier</p>
-                <p>Valentin Burillier</p>
-                <p>Valentin Burillier</p>
-                <p>Valentin Burillier</p>
-                <p>Valentin Burillier</p>
-                <p>Valentin Burillier</p>
+                {% set i = 0 %}
+                {% for user in thirdArray %}
+                    <ul class="container__dataUser{{i}} container__userGlobal"> 
+                        <li><p class="user{{i}} userGlobal">{{ user[0].email }}</p></li>
+                        <li><p class="user{{i}} userGlobal">{{ user[0].lastName }}</p></li>
+                        <li><p class="user{{i}} userGlobal">{{ user[0].firstName }}</p></li>
+                        <li><p class="user{{i}} userGlobal">{{ user[0].phoneNumber }}</p></li>
+                    </ul>
+                    {% set i = i + 1 %}
+                {% endfor %}
             </div>
         </section>
     </main>
