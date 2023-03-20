@@ -6,7 +6,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class UserManagementController extends AbstractController
+#[Route('/interface')]
+class InterfaceUserManagementController extends AbstractController
 {
     #[Route('/user/management', name: 'app_user_management')]
     public function index(): Response

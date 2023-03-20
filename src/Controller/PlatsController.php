@@ -12,6 +12,7 @@ class PlatsController extends AbstractController
     #[Route('/plats', name: 'app_plats')]
     public function index(DishesRepository $dishesRepository): Response
     {
+        $disabled = 'enable';
         $title = 'Plats';
         $linkLeft = "/entrees";
         $linkRight = "/desserts";
@@ -29,6 +30,7 @@ class PlatsController extends AbstractController
             'displayArrowLeft' => $displayArrowLeft,
             'displayArrowRight' => $displayArrowRight,
             'items' => $items,
+            'disabled' => $disabled,
         ]);
     }
 }

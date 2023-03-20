@@ -761,3 +761,7 @@ footer {
   align-items: center;
   column-gap: 2%;
 }
+
+textarea {
+  color: black;
+}

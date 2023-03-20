@@ -12,7 +12,7 @@ class VinsController extends AbstractController
     #[Route('/vins', name: 'app_vins')]
     public function index(WinesRepository $winesRepository): Response
     {
-        
+        $disabled = 'enable';
         $linkLeft = "/desserts";
         $linkRight = null;
         $linkButton = "/reservation/date";
@@ -41,6 +41,7 @@ class VinsController extends AbstractController
             'linkButton' => $linkButton,
             'displayArrowLeft' => $displayArrowLeft,
             'displayArrowRight' => $displayArrowRight,
+            'disabled' => $disabled,
         ]);
     }
 }

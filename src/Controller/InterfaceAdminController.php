@@ -15,7 +15,6 @@ class InterfaceAdminController extends AbstractController
     #[Route('/interface/admin', name: 'app_interface_admin')]
     public function index(ReservationsRepository $reservationsRepository): Response
     {
-        dd($this->getUser()->getRoles());
         $lunch = 0;
         $diner = 0;
         $numberReservationsToday = 0;

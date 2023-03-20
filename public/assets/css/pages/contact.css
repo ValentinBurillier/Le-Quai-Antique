@@ -644,6 +644,11 @@ footer {
   width: 100%;
 }
 
+@media screen and (min-width: 650px) and (min-height: 568px) {
+  footer a {
+    font-size: 1.2rem;
+  }
+}
 @media screen and (min-width: 900px) {
   footer a {
     font-size: 2vw;
@@ -654,12 +659,25 @@ footer {
     font-size: 1.5vw;
   }
 }
-/* MODIFICATIONS PERSONNALISEES */
+/* MODIFICATIONS PERSONNALISEES */    
 header {
   height: auto;
   padding: 10px;
 }
 
+main {
+  animation: opacity 4s;
+  height: 80%;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .main__title2 {
   font-size: 3.5vh;
   position: absolute;
@@ -724,4 +742,11 @@ header {
   .main__title3 {
     font-size: 2.5vw;
   }
+}
+.main__divlinkSocialNetwork a img:hover {
+  transform: scale(1.2);
+  box-shadow: 0px 0px 20px 12px rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  padding: 2%;
+  background: linear-gradient(197deg, rgb(118, 67, 0), rgba(26, 11, 11, 0.41));
 }

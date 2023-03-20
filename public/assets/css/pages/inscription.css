@@ -550,9 +550,13 @@ body {
   height: 100vh;
 }
 
+.main {
+  height: 80%;
+  position: relative;
+}
+
 /* FORMULAIRE DE CONNEXION */
 form {
-  height: 80%;
   display: flex;
   flex-direction: column;
   padding: 5%;
@@ -564,6 +568,9 @@ form {
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 1px 1px 4px 0px white;
   max-height: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 form h2 {
   font-size: 250%;

@@ -1,194 +1,111 @@
 /* RESET */ 
 @import '../base/_reset'
+
 /* IMPORTATION BODY */
-@import '../components/sections/_body'
+@import '../layout/_bodyMenu'
+
+/* IMPORTATION BODY BACKGROUND */
+@import '../components/sections/_bodyBg'
+
 /* IMPORTATION HEADER */
-@import '../components/sections/_header'
+@import '../components/sections/MenuFormules/_headerMenu'
 
-/* IMPORTATION RESTAURANT MENU */
-@import '../components/sections/_restaurantMenu'
+/* IMPORTATION MAIN */
+@import '../components/sections/MenuFormules/_main'
 
-/* IMPORTATION BOUTON */
-@import '../components/_button'
+/* IMPORTATION MAIN BACKGROUND */
+@import '../components/sections/MenuFormules/_mainBackground'
 
-/* PERSONNALISATION DE LA PAGE */
-body
-  height: 100vh
-  width: 100vw
-  
-.header
-  height: 15%
-.main
-  height: 85%
-.main__container
-  height: 90%
-@media screen and ( min-width: 800px)
-  .main__container
-    display: flex
-.menu__text
-  position: absolute
-  width: 100%
-  top: 50%
-  left: 50%
-  transform: translate(-50%, -50%)
-  & h2
-    color: black
-    margin-bottom: 5%
-  & h3
+/* IMPORTATION MAIN CONTAINER TEXT */
+@import '../components/sections/MenuFormules/_mainContainerText'
+
+/* IMPORTATION CONTAINER FORMULES */
+@import '../components/sections/MenuFormules/_containerFormules'
+
+/* IMPORTATION CONTAINER FORMULE */
+@import '../components/sections/MenuFormules/_formule'
+
+/* IMPORTATION BOUTON MENU PAGE */
+@import '../components/sections/MenuFormules/_arrowLinkRight'
+
+/* IMPORTATION BOUTON MENU PAGE */
+@import '../components/sections/MenuFormules/_btn'
+
+/* IMPORTATION RESERVED PARAGRAPHE */
+@import '../components/sections/MenuFormules/_reserved'
+
+/* IMPORTATION DU FOOTER */
+@import '../components/sections/MenuFormules/_footerMenu'
+
+/* BASES CONFIGURATION 320 * 568px */
+.entree__title2
+  font-size: 4.5rem
+  color: black
+
+.itemColor
     color: #AD5E00
-    font-size: 1.7rem
+    font-size: 1.4rem
+    letter-spacing: 0.5px
 
-@media screen and (min-height: 414px)
-  .menu__text h2
-    font-size: 2.5rem
-@media screen and ( min-width: 560px)
-  .menu__text h2
-    font-size: 3rem
-    margin-bottom: 7%
-@media screen and ( min-width: 700px)
-  .menu__text h2
+.entree__title3
+  font-size: 2.4rem
+
+.entree__title4
+  font-size: 2rem
+
+.item__paragraphe 
+  font-size: 2rem
+
+@media screen and (min-width: 700px) and (min-height: 568px)
+  .entree__title2
+    font-size: 6rem
+  .entree__title3
     font-size: 3.5rem
-    margin-bottom: 5%
-@media screen and ( min-width: 800px)
-  .menu__text h2
-    font-size: 2.5rem
-    margin-bottom: 5%
-@media screen and ( min-width: 1000px)
-  .menu__text h2
-    font-size: 3rem
-@media screen and ( min-width: 1400px)
-  .menu__text h2
-    font-size: 3.5rem
-@media screen and ( min-width: 1800px)
-  .menu__text h2
-    font-size: 4rem
-
-
-@media screen and ( min-width: 408px)
-  .menu__text h3
-    font-size: 1.8rem
-@media screen and ( min-width: 560px)
-  .menu__text h3
-    font-size: 2.2rem
-@media screen and ( min-width: 700px)
-  .menu__text h3
+  .entree__title4
     font-size: 2.7rem
-@media screen and ( min-width: 800px)
-  .menu__text h3
-    font-size: 1.7rem
-@media screen and ( min-width: 1000px)
-  .menu__text h3
+  .item__paragraphe 
     font-size: 2.5rem
-@media screen and ( min-width: 1400px)
-  .menu__text h3
-    font-size: 2.8rem
-@media screen and ( min-width: 1800px)
-  .menu__text h3
+  
+@media screen and (min-width: 1350px) and (min-height: 568px)
+  .entree__title3
+    font-size: 4rem
+  .entree__title4
+    font-size: 3.5rem
+  .item__paragraphe 
     font-size: 3rem
+  
+@media screen and (min-width: 1350px) and (min-height: 650px)
+  .entree__title2
+    font-size: 7rem
 
-    
-.container__formules
-  width: 80%
-  margin-left: auto
-  margin-right: auto
-  display: flex
-  flex-direction: column
-  justify-content: center
-  gap: 10px
-@media screen and (min-height: 430px)
-  .container__formules
-    width: 70%
-@media screen and (min-width: 488px)
-  .container__formules
-    width: 60%
-@media screen and (min-width: 560px)
-  .container__formules
-    gap: 20px
-@media screen and (min-width: 700px)
-  .container__formules
-    width: 70%
-@media screen and (min-width: 1800px)
-  .container__formules
-    width: 60%
-.div__form1
-  display: flex
-  justify-content: space-between
-.div__form2
-  display: flex
-  justify-content: space-between
-
-/* MENU & FORMULES */
-@media screen and ( min-width: 800px)
-  .menuLeft
-    width: 50%
-/* MENU ENTREES */
-.menuRight
-  display: none
-@media screen and ( min-width: 800px)
-  .menuRight
-    display: block
-    width: 50%
-.menuRight .menu__text
-  padding: 15px
-.menuRight h2
-  color: black
-  margin-bottom: 2%
-@media screen and ( min-width: 800px)
-  .menuRight h2
+@media screen and (min-width: 550px) and (min-height: 700px)
+  .entree__title2
+    font-size: 5rem
+  .entree__title3
+    font-size: 3.2rem
+  .entree__title4
     font-size: 3rem
-@media screen and ( min-width: 1400px)
-  .menuRight h2
+  .item__paragraphe 
+    font-size: 2.7rem
+
+@media screen and (min-width: 1350px) and (min-height: 700px)
+  .entree__title2
+    font-size: 7rem
+  .entree__title3
+    font-size: 4.5rem
+  .entree__title4
+    font-size: 3.8rem
+  .item__paragraphe 
     font-size: 3.5rem
 
-.menuRight h3
-  color: black
-  margin-bottom: 2%
-@media screen and ( min-width: 800px)
-  .menuRight h3
-    font-size: 2rem
-@media screen and ( min-width: 1400px)
-  .menuRight h3
-    font-size: 2.5rem
+@media screen and (min-width: 1100px) and (min-height: 750px)
+  .entree__title2
+    font-size: 7rem
+  .entree__title3
+    font-size: 4.5rem
+  .entree__title4
+    font-size: 3.8rem
+  .item__paragraphe 
+    font-size: 3.5rem
 
-
-.menuRight p
-  color: #AD5E00
-  font-size: 1.5rem
-  margin-bottom: 2%
-@media screen and ( min-width: 800px)
-  .menuRight p
-    font-size: 1.6rem
-@media screen and ( min-width: 1400px)
-  .menuRight p
-    font-size: 1.8rem
-.img__Entree
-  height: 75%
-  position: fixed
-  right: 0
-  width: 50%
-.menuRight .img__vector
-  height: 6vw
-  left: 95%
-.main__MenuEntree
-  height: calc(67.5% + 9.1vh)
-  width: calc(22% + 11vw)
-  background: white
-  position: absolute
-  top: 10.5%
-  left: 58%
-.div__button
-  height: 10%
-  display: flex
-  align-items: center
-  justify-content: center
-@media screen and ( min-width: 800px)
-  .div__button
-    width: auto
-@media screen and ( min-width: 600px)
-  button
-    font-size: 1.5rem
-@media screen and ( min-width: 800px)
-  .button
-    font-size: 2rem
-    width: 310px
-  
+// END RESPONSIVE 1880px * 874px

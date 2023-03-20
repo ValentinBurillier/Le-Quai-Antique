@@ -12,6 +12,7 @@ class EntreesController extends AbstractController
     #[Route('/entrees', name: 'app_entrees')]
     public function index(EntreesRepository $entreesList): Response
     {
+        $disabled = 'enable';
         $title = 'Entrées';
         $linkLeft = "/menu";
         $linkRight = "/plats";
@@ -29,6 +30,7 @@ class EntreesController extends AbstractController
             'displayArrowLeft' => $displayArrowLeft,
             'displayArrowRight' => $displayArrowRight,
             'items' => $items,
+            'disabled' => $disabled,
         ]);
     }
 }

@@ -511,100 +511,6 @@ h2 {
     width: 100vw;
   }
 }
-/* IMPORTATION DESCRIPTION MENU CARD */
-.description {
-  color: #AD5E00;
-  font-size: 1.4rem;
-  letter-spacing: 0.5px;
-}
-
-@media screen and (min-width: 700px) and (min-height: 568px) {
-  .description {
-    font-size: 1.7rem;
-  }
-}
-@media screen and (min-width: 1350px) and (min-height: 650px) {
-  .description {
-    font-size: 2rem;
-  }
-}
-@media screen and (min-width: 550px) and (min-height: 700px) {
-  .description {
-    font-size: 1.7rem;
-  }
-}
-@media screen and (min-width: 1350px) and (min-height: 700px) {
-  .description {
-    font-size: 2.1rem;
-  }
-}
-@media screen and (min-width: 700px) and (min-height: 750px) {
-  .description {
-    font-size: 2rem;
-  }
-}
-@media screen and (min-width: 1100px) and (min-height: 750px) {
-  .description {
-    font-size: 2.1rem;
-  }
-}
-@media screen and (min-width: 1100px) and (min-height: 850px) {
-  .description {
-    font-size: 2.3rem;
-  }
-}
-@media screen and (min-width: 1800px) and (min-height: 850px) {
-  .description {
-    font-size: 2.5rem;
-  }
-}
-/* IMPORTATION PRICE MENU CARD */
-.price {
-  color: black;
-  font-size: 1.2rem;
-  letter-spacing: 1px;
-}
-
-@media screen and (min-width: 700px) and (min-height: 568px) {
-  .price {
-    font-size: 1.7rem;
-  }
-}
-@media screen and (min-width: 1350px) and (min-height: 650px) {
-  .price {
-    font-size: 2rem;
-  }
-}
-@media screen and (min-width: 550px) and (min-height: 700px) {
-  .price {
-    font-size: 1.7rem;
-  }
-}
-@media screen and (min-width: 1350px) and (min-height: 700px) {
-  .price {
-    font-size: 2rem;
-  }
-}
-@media screen and (min-width: 700px) and (min-height: 750px) {
-  .price {
-    font-size: 2rem;
-  }
-}
-@media screen and (min-width: 1100px) and (min-height: 750px) {
-  .price {
-    font-size: 2rem;
-  }
-}
-@media screen and (min-width: 1100px) and (min-height: 850px) {
-  .price {
-    font-size: 2.1rem;
-  }
-}
-@media screen and (min-width: 1800px) and (min-height: 850px) {
-  .price {
-    font-size: 2.3rem;
-  }
-}
 /* IMPORTATION ARROWLEFT*/
 .arrow_linkLeft {
   position: absolute;
@@ -642,65 +548,6 @@ h2 {
 @media screen and (min-width: 1350px) and (min-height: 568px) {
   .arrow_linkLeft {
     left: 1.1rem;
-  }
-}
-/* IMPORTATION ARROWLEFT*/
-.arrow_linkRight {
-  position: absolute;
-  right: -1.5rem;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  height: auto;
-  width: auto;
-}
-.arrow_linkRight img {
-  height: 3rem;
-  width: 3rem;
-  object-fit: contain;
-}
-
-@media screen and (min-width: 350px) and (min-height: 568px) {
-  .arrow_linkRight {
-    right: -1rem;
-  }
-}
-@media screen and (min-width: 380px) and (min-height: 568px) {
-  .arrow_linkRight {
-    right: -0.5rem;
-  }
-}
-@media screen and (min-width: 700px) and (min-height: 568px) {
-  .arrow_linkRight {
-    right: -2rem;
-  }
-  .arrow_linkRight img {
-    width: 5rem;
-    height: 5rem;
-  }
-}
-@media screen and (min-width: 1350px) and (min-height: 568px) {
-  .arrow_linkRight {
-    right: 2rem;
-  }
-}
-@media screen and (min-width: 1350px) and (min-height: 650px) {
-  .arrow_linkRight {
-    right: 4rem;
-  }
-}
-@media screen and (min-width: 1350px) and (min-height: 700px) {
-  .arrow_linkRight {
-    right: 1rem;
-  }
-}
-@media screen and (min-width: 700px) and (min-height: 750px) {
-  .arrow_linkRight {
-    right: -1.7rem;
-  }
-}
-@media screen and (min-width: 1100px) and (min-height: 750px) {
-  .arrow_linkRight {
-    right: 1rem;
   }
 }
 /* IMPORTATION RESERVED PARAGRAPHE */
@@ -956,13 +803,85 @@ main .main__img {
   padding-left: 1rem;
   padding-right: 1rem;
 }
-.main__container .entree__title2 {
+
+.entree__title2 {
   color: black;
   font-size: 2.7rem;
+  height: 10%;
 }
-.main__container .title {
+
+.wines__container {
+  height: 90%;
+}
+.wines__container .redWines {
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.wines__container .whiteWines {
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.wines__container .pinkWines {
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.wine__List {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wine__ListPrice {
+  display: flex;
+  gap: 1rem;
+}
+
+.wines__paragraphe {
+  color: black;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+ul {
+  display: flex;
+}
+
+.wine__title {
+  color: black;
+  text-align: left;
+  font-size: 1.5rem;
+}
+
+.wine__ListPrice2 {
+  gap: 5px;
+}
+
+.wineName {
+  color: #AD5E00;
+}
+
+.title {
   color: black;
   font-size: 1.6rem;
+}
+
+.description {
+  color: #AD5E00;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+}
+
+.price {
+  color: black;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
 }
 
 @media screen and (min-width: 380px) and (min-height: 568px) {
@@ -972,7 +891,7 @@ main .main__img {
     width: 375px;
   }
 }
-@media screen and (min-width: 700px) and (min-height: 568px) {
+@media screen and (min-width: 650px) and (min-height: 568px) {
   h1 {
     font-size: 4rem;
   }
@@ -994,14 +913,20 @@ main .main__img {
   }
   .main__container {
     max-width: 450px;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
   }
-  .main__container .entree__title2 {
-    font-size: 3.5rem;
+  .entree__title2 {
+    font-size: 3rem;
   }
-  .main__container .title {
+  .wine__title {
     font-size: 2rem;
+  }
+  .wines__paragraphe {
+    font-size: 1.8rem;
+  }
+  footer a {
+    font-size: 1.2rem;
   }
 }
 @media screen and (min-width: 1350px) and (min-height: 568px) {
@@ -1033,7 +958,7 @@ main .main__img {
     top: 45%;
   }
 }
-@media screen and (min-width: 700px) and (min-height: 620px) {
+@media screen and (min-width: 650px) and (min-height: 620px) {
   .main__container {
     top: 50%;
   }
@@ -1048,28 +973,12 @@ main .main__img {
     align-self: center;
   }
 }
-@media screen and (min-width: 1350px) and (min-height: 650px) {
-  main .main__img {
-    width: 1200px;
-    height: -webkit-fill-available;
-  }
-  .main__container {
-    padding: 3rem;
-    max-width: 520px;
-  }
-  .main__container .entree__title2 {
-    font-size: 4.5rem;
-  }
-  .main__container .title {
-    font-size: 2.5rem;
-  }
-}
 @media screen and (min-width: 380px) and (min-height: 659px) {
   .main__container {
     height: 60vh;
   }
 }
-@media screen and (min-width: 700px) and (min-height: 659px) {
+@media screen and (min-width: 650px) and (min-height: 659px) {
   .main__container {
     height: 66vh;
   }
@@ -1098,12 +1007,16 @@ main .main__img {
   .main__container {
     max-width: 340px;
     height: 60vh;
+    padding: 0rem 3rem;
   }
   .main__container .entree__title2 {
     font-size: 3.5rem;
   }
-  .main__container .title {
-    font-size: 2.2rem;
+  .wine__title {
+    font-size: 2rem;
+  }
+  .wines__paragraphe {
+    font-size: 1.8rem;
   }
 }
 @media screen and (min-width: 700px) and (min-height: 700px) {
@@ -1137,6 +1050,7 @@ main .main__img {
     background-position: center;
   }
   main .main__img .main__container {
+    padding: 0rem 5rem;
     height: 100%;
     left: 60%;
     top: 50%;
@@ -1146,32 +1060,17 @@ main .main__img {
   main .main__img .main__container .entree__title2 {
     font-size: 4.5rem;
   }
-  main .main__img .main__container .title {
-    font-size: 3rem;
+  .wine__title {
+    font-size: 2.6rem;
   }
-}
-@media screen and (min-width: 320px) and (min-height: 750px) {
-  .main__container {
-    height: 50vh;
+  .wines__paragraphe {
+    font-size: 2rem;
   }
-}
-@media screen and (min-width: 550px) and (min-height: 750px) {
-  .main__container {
-    height: 60vh;
+  .price14 {
+    font-size: 2.2rem;
   }
-}
-@media screen and (min-width: 700px) and (min-height: 750px) {
-  .main__container {
-    max-height: 490px;
-    top: 50%;
-    left: 50%;
-    height: 100%;
-  }
-  .main__container .entree__title2 {
-    font-size: 4rem;
-  }
-  .main__container .title {
-    font-size: 2.5rem;
+  .price75 {
+    font-size: 2.2rem;
   }
 }
 @media screen and (min-width: 1100px) and (min-height: 750px) {
@@ -1203,12 +1102,21 @@ main .main__img {
     top: 50%;
     max-height: initial;
     max-width: 500px;
+    padding: 0rem 6rem;
   }
-  main .main__img .main__container .entree__title2 {
+  .wine__title {
+    font-size: 3rem;
+  }
+  .wines__paragraphe {
+    font-size: 2.2rem;
+  }
+}
+@media screen and (min-width: 1100px) and (min-height: 800px) {
+  .main__container .entree__title2 {
     font-size: 4.5rem;
   }
-  main .main__img .main__container .title {
-    font-size: 3rem;
+  .wines__paragraphe {
+    font-size: 2.5rem;
   }
 }
 @media screen and (min-width: 1100px) and (min-height: 850px) {
@@ -1224,6 +1132,12 @@ main .main__img {
   main .main__img .main__container .title {
     font-size: 3.1rem;
   }
+  main .main__img .main__container .description {
+    font-size: 2.3rem;
+  }
+  main .main__img .main__container .price {
+    font-size: 2.1rem;
+  }
 }
 @media screen and (min-width: 1800px) and (min-height: 850px) {
   main .main__img {
@@ -1238,5 +1152,11 @@ main .main__img {
   }
   main .main__img .main__container .title {
     font-size: 3rem;
+  }
+  main .main__img .main__container .description {
+    font-size: 2.5rem;
+  }
+  main .main__img .main__container .price {
+    font-size: 2.3rem;
   }
 }

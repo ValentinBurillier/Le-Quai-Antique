@@ -12,6 +12,7 @@ class DessertsController extends AbstractController
     #[Route('/desserts', name: 'app_desserts')]
     public function index(DessertsRepository $dessertsRepository): Response
     {
+        $disabled = 'enable';
         $title = 'Desserts';
         $linkLeft = "/plats";
         $linkRight = "/vins";
@@ -29,6 +30,7 @@ class DessertsController extends AbstractController
             'displayArrowLeft' => $displayArrowLeft,
             'displayArrowRight' => $displayArrowRight,
             'items' => $items,
+            'disabled' => $disabled,
         ]);
     }
 }
