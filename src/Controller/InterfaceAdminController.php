@@ -20,6 +20,14 @@ class InterfaceAdminController extends AbstractController
         $numberReservationsToday = 0;
         $array = [];
 
+        /* VERIFY IF USER IS CONNECTED */
+        $connect = false;
+        if ($this->getUser() !== null) {
+            $user = $this->getUser()->getUserIdentifier();
+        } if(isset($user) && ($user !== null) && ($user !== '')) {
+            $connect = true;
+            }
+        
         /* GET DATES OF RESERVATION OF THE DAY */
         $date = date("d.m.y");
         $dataDate = $reservationsRepository->findBy([
@@ -53,6 +61,7 @@ class InterfaceAdminController extends AbstractController
         }
 
         return $this->render('interface_admin/index.html.twig', [
+            'connect' => $connect,
             'numberReservationsToday' => $numberReservationsToday,
             'lunch' => $lunch,
             'diner' => $diner,

@@ -20,9 +20,17 @@ class EntreesController extends AbstractController
         $displayArrowLeft = true;
         $displayArrowRight = true; 
 
+        $connect = false;
+        if ($this->getUser() !== null) {
+            $user = $this->getUser()->getUserIdentifier();
+        } if(isset($user) && ($user !== null) && ($user !== '')) {
+            $connect = true;
+            }
+        
         // DATABASE DATA RECOVERY
         $items = $entreesList->findAll();
         return $this->render('entrees/index.html.twig', [
+            'connect' => $connect,
             'title' => $title,
             'linkLeft' => $linkLeft,
             'linkRight' => $linkRight,

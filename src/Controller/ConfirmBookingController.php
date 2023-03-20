@@ -16,6 +16,13 @@ class ConfirmBookingController extends AbstractController
     #[Route('/confirm/booking', name: 'app_confirm_booking')]
     public function index(Request $request, ReservationsRepository $reservationsRepository, ManagerRegistry $getDoctrine): Response
     {
+        $connect = false;
+        if ($this->getUser() !== null) {
+            $user = $this->getUser()->getUserIdentifier();
+        } if(isset($user) && ($user !== null) && ($user !== '')) {
+            $connect = true;
+            }
+        
         $date = $_COOKIE['date'];
         $hour = $_COOKIE['hour'];
         $allergy = $_COOKIE['allergy'];
@@ -40,7 +47,7 @@ class ConfirmBookingController extends AbstractController
             return $this->redirectToRoute('app_felicitation');
         }
         return $this->render('confirm_booking/index.html.twig', [
-            'controller_name' => 'ConfirmBookingController',
+            'connect' => $connect,
             'form' => $form->createView(),
         ]);
     }

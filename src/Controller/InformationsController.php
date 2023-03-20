@@ -20,6 +20,13 @@ class InformationsController extends AbstractController
     #[Route('/informations', name: 'app_informations')]
     public function index(LoggerInterface $loggerInterface, InfosUsersRepository $infosUsersRepository, Request $request, ManagerRegistry $getDoctrine): Response
     {
+        $connect = false;
+        if ($this->getUser() !== null) {
+            $user = $this->getUser()->getUserIdentifier();
+        } if(isset($user) && ($user !== null) && ($user !== '')) {
+            $connect = true;
+            }
+        
         /* GET EMAIL CONNECTED USER */
         $email = $this->getUser()->getUserIdentifier();
     
@@ -53,6 +60,7 @@ class InformationsController extends AbstractController
             $entityManager->flush();            
         }
         return $this->render('informations/index.html.twig', [
+            'connect' => $connect,
             'firstName' =>$firstName,
             'lastName' =>$lastName,
             'phoneNumber' => $phoneNumber,

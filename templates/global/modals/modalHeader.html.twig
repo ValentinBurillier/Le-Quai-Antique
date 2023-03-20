@@ -4,7 +4,17 @@
   <nav class="header__nav">
     <div class="nav__div">
       <h1>Le Quai Antique</h1>
-      <a href="/connect"><img src="{{ asset('assets/images/icon_user.png')}}" alt="icone utilisateur connexion et inscription" class="header__iconUser"></a>
+      {% if connect == false %}
+      <a href="/connect">
+        <img src="{{ asset('assets/images/icon_user.png')}}" alt="icone utilisateur connexion et inscription" class="header__iconUser">
+      </a>
+      {% endif %}
+
+      {% if connect == true %}
+      <a href="/logout">
+        <img src="{{ asset('assets/images/sortir.png')}}" alt="icone deconnexion" class="header__iconUser">
+      </a>
+      {% endif %}
     </div>
     <ul class="nav__ul">
       <li><a href="/">Accueil</a></li>

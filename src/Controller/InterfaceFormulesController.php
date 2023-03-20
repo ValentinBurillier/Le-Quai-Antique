@@ -22,6 +22,14 @@ class InterfaceFormulesController extends AbstractController
         $entreeAndDessert = $data->getEntreeanddessert();
         $dishAndDessert = $data->getDishanddessert();
 
+        /* VERIFY IF USER IS CONNECTED */
+        $connect = false;
+        if ($this->getUser() !== null) {
+            $user = $this->getUser()->getUserIdentifier();
+        } if(isset($user) && ($user !== null) && ($user !== '')) {
+            $connect = true;
+            }
+        
         /* IMPORT FORMULAS FORM */
         $form = $this->createForm(FormulesType:: class);
 
@@ -40,7 +48,7 @@ class InterfaceFormulesController extends AbstractController
        
 
         return $this->render('interface_formules/index.html.twig', [
-            'controller_name' => 'InterfaceFormulesController',
+            'connect' => $connect,
             'form' => $form->createView(),
             'entreeAndDish' => $entreeAndDish,
             'entreeAndDessert' => $entreeAndDessert,

@@ -19,9 +19,17 @@ class MenuController extends AbstractController
         $displayArrowLeft = false;
         $displayArrowRight = true; 
 
+        $connect = false;
+        if ($this->getUser() !== null) {
+            $user = $this->getUser()->getUserIdentifier();
+        } if(isset($user) && ($user !== null) && ($user !== '')) {
+            $connect = true;
+            }
+        
         // DATABASE DATA RECOVERY
         $items = $formulasRepository->find(1);
         return $this->render('menu/index.html.twig', [
+            'connect' => $connect,
             'linkLeft' => $linkLeft,
             'linkRight' => $linkRight,
             'linkButton' => $linkButton,

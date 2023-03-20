@@ -20,6 +20,14 @@ class UsersListController extends AbstractController
         $firstName = '';
         $phoneNumber = '';
 
+        /* VERIFY IF USER IS CONNECTED */
+        $connect = false;
+        if ($this->getUser() !== null) {
+            $user = $this->getUser()->getUserIdentifier();
+        } if(isset($user) && ($user !== null) && ($user !== '')) {
+            $connect = true;
+            }
+
         /* GET EMAILS AND STOCK IN USERS VARIABLE */
         $datas = $userRepository->findAll();
         $users = [];
@@ -41,6 +49,7 @@ class UsersListController extends AbstractController
         }
 
         return $this->render('users_list/index.html.twig', [
+            'connect' => $connect,
             'thirdArray' => $thirdArray,
         ]);
     }

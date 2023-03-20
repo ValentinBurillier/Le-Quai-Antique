@@ -13,6 +13,15 @@ class InterfaceImagesController extends AbstractController
     public function index(): Response
     {
         $i = 1;
+
+        /* VERIFY IF USER IS CONNECTED */
+        $connect = false;
+        if ($this->getUser() !== null) {
+            $user = $this->getUser()->getUserIdentifier();
+        } if(isset($user) && ($user !== null) && ($user !== '')) {
+            $connect = true;
+            }
+        
         /* STORAGE NEW IMAGES */
         if(isset($_FILES[1]) && ($_FILES[1]['error'] === 0)) {
             $img1 = $_FILES[1]['tmp_name'];
@@ -40,6 +49,7 @@ class InterfaceImagesController extends AbstractController
         unset($resources[1]); /* Index index à 2 */
    
         return $this->render('interface_images/index.html.twig', [
+            'connect' => $connect,
             'resources' => $resources,
             'repertory' => $repertory,
             'textbtn' => 'Valider',

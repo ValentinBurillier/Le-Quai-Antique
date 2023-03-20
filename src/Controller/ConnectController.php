@@ -11,8 +11,14 @@ class ConnectController extends AbstractController
     #[Route('/connect', name: 'app_connect')]
     public function index(): Response
     {
+        $connect = false;
+        if ($this->getUser() !== null) {
+            $user = $this->getUser()->getUserIdentifier();
+        } if(isset($user) && ($user !== null) && ($user !== '')) {
+            $connect = true;
+            }
         return $this->render('connect/index.html.twig', [
-            'controller_name' => 'ConnectController',
+            'connect' => $connect,
         ]);
     }
 }

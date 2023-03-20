@@ -20,9 +20,17 @@ class DessertsController extends AbstractController
         $displayArrowLeft = true;
         $displayArrowRight = true;
         
+        $connect = false;
+        if ($this->getUser() !== null) {
+            $user = $this->getUser()->getUserIdentifier();
+        } if(isset($user) && ($user !== null) && ($user !== '')) {
+            $connect = true;
+            }
+        
         // DATABASE DATA RECOVERY
         $items = $dessertsRepository->findAll();
         return $this->render('desserts/index.html.twig', [
+            'connect' => $connect,
             'title' => $title,
             'linkLeft' => $linkLeft,
             'linkRight' => $linkRight,

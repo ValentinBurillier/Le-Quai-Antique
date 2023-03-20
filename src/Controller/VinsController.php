@@ -18,6 +18,14 @@ class VinsController extends AbstractController
         $linkButton = "/reservation/date";
         $displayArrowLeft = true;
         $displayArrowRight = false;
+
+        $connect = false;
+        if ($this->getUser() !== null) {
+            $user = $this->getUser()->getUserIdentifier();
+        } if(isset($user) && ($user !== null) && ($user !== '')) {
+            $connect = true;
+            }
+        
         $vR1 = $winesRepository->find(1);
         $vR2 = $winesRepository->find(2);
         $vR3 = $winesRepository->find(3);
@@ -28,7 +36,7 @@ class VinsController extends AbstractController
         
         // DATABASE DATA RECOVERY
         return $this->render('vins/index.html.twig', [
-            'controller_name' => 'VinsController',
+            'connect' => $connect,
             'vR1' => $vR1,
             'vR2' => $vR2,
             'vR3' => $vR3,

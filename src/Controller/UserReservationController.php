@@ -21,6 +21,13 @@ class UserReservationController extends AbstractController
         $display = false;
         $displayText = 'Aucune réservation en cours';
 
+        $connect = false;
+        if ($this->getUser() !== null) {
+            $user = $this->getUser()->getUserIdentifier();
+        } if(isset($user) && ($user !== null) && ($user !== '')) {
+            $connect = true;
+            }
+        
         /* REMOVE RESERVATION*/
         if(isset($_COOKIE['suppr']) && ($_COOKIE['suppr'] === 'suppr')) {
             $email = $this->getUser()->getUserIdentifier();
@@ -60,6 +67,7 @@ class UserReservationController extends AbstractController
         }
              
         return $this->render('user_reservation/index.html.twig', [
+            'connect' => $connect,
             'date' => $dateReservation,
             'hour' => $hourReservation,
             'number' => $number,

@@ -14,6 +14,14 @@ class InterfaceReservationsController extends AbstractController
     #[Route('/interface/reservations', name: 'app_interface_reservations')]
     public function index(ReservationsRepository $reservationsRepository, ManagerRegistry $getDoctrine): Response
     {
+        /* VERIFY IF USER IS CONNECTED */
+        $connect = false;
+        if ($this->getUser() !== null) {
+            $user = $this->getUser()->getUserIdentifier();
+        } if(isset($user) && ($user !== null) && ($user !== '')) {
+            $connect = true;
+            }
+        
         $cookie = '';
         if(isset($_COOKIE['suppr']) && $_COOKIE['suppr'] !== '') {
             $newCookie = $_COOKIE['suppr'];
@@ -47,7 +55,7 @@ class InterfaceReservationsController extends AbstractController
         /* RECUPERATION DES DONNEES ET TRIER */
         $datas = $reservationsRepository->findBy(array(), array('dateofreservation' => 'asc'));
         return $this->render('interface_reservations/index.html.twig', [
-            'controller_name' => 'InterfaceReservationsController',
+            'connect' => $connect,
             'datas' => $datas,
         ]);
     }

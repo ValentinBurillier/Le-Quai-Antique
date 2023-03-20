@@ -25,6 +25,13 @@ class UserHomeController extends AbstractController
             'email' => $email,
         ]);
 
+        $connect = false;
+        if ($this->getUser() !== null) {
+            $user = $this->getUser()->getUserIdentifier();
+        } if(isset($user) && ($user !== null) && ($user !== '')) {
+            $connect = true;
+            }
+        
         /* On vérifie si user à une réservation passée */
         if($reservations !== []) {
             if (isset($reservations[0])) {
@@ -50,6 +57,7 @@ class UserHomeController extends AbstractController
         }
         
         return $this->render('user_home/index.html.twig', [
+            'connect' => $connect,
             'display' => $display,
         ]);
     }

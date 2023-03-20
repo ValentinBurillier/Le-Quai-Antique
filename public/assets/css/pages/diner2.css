@@ -640,6 +640,7 @@ main {
 .btn {
   width: initial;
   height: initial;
+  font-size: 1.2rem;
 }
 
 .btnTop {
@@ -698,6 +699,9 @@ main {
   .section__container {
     gap: 10%;
     max-width: 575px;
+  }
+  .btn {
+    font-size: 1.5rem;
   }
   .btnTop {
     width: 30%;

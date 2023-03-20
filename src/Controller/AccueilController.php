@@ -11,6 +11,13 @@ class AccueilController extends AbstractController
     #[Route('/', name: 'app_accueil')]
     public function index(): Response
     {
+        $connect = false;
+        if ($this->getUser() !== null) {
+            $user = $this->getUser()->getUserIdentifier();
+        } if(isset($user) && ($user !== null) && ($user !== '')) {
+            $connect = true;
+            }
+            
         $y = 0;
         $linkButton = '/reservation';
         $disabled = 'enable';
@@ -37,6 +44,7 @@ class AccueilController extends AbstractController
             'linkButton' => $linkButton,
             'disabled' => $disabled,
             'textbtn' => $textbtn,
+            'connect' => $connect,
         ]);
     }
 }

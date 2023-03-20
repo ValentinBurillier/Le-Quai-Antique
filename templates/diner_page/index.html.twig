@@ -9,7 +9,7 @@
   <title>Connexion - Le Quai Antique</title>
 {% endblock %}
 {% block stylesheets %}
-  <link href="{{ asset('assets/css/pages/diner.css')}}" rel="stylesheet" type="text/css">
+  <link href="{{ asset('assets/css/pages/diner2.css')}}" rel="stylesheet" type="text/css">
 {% endblock %}
 </head>
 
@@ -40,7 +40,7 @@
             {% block button %}
             {% set textbtn = 'Continuer' %}
               {% include ('global/modals/modalButton.html.twig') %}
-              <button class="button btnBottom" onClick="window.location.href='{{ linkButton }}'">Réserver pour le déjeuner</button>
+              <button class="button btnBottom" onClick="window.location.href='{{ linkButton2 }}'">Réserver pour le déjeuner</button>
             {% endblock %}
         </section>
     </main>

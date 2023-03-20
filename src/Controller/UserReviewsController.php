@@ -14,6 +14,13 @@ class UserReviewsController extends AbstractController
     #[Route('/reviews', name: 'app_user_reviews')]
     public function index(ReviewsTypeRepository $reviewsTypeRepository, ManagerRegistry $getDoctrine): Response
     {
+        $connect = false;
+        if ($this->getUser() !== null) {
+            $user = $this->getUser()->getUserIdentifier();
+        } if(isset($user) && ($user !== null) && ($user !== '')) {
+            $connect = true;
+            }
+        
         if(isset($_COOKIE['suppr']) && ($_COOKIE['suppr'] !== '') && ($_COOKIE['suppr'] !== null)) {
             $delete = $reviewsTypeRepository->find($_COOKIE['suppr']);
             $entityManager = $getDoctrine->getManager();
@@ -28,6 +35,7 @@ class UserReviewsController extends AbstractController
         ]);
         $count = (count($datas));
         return $this->render('user_reviews/index.html.twig', [
+            'connect' => $connect,
             'datas' => $datas,
             'count' => $count,
         ]);
