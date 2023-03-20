@@ -18,7 +18,9 @@ body
   height: 100vh
 .main
   height: 80%
-  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
 /* FORMULAIRE DE CONNEXION */
 form
   display: flex
@@ -32,9 +34,7 @@ form
   background: rgba(255, 255, 255, 0.2)
   box-shadow: 1px 1px 4px 0px white
   max-height: 500px
-  top: 50%
-  left: 50%
-  transform: translate(-50%, -50%)
+  max-height: 400px
   & h2
     font-size: 250%
     line-height: 150%
@@ -51,5 +51,22 @@ form
     height: initial
     font-size: 1.2rem
     padding: 0.5rem
+  
+@media screen and (min-width: 700px) and (min-height: 650px)
+  form
+    scale: 1.2
 
+@media screen and (min-width: 700px) and (min-height: 700px)
+  form
+    scale: 1.3
+
+@media screen and (min-width: 700px) and (min-height: 750px)
+  form
+    scale: 1.4
+
+@media screen and (min-width: 700px) and (min-height: 800px)
+  form
+    scale: 1.5
+
+  
 

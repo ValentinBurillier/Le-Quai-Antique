@@ -24,10 +24,9 @@
         {# PREMIERE SECTION#}
         <section class="main__section">
             <div class="section__container">
-                <img src={{asset('assets/images/arrow_left.png')}}>
+                <a href="/user/home"><img src={{asset('assets/images/arrow_left.png')}}></a>
                 <h3>Informations</h3>
             </div>
-
 
             {{ form_start(form) }}
                 {{ form_row(form.lastName, {'attr': {'value' : lastName }} )}}
