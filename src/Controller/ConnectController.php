@@ -17,7 +17,17 @@ class ConnectController extends AbstractController
         } if(isset($user) && ($user !== null) && ($user !== '')) {
             $connect = true;
             }
+        
+            $access = '';
+            if ($this->getUser()) {
+                if ($this->getUser()->getRoles()[0] == 'ROLE_ADMIN') {
+                    $access = true;
+                } else if (($this->getUser()->getRoles()[0] == 'ROLE_USER')) {
+                    $access = false;
+                }
+            }
         return $this->render('connect/index.html.twig', [
+            'access' => $access,
             'connect' => $connect,
         ]);
     }

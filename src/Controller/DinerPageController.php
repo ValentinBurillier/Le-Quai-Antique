@@ -18,6 +18,15 @@ class DinerPageController extends AbstractController
             $connect = true;
             }
         
+        $access = '';
+        if ($this->getUser()) {
+            if ($this->getUser()->getRoles()[0] == 'ROLE_ADMIN') {
+                $access = true;
+            } else if (($this->getUser()->getRoles()[0] == 'ROLE_USER')) {
+                $access = false;
+            }
+        }
+
         if (!isset($_COOKIE['hour'])) {
             $disabled = 'disabled';
         } else {
@@ -28,6 +37,7 @@ class DinerPageController extends AbstractController
         $textbtn = '';
         $displayArrowLeft = false;
         return $this->render('diner_page/index.html.twig', [
+            'access' => $access,
             'connect' => $connect,
             'linkButton2' => $linkButton2,
             'displayArrowLeft' => $displayArrowLeft,

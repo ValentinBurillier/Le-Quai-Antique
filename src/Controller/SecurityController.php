@@ -13,12 +13,7 @@ class SecurityController extends AbstractController
     #[Route(path: '/account', name: 'account')]
     public function account(AuthenticationUtils $authenticationUtils): Response
     {
-        if ($this->getUser()->getRoles() === 'ROLE_USER') {
-            dd('yes');
-            return new Response ($this->redirectToRoute('app_accueil'));
-        } else if ($this->getUser()->getRoles() === 'ROLE_ADMIN') {
-            $this->redirectToRoute('app_interface_admin');
-        }
+        return $this->redirectToRoute('app_accueil');
     }
 
     #[Route(path: '/login', name: 'app_login')]
@@ -30,6 +25,16 @@ class SecurityController extends AbstractController
         } if(isset($user) && ($user !== null) && ($user !== '')) {
             $connect = true;
             }
+        
+            $access = '';
+            if ($this->getUser()) {
+                if ($this->getUser()->getRoles()[0] == 'ROLE_ADMIN') {
+                    $access = true;
+                } else if (($this->getUser()->getRoles()[0] == 'ROLE_USER')) {
+                    $access = false;
+                }
+            }
+        
         // if ($this->getUser()->getRoles()) {
         //     // Si role = admin
         //     return $this->redirectToRoute('app_interface_admin');
@@ -42,6 +47,7 @@ class SecurityController extends AbstractController
         $lastUsername = $authenticationUtils->getLastUsername();
 
         return $this->render('security/login.html.twig', [
+            'access' => $access,
             'last_username' => $lastUsername, 'error' => $error,
             'connect' => $connect,
         ]);

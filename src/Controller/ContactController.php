@@ -19,8 +19,18 @@ class ContactController extends AbstractController
             $connect = true;
             }
         
+            $access = '';
+            if ($this->getUser()) {
+                if ($this->getUser()->getRoles()[0] == 'ROLE_ADMIN') {
+                    $access = true;
+                } else if (($this->getUser()->getRoles()[0] == 'ROLE_USER')) {
+                    $access = false;
+                }
+            }
+
         $link = $contactRestaurantRepository->find(1);
         return $this->render('contact/index.html.twig', [
+            'access' => $access,
             'link' => $link,
             'connect' => $connect,
         ]);

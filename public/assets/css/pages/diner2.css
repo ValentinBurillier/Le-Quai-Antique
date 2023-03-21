@@ -609,6 +609,7 @@ main {
 }
 
 .section__container p {
+  cursor: pointer;
   color: black;
   background: rgba(255, 255, 255, 0.95);
   height: 25%;
@@ -620,6 +621,10 @@ main {
   justify-content: center;
   align-items: center;
   justify-content: center;
+}
+
+.section__container p:active {
+  background: green;
 }
 
 .section__button {

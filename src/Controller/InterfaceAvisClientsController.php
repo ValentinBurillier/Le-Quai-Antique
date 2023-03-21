@@ -21,7 +21,7 @@ class InterfaceAvisClientsController extends AbstractController
             }
         
         $datas = $reviewsTypeRepository->findAll();
-        return $this->render('interface_avis_clients/index.html.twig', [
+        return $this->render('interface_review/index.html.twig', [
             'connect' => $connect,
             'datas' => $datas,
         ]);

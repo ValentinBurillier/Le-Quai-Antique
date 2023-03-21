@@ -21,6 +21,15 @@ class UserReviewsController extends AbstractController
             $connect = true;
             }
         
+            $access = '';
+            if ($this->getUser()) {
+                if ($this->getUser()->getRoles()[0] == 'ROLE_ADMIN') {
+                    $access = true;
+                } else if (($this->getUser()->getRoles()[0] == 'ROLE_USER')) {
+                    $access = false;
+                }
+            }
+        
         if(isset($_COOKIE['suppr']) && ($_COOKIE['suppr'] !== '') && ($_COOKIE['suppr'] !== null)) {
             $delete = $reviewsTypeRepository->find($_COOKIE['suppr']);
             $entityManager = $getDoctrine->getManager();
@@ -35,6 +44,7 @@ class UserReviewsController extends AbstractController
         ]);
         $count = (count($datas));
         return $this->render('user_reviews/index.html.twig', [
+            'access' => $access,
             'connect' => $connect,
             'datas' => $datas,
             'count' => $count,

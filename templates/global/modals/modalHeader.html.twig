@@ -15,6 +15,19 @@
         <img src="{{ asset('assets/images/sortir.png')}}" alt="icone deconnexion" class="header__iconUser">
       </a>
       {% endif %}
+
+      {% if access == true %}
+      <a href="/interface/admin">
+        <img src="{{ asset('assets/images/carteAccess.png')}}" alt="icone deconnexion" class="header__iconUser">
+      </a>
+      {% endif %}
+
+      {% if access == false %}
+      <a href="/user/home">
+        <img src="{{ asset('assets/images/carteAccess.png')}}" alt="icone deconnexion" class="header__iconUser">
+      </a>
+
+      {% endif %}
     </div>
     <ul class="nav__ul">
       <li><a href="/">Accueil</a></li>

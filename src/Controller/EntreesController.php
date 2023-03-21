@@ -26,10 +26,19 @@ class EntreesController extends AbstractController
         } if(isset($user) && ($user !== null) && ($user !== '')) {
             $connect = true;
             }
-        
+    
+            $access = '';
+            if ($this->getUser()) {
+                if ($this->getUser()->getRoles()[0] == 'ROLE_ADMIN') {
+                    $access = true;
+                } else if (($this->getUser()->getRoles()[0] == 'ROLE_USER')) {
+                    $access = false;
+                }
+            }
         // DATABASE DATA RECOVERY
         $items = $entreesList->findAll();
         return $this->render('entrees/index.html.twig', [
+            'access' => $access,
             'connect' => $connect,
             'title' => $title,
             'linkLeft' => $linkLeft,

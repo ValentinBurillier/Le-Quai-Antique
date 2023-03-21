@@ -611,6 +611,7 @@ form div label {
 }
 form div input {
   height: 30px;
+  color: black;
 }
 form .button {
   width: initial;

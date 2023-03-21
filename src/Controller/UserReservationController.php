@@ -28,6 +28,15 @@ class UserReservationController extends AbstractController
             $connect = true;
             }
         
+            $access = '';
+            if ($this->getUser()) {
+                if ($this->getUser()->getRoles()[0] == 'ROLE_ADMIN') {
+                    $access = true;
+                } else if (($this->getUser()->getRoles()[0] == 'ROLE_USER')) {
+                    $access = false;
+                }
+            }
+        
         /* REMOVE RESERVATION*/
         if(isset($_COOKIE['suppr']) && ($_COOKIE['suppr'] === 'suppr')) {
             $email = $this->getUser()->getUserIdentifier();
@@ -53,7 +62,7 @@ class UserReservationController extends AbstractController
         if (isset($reservationData[0]) && ($reservationData[0] !== []) && ($reservationData[0] !== '')) {
             $dateReservationUser = $reservationData[0]->getDateofreservation();
 
-             /* COMPARE BOOKING DATE AND TODAY DATE */
+             /* COMPARE BOOKING DATE AND TODAY DATE AND RETURN THE FIRST RESERVATION  */
             if ($dateReservationUser >= $newDate) {
                 $display = true;
                 $dateReservation = $dateReservationUser;
@@ -67,6 +76,7 @@ class UserReservationController extends AbstractController
         }
              
         return $this->render('user_reservation/index.html.twig', [
+            'access' => $access,
             'connect' => $connect,
             'date' => $dateReservation,
             'hour' => $hourReservation,

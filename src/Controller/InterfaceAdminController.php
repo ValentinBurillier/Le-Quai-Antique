@@ -15,12 +15,13 @@ class InterfaceAdminController extends AbstractController
     #[Route('/interface/admin', name: 'app_interface_admin')]
     public function index(ReservationsRepository $reservationsRepository): Response
     {
+        dd($this->getUser()->getRoles());
         $lunch = 0;
         $diner = 0;
         $numberReservationsToday = 0;
         $array = [];
 
-        /* VERIFY IF USER IS CONNECTED */
+        /* VERIFY IF USER IS CONNECTED => DISPLAY IMG DECONNEXION */
         $connect = false;
         if ($this->getUser() !== null) {
             $user = $this->getUser()->getUserIdentifier();
@@ -29,11 +30,10 @@ class InterfaceAdminController extends AbstractController
             }
         
         /* GET DATES OF RESERVATION OF THE DAY */
-        $date = date("d.m.y");
+        $date = date("d/m/y");
         $dataDate = $reservationsRepository->findBy([
-            'dateofreservation' => '30.03.23', // SI OK REMPLACER 2.03.23 PAR $date
+            'dateofreservation' => $date, // SI OK REMPLACER 2.03.23 PAR $date
         ]);
-
         if (count($dataDate) > 0) {
             $numberReservationsToday = count($dataDate);
             /* ARRAY CONTENANT LES HEURES DU JOUR */

@@ -24,7 +24,6 @@ class UserHomeController extends AbstractController
         $reservations = $reservationsRepository->findBy([
             'email' => $email,
         ]);
-
         $connect = false;
         if ($this->getUser() !== null) {
             $user = $this->getUser()->getUserIdentifier();
@@ -32,12 +31,20 @@ class UserHomeController extends AbstractController
             $connect = true;
             }
         
+            $access = '';
+            if ($this->getUser()) {
+                if ($this->getUser()->getRoles()[0] == 'ROLE_ADMIN') {
+                    $access = true;
+                } else if (($this->getUser()->getRoles()[0] == 'ROLE_USER')) {
+                    $access = false;
+                }
+            }
+
         /* On vérifie si user à une réservation passée */
         if($reservations !== []) {
             if (isset($reservations[0])) {
                 $dateReservation = $reservations[0]->getDateofreservation();
-                $newDateReservation = strtotime($dateReservation);
-                if ($newDateReservation < time()) {
+                if ($dateReservation < date('d/m/y')) {
                     $display = true;
                     if(isset($_COOKIE['review']) && ($_COOKIE['review'] !== null) && ($_COOKIE['review'] !== '')) {
                         $review->setDate($todayDate);
@@ -57,6 +64,7 @@ class UserHomeController extends AbstractController
         }
         
         return $this->render('user_home/index.html.twig', [
+            'access' => $access,
             'connect' => $connect,
             'display' => $display,
         ]);

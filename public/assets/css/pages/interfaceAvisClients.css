@@ -552,6 +552,10 @@ footer {
   }
 }
 /* CONFIG DE BASE 320 * 568PX */
+body {
+  backgroun: white;
+}
+
 main {
   padding: 0% 5vw;
   display: flex;

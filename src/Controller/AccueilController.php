@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Entity\ContactRestaurant;
+use App\Repository\ContactRestaurantRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -9,7 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class AccueilController extends AbstractController
 {
     #[Route('/', name: 'app_accueil')]
-    public function index(): Response
+    public function index(ContactRestaurantRepository $contactRestaurantRepository): Response
     {
         $connect = false;
         if ($this->getUser() !== null) {
@@ -17,7 +19,19 @@ class AccueilController extends AbstractController
         } if(isset($user) && ($user !== null) && ($user !== '')) {
             $connect = true;
             }
-            
+        
+        $access = '';
+        if ($this->getUser()) {
+            if ($this->getUser()->getRoles()[0] == 'ROLE_ADMIN') {
+                $access = true;
+            } else if (($this->getUser()->getRoles()[0] == 'ROLE_USER')) {
+                $access = false;
+            }
+        }
+    
+        $phone = $contactRestaurantRepository->find(1)->getPhonenumber();
+        $phoneNumber = '0'.$phone;
+        $email = $contactRestaurantRepository->find(1)->getEmail();
         $y = 0;
         $linkButton = '/reservation';
         $disabled = 'enable';
@@ -36,6 +50,9 @@ class AccueilController extends AbstractController
         unset($imgs[1]);
 
         return $this->render('accueil/index.html.twig', [
+            'access' => $access,
+            'phoneNumber' => $phoneNumber,
+            'email' => $email,
             'repertory' => $repertory,
             'resources' => $resources,
             'platImgs' => $imgs,

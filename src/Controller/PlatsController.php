@@ -27,9 +27,18 @@ class PlatsController extends AbstractController
             $connect = true;
             }
         
+            $access = '';
+            if ($this->getUser()) {
+                if ($this->getUser()->getRoles()[0] == 'ROLE_ADMIN') {
+                    $access = true;
+                } else if (($this->getUser()->getRoles()[0] == 'ROLE_USER')) {
+                    $access = false;
+                }
+            }
         // DATABASE DATA RECOVERY
         $items = $dishesRepository->findAll();
         return $this->render('plats/index.html.twig', [
+            'access' => $access,
             'connect' => $connect,
             'title' => $title,
             'linkLeft' => $linkLeft,

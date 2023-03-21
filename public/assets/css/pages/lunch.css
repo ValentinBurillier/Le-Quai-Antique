@@ -620,12 +620,12 @@ main {
   justify-content: center;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .section__container p:active {
   background: green;
   border-radius: 10%;
-  cursor: pointer;
 }
 
 .section__button {

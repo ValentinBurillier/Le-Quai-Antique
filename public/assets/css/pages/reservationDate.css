@@ -638,6 +638,10 @@ p {
   align-items: center;
 }
 
+p:hover {
+  cursor: pointer;
+}
+
 .week {
   background: #FF5C00;
   border-radius: 5px;

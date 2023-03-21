@@ -26,6 +26,16 @@ class VinsController extends AbstractController
             $connect = true;
             }
         
+            $access = '';
+            if ($this->getUser()) {
+                if ($this->getUser()->getRoles()[0] == 'ROLE_ADMIN') {
+                    $access = true;
+                } else if (($this->getUser()->getRoles()[0] == 'ROLE_USER')) {
+                    $access = false;
+                }
+            }
+
+            
         $vR1 = $winesRepository->find(1);
         $vR2 = $winesRepository->find(2);
         $vR3 = $winesRepository->find(3);
@@ -36,6 +46,7 @@ class VinsController extends AbstractController
         
         // DATABASE DATA RECOVERY
         return $this->render('vins/index.html.twig', [
+            'access' => $access,
             'connect' => $connect,
             'vR1' => $vR1,
             'vR2' => $vR2,

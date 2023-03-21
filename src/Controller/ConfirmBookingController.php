@@ -23,6 +23,15 @@ class ConfirmBookingController extends AbstractController
             $connect = true;
             }
         
+            $access = '';
+            if ($this->getUser()) {
+                if ($this->getUser()->getRoles()[0] == 'ROLE_ADMIN') {
+                    $access = true;
+                } else if (($this->getUser()->getRoles()[0] == 'ROLE_USER')) {
+                    $access = false;
+                }
+            }
+
         $date = $_COOKIE['date'];
         $hour = $_COOKIE['hour'];
         $allergy = $_COOKIE['allergy'];
@@ -47,6 +56,7 @@ class ConfirmBookingController extends AbstractController
             return $this->redirectToRoute('app_felicitation');
         }
         return $this->render('confirm_booking/index.html.twig', [
+            'access' => $access,
             'connect' => $connect,
             'form' => $form->createView(),
         ]);

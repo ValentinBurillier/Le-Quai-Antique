@@ -18,6 +18,15 @@ class ReservationDetailsController extends AbstractController
             $connect = true;
             }
         
+            $access = '';
+            if ($this->getUser()) {
+                if ($this->getUser()->getRoles()[0] == 'ROLE_ADMIN') {
+                    $access = true;
+                } else if (($this->getUser()->getRoles()[0] == 'ROLE_USER')) {
+                    $access = false;
+                }
+            }
+        
         if (!isset($_COOKIE['number']) && !isset($_COOKIE['allergy'])) {
             $disabled = 'disabled';
         } else {
@@ -26,6 +35,7 @@ class ReservationDetailsController extends AbstractController
         $linkButton = '/confirm/booking';
         $textbtn = 'Continuer';
         return $this->render('reservation_details/index.html.twig', [
+            'access' => $access,
             'connect' => $connect,
             'linkButton' => $linkButton,
             'textbtn' => $textbtn,
